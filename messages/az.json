@@ -1,0 +1,627 @@
+{
+  "Metadata": {
+    "siteName": "SığortaPro",
+    "ogImageAlt": "SığortaPro — Azərbaycanda onlayn sığorta platforması",
+    "home": {
+      "title": "SığortaPro — Azərbaycanda onlayn sığorta",
+      "description": "Avtomobil, KASKO, səyahət, əmlak və həyat sığortası üçün onlayn müraciət edin. SığortaPro ilə sığorta seçimi sadə, rahat və şəffafdır."
+    },
+    "insurance": {
+      "title": "Sığorta məhsulları — avtomobil, səyahət, əmlak və həyat",
+      "description": "İcbari avtomobil sığortası, KASKO, səyahət, əmlak və həyat sığortası haqqında aydın məlumat. Sizə uyğun sığortanı seçin və onlayn müraciət edin."
+    },
+    "prices": {
+      "title": "Sığorta qiymətləri və tariflər",
+      "description": "Avtomobil, KASKO, səyahət, əmlak və həyat sığortası üzrə tariflərlə tanış olun və məlumatlarınıza əsasən fərdi qiymət təklifi alın."
+    },
+    "about": {
+      "title": "Haqqımızda",
+      "description": "SığortaPro sığortanı hər kəs üçün sadə, şəffaf və rahat etmək məqsədi daşıyan onlayn platformadır. Missiyamız və dəyərlərimizlə tanış olun."
+    },
+    "contact": {
+      "title": "Əlaqə",
+      "description": "SığortaPro ilə əlaqə: 070 609 29 69 nömrəsinə zəng edin və ya WhatsApp-a yazın. Sığorta seçimində sizə kömək edək."
+    },
+    "apply": {
+      "title": "Onlayn sığorta müraciəti",
+      "description": "İcbari avtomobil, KASKO, səyahət, əmlak və ya həyat sığortası üçün bir neçə sadə addımda onlayn müraciət hazırlayın."
+    },
+    "privacy": {
+      "title": "Məxfilik siyasəti",
+      "description": "SığortaPro saytında şəxsi məlumatların necə toplandığı, istifadə edildiyi və qorunduğu barədə məlumat."
+    },
+    "terms": {
+      "title": "İstifadə şərtləri",
+      "description": "SığortaPro veb-saytından istifadə qaydaları və şərtləri."
+    },
+    "notFound": {
+      "title": "Səhifə tapılmadı"
+    }
+  },
+  "Common": {
+    "applyNow": "İndi müraciət et",
+    "apply": "Müraciət et",
+    "details": "Ətraflı",
+    "getQuote": "Qiymət təklifi al",
+    "priceOnRequest": "Qiymət sorğu əsasında",
+    "fromPrice": "{price} ₼-dan",
+    "mandatory": "Məcburi",
+    "voluntary": "Könüllü",
+    "popular": "Populyar",
+    "allProducts": "Bütün sığorta növləri",
+    "call": "Zəng et",
+    "whatsapp": "WhatsApp",
+    "writeWhatsapp": "WhatsApp-a yaz",
+    "phone": "Telefon",
+    "newTab": "(yeni pəncərədə açılır)"
+  },
+  "Nav": {
+    "home": "Ana səhifə",
+    "insurance": "Sığorta məhsulları",
+    "prices": "Qiymətlər",
+    "about": "Haqqımızda",
+    "contact": "Əlaqə",
+    "apply": "İndi müraciət et",
+    "openMenu": "Menyunu aç",
+    "closeMenu": "Menyunu bağla",
+    "mainNav": "Əsas naviqasiya",
+    "mobileNav": "Mobil naviqasiya",
+    "skipToContent": "Əsas məzmuna keç",
+    "homeAria": "SığortaPro — ana səhifə",
+    "productsMenu": "Sığorta növləri",
+    "allProducts": "Bütün sığorta məhsulları",
+    "needHelp": "Köməyə ehtiyacınız var?"
+  },
+  "LocaleSwitcher": {
+    "label": "Dil",
+    "change": "Dili dəyişin",
+    "az": "Azərbaycanca",
+    "en": "English",
+    "ru": "Русский"
+  },
+  "Hero": {
+    "badge": "Azərbaycanda onlayn sığorta",
+    "title": "Gələcəyinizi <brand>SığortaPro</brand> ilə qoruyun!",
+    "description": "Avtomobilinizi, evinizi, səyahətinizi və həyatınızı rahat və etibarlı sığorta həlləri ilə qoruyun.",
+    "ctaPrimary": "Sığorta seç",
+    "ctaSecondary": "Müraciət et",
+    "quickLabel": "Hansı sığorta lazımdır?",
+    "quickPlaceholder": "Sığorta növünü seçin",
+    "quickSubmit": "Təklif al",
+    "visualTitle": "Sığortanı seçin",
+    "visualProtected": "Etibarlı qoruma",
+    "visualApplication": "Onlayn müraciət",
+    "visualApplicationText": "Sadə addımlarla",
+    "visualWhatsapp": "WhatsApp ilə əlaqə"
+  },
+  "Trust": {
+    "online": {
+      "title": "Onlayn müraciət",
+      "text": "İstənilən cihazdan, istənilən vaxt"
+    },
+    "advice": {
+      "title": "Fərdi məsləhət",
+      "text": "Uyğun həllin seçimində kömək"
+    },
+    "contact": {
+      "title": "Rahat əlaqə",
+      "text": "Telefon və ya WhatsApp ilə"
+    },
+    "languages": {
+      "title": "Üç dildə",
+      "text": "Azərbaycan, ingilis və rus dillərində"
+    }
+  },
+  "Products": {
+    "eyebrow": "Sığorta məhsulları",
+    "title": "Sizə uyğun sığortanı seçin",
+    "description": "Avtomobil, səyahət, əmlak və həyat — hər biri üçün aydın şərtlər və rahat onlayn müraciət.",
+    "viewAll": "Bütün sığorta növlərinə bax"
+  },
+  "HowItWorks": {
+    "eyebrow": "Necə işləyir",
+    "title": "Sığortaya üç sadə addım",
+    "description": "Mürəkkəb sənədlər və uzun növbələr olmadan — hər şey aydın və rahatdır.",
+    "choose": {
+      "title": "Sığortanı seçin",
+      "text": "Ehtiyacınıza uyğun sığorta növünü seçin və şərtlərlə tanış olun."
+    },
+    "apply": {
+      "title": "Müraciəti doldurun",
+      "text": "Bir neçə dəqiqəyə əsas məlumatları qeyd edin."
+    },
+    "offer": {
+      "title": "Təklifi alın",
+      "text": "Mütəxəssisimiz sizinlə əlaqə saxlayıb fərdi təklif təqdim edir."
+    }
+  },
+  "Benefits": {
+    "eyebrow": "Niyə SığortaPro?",
+    "title": "Sığortanı sadə və anlaşıqlı edirik",
+    "description": "Hər addımı sizin rahatlığınız üçün düşünmüşük — seçimdən müraciətə qədər.",
+    "easyOnline": {
+      "title": "Asan onlayn müraciət",
+      "text": "Aydın və rahat forma ilə müraciətinizi istənilən cihazdan hazırlayın."
+    },
+    "timeSaving": {
+      "title": "Vaxta qənaət",
+      "text": "Ofisə getmədən və növbə gözləmədən prosesə başlayın."
+    },
+    "personal": {
+      "title": "Fərdi yanaşma",
+      "text": "Ehtiyaclarınızı dinləyir, sizə uyğun həll təklif edirik."
+    },
+    "options": {
+      "title": "Müxtəlif sığorta seçimləri",
+      "text": "Avtomobil, səyahət, əmlak və həyat sığortası bir platformada."
+    },
+    "communication": {
+      "title": "Rahat ünsiyyət",
+      "text": "Telefon və ya WhatsApp — sizə uyğun əlaqə vasitəsini seçin."
+    },
+    "simple": {
+      "title": "Sadə və anlaşıqlı xidmət",
+      "text": "Şərtləri sadə dildə izah edirik ki, nə seçdiyinizi dəqiq biləsiniz."
+    }
+  },
+  "Pricing": {
+    "eyebrow": "Qiymətlər və tariflər",
+    "title": "Şəffaf tariflər, fərdi təkliflər",
+    "description": "Hər sığorta növü üçün əsas tarif seçimləri. Dəqiq qiymət sizin məlumatlarınıza əsasən hesablanır.",
+    "coverage": "Əhatə",
+    "duration": "Müddət",
+    "included": "Daxildir",
+    "price": "Qiymət",
+    "recommended": "Tövsiyə olunur",
+    "plan": "Tarif",
+    "viewAll": "Bütün tariflərə bax",
+    "previous": "Əvvəlki",
+    "next": "Növbəti",
+    "disclaimer": "Məlumatlar tanışlıq məqsədi daşıyır. Dəqiq şərtlər, təminatlar və qiymət fərdi qaydada müəyyən edilir və sığorta müqaviləsi ilə tənzimlənir."
+  },
+  "Faq": {
+    "eyebrow": "Suallar",
+    "title": "Tez-tez verilən suallar",
+    "description": "Cavabını tapmadığınız sual varsa, bizə zəng edin və ya WhatsApp-a yazın.",
+    "items": [
+      {
+        "question": "SığortaPro necə işləyir?",
+        "answer": "Sizə lazım olan sığorta növünü seçir və onlayn müraciət formasını doldurursunuz. Mütəxəssisimiz sizinlə əlaqə saxlayır, suallarınızı cavablandırır və məlumatlarınıza əsasən fərdi təklif hazırlayır."
+      },
+      {
+        "question": "Niyə saytda dəqiq qiymətlər göstərilmir?",
+        "answer": "Sığorta haqqı avtomobilin, əmlakın, səfərin və ya sığortalanan şəxsin fərdi göstəricilərindən asılıdır. Buna görə dəqiq qiyməti sizin məlumatlarınız əsasında hazırlanan təkliflə təqdim edirik."
+      },
+      {
+        "question": "Sizinlə necə əlaqə saxlaya bilərəm?",
+        "answer": "070 609 29 69 nömrəsinə zəng edə və ya WhatsApp vasitəsilə yaza bilərsiniz. Həmçinin saytdakı onlayn müraciət formasından istifadə edə bilərsiniz."
+      },
+      {
+        "question": "Hansı sığorta növləri üçün müraciət etmək olar?",
+        "answer": "İcbari avtomobil sığortası, KASKO, səyahət, əmlak və həyat sığortası üçün müraciət edə bilərsiniz."
+      },
+      {
+        "question": "Şəxsi məlumatlarım necə istifadə olunur?",
+        "answer": "Məlumatlarınızdan yalnız müraciətinizə baxılması və sizinlə əlaqə saxlanılması məqsədilə istifadə edirik. Ətraflı məlumatı Məxfilik siyasətində tapa bilərsiniz."
+      }
+    ]
+  },
+  "Cta": {
+    "title": "Sualınız var? Kömək etməyə hazırıq.",
+    "description": "Mütəxəssisimizlə telefon və ya WhatsApp vasitəsilə əlaqə saxlayın, yaxud onlayn müraciət edin."
+  },
+  "Footer": {
+    "description": "Avtomobil, səyahət, əmlak və həyat sığortası üçün rahat onlayn platforma. Sığortanı sadə və anlaşıqlı edirik.",
+    "navigation": "Naviqasiya",
+    "insurance": "Sığorta növləri",
+    "contact": "Əlaqə",
+    "contactText": "Suallarınız üçün bizə zəng edin və ya WhatsApp-a yazın.",
+    "privacy": "Məxfilik siyasəti",
+    "terms": "İstifadə şərtləri",
+    "copyright": "© {year} SığortaPro. Bütün hüquqlar qorunur."
+  },
+  "WhatsApp": {
+    "fab": "WhatsApp ilə yazın"
+  },
+  "Breadcrumbs": {
+    "label": "Naviqasiya zənciri",
+    "home": "Ana səhifə"
+  },
+  "ProductPage": {
+    "overview": "Ümumi məlumat",
+    "highlights": "Əsas xüsusiyyətlər",
+    "coverageTitle": "Nələri əhatə edir",
+    "coverageDescription": "Seçilmiş proqramdan asılı olaraq sığorta aşağıdakı riskləri əhatə edə bilər.",
+    "coverageNote": "Dəqiq risklər siyahısı, limitlər və istisnalar sığorta müqaviləsində müəyyən edilir.",
+    "benefitsTitle": "SığortaPro ilə üstünlüklər",
+    "tariffsTitle": "Tariflər",
+    "tariffsDescription": "Tarif seçimləri ilə tanış olun. Dəqiq qiymət məlumatlarınıza əsasən hesablanır.",
+    "howTitle": "Necə müraciət etmək olar",
+    "faqTitle": "Tez-tez verilən suallar",
+    "relatedTitle": "Digər sığorta növləri",
+    "relatedDescription": "Sizi maraqlandıra biləcək digər həllər.",
+    "ctaTitle": "{name} üçün müraciət edin",
+    "ctaDescription": "Əsas məlumatları qeyd edin — mütəxəssisimiz sizə fərdi təklif hazırlamağa kömək edəcək."
+  },
+  "InsurancePage": {
+    "eyebrow": "Sığorta məhsulları",
+    "title": "Azərbaycanda onlayn sığorta məhsulları",
+    "description": "Avtomobil, səyahət, əmlak və həyat üçün sığorta həlləri — hər biri haqqında aydın məlumat və rahat onlayn müraciət imkanı ilə.",
+    "compareTitle": "Avtomobil üçün hansı sığorta lazımdır?",
+    "compareDescription": "İcbari sığorta və KASKO fərqli məqsədlərə xidmət edir. Əsas fərqlər belədir:",
+    "compulsoryPoints": [
+      "Qanunla məcburidir",
+      "Üçüncü şəxslərə dəyən zərəri əhatə edir",
+      "Sığorta haqqı qanunvericiliklə müəyyən edilmiş qaydada hesablanır"
+    ],
+    "cascoPoints": [
+      "Könüllüdür",
+      "Öz avtomobilinizi qoruyur",
+      "Şərtlər və qiymət seçilmiş proqramdan asılıdır"
+    ],
+    "compareNote": "Daha geniş qoruma üçün bir çox sürücü hər iki sığortanı birlikdə seçir."
+  },
+  "PricesPage": {
+    "eyebrow": "Qiymətlər",
+    "title": "Sığorta qiymətləri və tariflər",
+    "description": "Hər sığorta növü üzrə tarif seçimləri ilə tanış olun. Dəqiq qiymət sizin məlumatlarınıza əsasən fərdi qaydada hesablanır — qiymət təklifi almaq üçün müraciət edin.",
+    "viewProduct": "Ətraflı məlumat",
+    "faqTitle": "Qiymətlərlə bağlı suallar",
+    "faq": [
+      {
+        "question": "Qiymət təklifini necə ala bilərəm?",
+        "answer": "Onlayn müraciət formasını doldurun, zəng edin və ya WhatsApp-a yazın — mütəxəssisimiz məlumatlarınıza əsasən fərdi təklif hazırlayacaq."
+      },
+      {
+        "question": "Qiymətə hansı amillər təsir edir?",
+        "answer": "Sığorta növündən asılı olaraq: nəqliyyat vasitəsinin göstəriciləri, əmlakın növü və dəyəri, səfərin müddəti və istiqaməti, yaşınız, həmçinin seçilmiş təminatlar və azadolma məbləği."
+      },
+      {
+        "question": "Saytda göstərilən tariflər yekundurmu?",
+        "answer": "Xeyr. Tariflər tanışlıq məqsədi daşıyır. Dəqiq şərtlər, təminatlar və qiymət fərdi qaydada müəyyən edilir və sığorta müqaviləsi ilə tənzimlənir."
+      },
+      {
+        "question": "İcbari sığortanın qiyməti necə hesablanır?",
+        "answer": "İcbari avtomobil sığortasının haqqı qanunvericiliklə müəyyən edilmiş qaydada, nəqliyyat vasitəsinin növü və texniki göstəriciləri nəzərə alınmaqla hesablanır."
+      }
+    ]
+  },
+  "AboutPage": {
+    "eyebrow": "Haqqımızda",
+    "title": "Sığortanı hər kəs üçün sadə edirik",
+    "description": "SığortaPro sığorta seçimini müasir, şəffaf və rahat rəqəmsal təcrübəyə çevirmək məqsədi daşıyır.",
+    "whoTitle": "Biz kimik",
+    "whoText": [
+      "Çoxları üçün sığorta mürəkkəb terminlər, uzun sənədlər və itirilmiş vaxtla assosiasiya olunur. SığortaPro bu təcrübəni dəyişmək ideyası ilə yaradılıb.",
+      "Platformamızda avtomobil, səyahət, əmlak və həyat sığortası haqqında aydın məlumat tapa, sizə uyğun variantı seçə və onlayn müraciət hazırlaya bilərsiniz. Mütəxəssisimiz isə hər addımda suallarınızı cavablandırmağa hazırdır."
+    ],
+    "missionTitle": "Missiyamız",
+    "missionText": "İnsanlara və ailələrə gələcəklərini arxayınlıqla planlamağa kömək edən sadə və etibarlı sığorta təcrübəsi yaratmaq.",
+    "valuesTitle": "Dəyərlərimiz",
+    "valuesDescription": "Hər qərarımızda bu prinsiplərə əsaslanırıq.",
+    "transparency": {
+      "title": "Şəffaflıq",
+      "text": "Şərtləri açıq və anlaşıqlı dildə izah edirik."
+    },
+    "simplicity": {
+      "title": "Sadəlik",
+      "text": "Hər addımı mümkün qədər rahat və intuitiv edirik."
+    },
+    "trust": {
+      "title": "Etibar",
+      "text": "Uzunmüddətli münasibətləri dürüstlük üzərində qururuq."
+    },
+    "care": {
+      "title": "Qayğı",
+      "text": "Hər müraciətə fərdi diqqətlə yanaşırıq."
+    }
+  },
+  "ContactPage": {
+    "eyebrow": "Əlaqə",
+    "title": "Bizimlə əlaqə saxlayın",
+    "description": "Sualınız var və ya sığorta seçimində köməyə ehtiyacınız var? Sizə uyğun üsulla bizimlə əlaqə saxlayın.",
+    "phoneTitle": "Telefon",
+    "phoneText": "Mütəxəssisimizlə birbaşa danışın.",
+    "whatsappTitle": "WhatsApp",
+    "whatsappText": "Sualınızı yazılı şəkildə göndərin.",
+    "whatsappAction": "Yazmağa başla",
+    "applyTitle": "Onlayn müraciət",
+    "applyText": "Formu doldurun və fərdi təklif üçün ilk addımı atın.",
+    "applyAction": "Formu doldur",
+    "helpTitle": "Necə kömək edə bilərik?",
+    "helpItems": [
+      "Sizə uyğun sığorta növünün seçilməsi",
+      "Şərtlərin və təminatların sadə dildə izahı",
+      "Onlayn müraciətin hazırlanması",
+      "Fərdi qiymət təklifinin alınması"
+    ]
+  },
+  "ApplyPage": {
+    "eyebrow": "Onlayn müraciət",
+    "title": "Sığorta üçün onlayn müraciət",
+    "description": "Bir neçə sadə addımda məlumatlarınızı qeyd edin. Hər sahə aydın izah olunub.",
+    "asideTitle": "Sualınız var?",
+    "asideText": "Müraciətlə bağlı köməyə ehtiyacınız olarsa, bizə zəng edin və ya WhatsApp-a yazın.",
+    "privacyNote": "Məlumatlarınız yalnız müraciətinizə baxılması məqsədilə istifadə olunur."
+  },
+  "ApplyForm": {
+    "steps": {
+      "type": "Sığorta növü",
+      "details": "Məlumatlar",
+      "contact": "Əlaqə",
+      "review": "Təsdiq"
+    },
+    "progress": "Addım {current} / {total}",
+    "typeTitle": "Hansı sığorta sizi maraqlandırır?",
+    "typeDescription": "Sığorta növünü seçin — növbəti addımda yalnız lazım olan məlumatları soruşacağıq.",
+    "detailsTitle": "Əsas məlumatlar",
+    "detailsDescription": "Bu məlumatlar sizə daha dəqiq təklif hazırlamağa kömək edəcək.",
+    "contactTitle": "Sizinlə necə əlaqə saxlayaq?",
+    "contactDescription": "Mütəxəssisimiz bu məlumatlar vasitəsilə sizinlə əlaqə saxlayacaq.",
+    "reviewTitle": "Məlumatları yoxlayın",
+    "reviewDescription": "Hər şey düzgündürsə, müraciəti təsdiqləyin. Lazım olarsa, istənilən bölməyə qayıdıb düzəliş edə bilərsiniz.",
+    "next": "Davam et",
+    "back": "Geri",
+    "submit": "Müraciəti təsdiqlə",
+    "submitting": "Yoxlanılır…",
+    "edit": "Düzəliş et",
+    "optional": "istəyə bağlı",
+    "requiredHint": "* ilə işarələnmiş xanalar məcburidir",
+    "selectPlaceholder": "Seçin",
+    "change": "Dəyiş",
+    "fixErrors": "Zəhmət olmasa qeyd olunan xanaları düzəldin.",
+    "fields": {
+      "insuranceType": "Sığorta növü",
+      "fullName": "Ad və soyad",
+      "fullNamePlaceholder": "Məs.: Aysel Məmmədova",
+      "phone": "Telefon nömrəsi",
+      "phonePlaceholder": "070 609 29 69",
+      "phoneHint": "Mütəxəssisimiz bu nömrə ilə sizinlə əlaqə saxlayacaq",
+      "email": "E-poçt",
+      "emailPlaceholder": "ad@example.com",
+      "additionalInfo": "Əlavə məlumat",
+      "additionalInfoPlaceholder": "Suallarınızı və ya əlavə istəklərinizi qeyd edin",
+      "consent": "Şəxsi məlumatlarımın müraciətə baxılması məqsədilə işlənməsinə razıyam və <link>Məxfilik siyasəti</link> ilə tanış oldum.",
+      "registrationNumber": "Dövlət qeydiyyat nişanı",
+      "registrationNumberPlaceholder": "10-AA-123",
+      "brandModel": "Marka və model",
+      "brandModelPlaceholder": "Məs.: Toyota Camry",
+      "year": "Buraxılış ili",
+      "yearPlaceholder": "Məs.: 2020",
+      "technicalDetails": "Texniki göstəricilər",
+      "vehicleType": "Nəqliyyat vasitəsinin növü",
+      "engineVolume": "Mühərrikin həcmi (sm³)",
+      "engineVolumePlaceholder": "Məs.: 2000",
+      "vehicleValue": "Avtomobilin təxmini dəyəri (₼)",
+      "vehicleValuePlaceholder": "Məs.: 25000",
+      "cascoCoverage": "İstədiyiniz təminat",
+      "destination": "Təyinat ölkəsi",
+      "destinationPlaceholder": "Məs.: Almaniya",
+      "startDate": "Başlama tarixi",
+      "endDate": "Bitmə tarixi",
+      "travelers": "Səyahətçilərin sayı",
+      "decrease": "Azalt",
+      "increase": "Artır",
+      "duration": "Sığorta müddəti",
+      "durationValue": "{count} gün",
+      "durationHint": "Tarixlərə əsasən avtomatik hesablanır",
+      "durationEmpty": "Tarixləri seçin",
+      "propertyAddress": "Əmlakın ünvanı",
+      "propertyAddressPlaceholder": "Şəhər, küçə, ev",
+      "propertyType": "Əmlakın növü",
+      "propertyValue": "Təxmini dəyər (₼)",
+      "propertyValuePlaceholder": "Məs.: 150000",
+      "propertyCoverage": "İstədiyiniz təminatlar",
+      "propertyCoverageHint": "Bir və ya bir neçə variant seçin",
+      "age": "Yaşınız",
+      "agePlaceholder": "Məs.: 35",
+      "lifeTerm": "İstədiyiniz sığorta müddəti"
+    },
+    "options": {
+      "vehicleType": {
+        "car": "Minik avtomobili",
+        "truck": "Yük avtomobili",
+        "bus": "Avtobus / mikroavtobus",
+        "motorcycle": "Motosiklet",
+        "other": "Digər"
+      },
+      "cascoCoverage": {
+        "essential": "Əsas",
+        "standard": "Standart",
+        "comprehensive": "Geniş",
+        "advice": "Əmin deyiləm"
+      },
+      "cascoCoverageHint": {
+        "essential": "Oğurluq, tam məhv olma, yanğın",
+        "standard": "Qəza, təbii fəlakətlər, şüşə zədələri",
+        "comprehensive": "Geniş əhatə və əlavə xidmətlər",
+        "advice": "Mütəxəssis sizə uyğun variantı təklif edəcək"
+      },
+      "propertyType": {
+        "apartment": "Mənzil",
+        "house": "Fərdi ev",
+        "country": "Bağ evi",
+        "commercial": "Kommersiya obyekti"
+      },
+      "propertyCoverage": {
+        "fire": "Yanğın",
+        "water": "Su basması",
+        "natural": "Təbii fəlakətlər",
+        "theft": "Oğurluq",
+        "liability": "Qonşular qarşısında məsuliyyət"
+      },
+      "lifeTerm": {
+        "y1": "1 il",
+        "y5": "5 il",
+        "y10": "10 il",
+        "y15": "15 il",
+        "y20": "20 il və daha çox"
+      }
+    },
+    "review": {
+      "type": "Sığorta növü",
+      "details": "Məlumatlar",
+      "contact": "Əlaqə məlumatları",
+      "notProvided": "Qeyd edilməyib",
+      "consentGiven": "Razılıq verilib"
+    },
+    "demoBanner": {
+      "title": "Nümayiş rejimi",
+      "text": "Onlayn forma hazırda nümayiş rejimində işləyir: məlumatlar yoxlanılır, lakin heç yerə göndərilmir. Müraciət üçün bizə zəng edin və ya WhatsApp-a yazın."
+    },
+    "demoSuccess": {
+      "badge": "Demo",
+      "title": "Forma uğurla yoxlanıldı",
+      "text": "Bu, nümayiş versiyasıdır — müraciətiniz göndərilmədi və heç yerdə saxlanılmadı. Məlumatlarınızı WhatsApp vasitəsilə bizə göndərə və ya zəng edə bilərsiniz.",
+      "whatsapp": "Məlumatları WhatsApp ilə göndər",
+      "restart": "Yeni müraciət"
+    },
+    "submitted": {
+      "title": "Müraciətiniz göndərildi",
+      "text": "Mütəxəssisimiz tezliklə sizinlə əlaqə saxlayacaq.",
+      "reference": "Müraciət nömrəsi: {reference}",
+      "restart": "Yeni müraciət"
+    },
+    "error": {
+      "title": "Xəta baş verdi",
+      "text": "Zəhmət olmasa bir az sonra yenidən cəhd edin və ya bizə zəng edin.",
+      "retry": "Yenidən cəhd et"
+    },
+    "whatsappIntro": "Salam! SığortaPro saytı vasitəsilə sığorta üçün müraciət etmək istəyirəm."
+  },
+  "Validation": {
+    "required": "Bu xananı doldurun",
+    "selectType": "Sığorta növünü seçin",
+    "selectOption": "Variantlardan birini seçin",
+    "fullName": "Ad və soyadınızı tam daxil edin",
+    "phone": "Düzgün telefon nömrəsi daxil edin, məs.: 070 609 29 69",
+    "email": "Düzgün e-poçt ünvanı daxil edin",
+    "plate": "Qeydiyyat nişanını düzgün daxil edin, məs.: 10-AA-123",
+    "year": "Düzgün buraxılış ili daxil edin",
+    "amount": "Düzgün məbləğ daxil edin",
+    "engine": "Mühərrikin həcmini düzgün daxil edin",
+    "date": "Tarixi seçin",
+    "datePast": "Tarix bu gündən əvvəl ola bilməz",
+    "dateRange": "Tarix növbəti 2 il ərzində olmalıdır",
+    "endBeforeStart": "Bitmə tarixi başlama tarixindən əvvəl ola bilməz",
+    "tripLength": "Səfər müddəti 365 gündən çox ola bilməz",
+    "travelers": "1 ilə 10 arasında say seçin",
+    "age": "Yaş 18 ilə 80 arasında olmalıdır",
+    "coverage": "Ən azı bir variant seçin",
+    "consent": "Davam etmək üçün razılığınızı təsdiqləyin",
+    "tooLong": "Mətn çox uzundur",
+    "tooShort": "Daha ətraflı qeyd edin"
+  },
+  "Legal": {
+    "intro": "Bu səhifədəki məlumatlar SığortaPro veb-saytından istifadəyə aiddir.",
+    "privacy": [
+      {
+        "title": "Ümumi müddəalar",
+        "body": [
+          "Bu Məxfilik siyasəti SığortaPro veb-saytından (bundan sonra — «Sayt») istifadə zamanı təqdim etdiyiniz şəxsi məlumatların necə toplandığını, istifadə edildiyini və qorunduğunu izah edir.",
+          "Saytdan istifadə etməklə bu siyasətin şərtləri ilə razılaşmış olursunuz."
+        ]
+      },
+      {
+        "title": "Hansı məlumatları toplayırıq",
+        "body": [
+          "Müraciət formasını doldurarkən təqdim etdiyiniz məlumatlar: ad və soyad, telefon nömrəsi, e-poçt ünvanı (istəyə bağlı), həmçinin seçdiyiniz sığorta növü ilə bağlı məlumatlar (məsələn, nəqliyyat vasitəsi, səfər və ya əmlak barədə).",
+          "Saytın düzgün işləməsi üçün zəruri olan texniki məlumatlar (məsələn, seçilmiş dil)."
+        ]
+      },
+      {
+        "title": "Məlumatlardan istifadə məqsədləri",
+        "body": [
+          "Müraciətinizə baxmaq və sizinlə əlaqə saxlamaq; sizə uyğun sığorta təklifi hazırlamaq; xidmət keyfiyyətini yaxşılaşdırmaq; qanunvericiliyin tələblərinə əməl etmək."
+        ]
+      },
+      {
+        "title": "Məlumatların ötürülməsi",
+        "body": [
+          "Şəxsi məlumatlarınız satılmır. Məlumatlar yalnız müraciətinizin icrası üçün zəruri olduqda — sığorta xidmətinin göstərilməsində iştirak edən tərəflərə — və ya qanunvericilikdə nəzərdə tutulmuş hallarda ötürülə bilər."
+        ]
+      },
+      {
+        "title": "Məlumatların qorunması",
+        "body": [
+          "Məlumatlarınızı icazəsiz girişdən, dəyişdirilmədən və itkidən qorumaq üçün müvafiq təşkilati və texniki tədbirlər görürük."
+        ]
+      },
+      {
+        "title": "Sizin hüquqlarınız",
+        "body": [
+          "Azərbaycan Respublikasının qanunvericiliyinə uyğun olaraq şəxsi məlumatlarınızla tanış olmaq, onların düzəldilməsini və ya silinməsini tələb etmək hüququnuz var."
+        ]
+      },
+      {
+        "title": "Kukilər (cookies)",
+        "body": [
+          "Sayt yalnız onun düzgün işləməsi üçün zəruri olan texniki kukilərdən istifadə edə bilər. Reklam və ya izləmə kukilərindən istifadə olunmur."
+        ]
+      },
+      {
+        "title": "Dəyişikliklər və əlaqə",
+        "body": [
+          "Bu siyasət vaxtaşırı yenilənə bilər; yenilənmiş versiya bu səhifədə dərc olunur.",
+          "Məxfilik siyasəti ilə bağlı suallarınız üçün 070 609 29 69 nömrəsi ilə əlaqə saxlaya bilərsiniz."
+        ]
+      }
+    ],
+    "terms": [
+      {
+        "title": "Ümumi müddəalar",
+        "body": [
+          "Bu İstifadə şərtləri SığortaPro veb-saytından (bundan sonra — «Sayt») istifadə qaydalarını müəyyən edir. Saytdan istifadə etməklə bu şərtləri qəbul etmiş olursunuz."
+        ]
+      },
+      {
+        "title": "Xidmətin təsviri",
+        "body": [
+          "Sayt sığorta məhsulları barədə məlumat əldə etmək və onlayn müraciət hazırlamaq imkanı verir. Saytda yerləşdirilən məlumatlar tanışlıq xarakteri daşıyır və ictimai oferta deyil."
+        ]
+      },
+      {
+        "title": "Qiymətlər və şərtlər",
+        "body": [
+          "Saytda göstərilən tariflər, təminatlar və digər məlumatlar ilkin xarakter daşıyır. Dəqiq sığorta şərtləri, təminatlar və sığorta haqqı fərdi qaydada müəyyən edilir və bağlanan sığorta müqaviləsi ilə tənzimlənir."
+        ]
+      },
+      {
+        "title": "İstifadəçinin öhdəlikləri",
+        "body": [
+          "Müraciət zamanı düzgün və tam məlumat təqdim etmək, saytdan yalnız qanuni məqsədlərlə istifadə etmək və saytın işinə müdaxilə etməmək."
+        ]
+      },
+      {
+        "title": "Əqli mülkiyyət",
+        "body": [
+          "Saytdakı mətnlər, dizayn, loqo və digər materiallar SığortaPro-ya məxsusdur və icazəsiz istifadə edilə bilməz."
+        ]
+      },
+      {
+        "title": "Məsuliyyətin məhdudlaşdırılması",
+        "body": [
+          "Saytdakı məlumatların aktuallığını təmin etməyə çalışırıq, lakin texniki fasilələr və ya məlumatlardakı dəyişikliklər nəticəsində yarana biləcək hallara görə məsuliyyət daşımırıq."
+        ]
+      },
+      {
+        "title": "Tətbiq olunan hüquq",
+        "body": ["Bu şərtlər Azərbaycan Respublikasının qanunvericiliyinə uyğun olaraq tənzimlənir."]
+      },
+      {
+        "title": "Dəyişikliklər və əlaqə",
+        "body": [
+          "Bu şərtlər vaxtaşırı yenilənə bilər; yenilənmiş versiya bu səhifədə dərc olunur.",
+          "Suallarınız üçün 070 609 29 69 nömrəsi ilə əlaqə saxlaya bilərsiniz."
+        ]
+      }
+    ]
+  },
+  "NotFound": {
+    "code": "404",
+    "title": "Səhifə tapılmadı",
+    "description": "Axtardığınız səhifə mövcud deyil və ya başqa ünvana köçürülüb.",
+    "home": "Ana səhifəyə qayıt",
+    "browse": "Sığorta məhsullarına bax"
+  }
+}

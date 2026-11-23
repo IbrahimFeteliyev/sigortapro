@@ -1,0 +1,623 @@
+{
+  "Metadata": {
+    "siteName": "SığortaPro",
+    "ogImageAlt": "SığortaPro — online insurance platform in Azerbaijan",
+    "home": {
+      "title": "SığortaPro — Online Insurance in Azerbaijan",
+      "description": "Apply online for compulsory motor, CASCO, travel, property and life insurance. SığortaPro makes choosing insurance in Azerbaijan simple, convenient and clear."
+    },
+    "insurance": {
+      "title": "Insurance Products — Motor, Travel, Property and Life",
+      "description": "Clear information on compulsory motor insurance, CASCO, travel, property and life insurance. Choose the cover that suits you and apply online."
+    },
+    "prices": {
+      "title": "Insurance Prices and Plans",
+      "description": "Explore plans for motor, CASCO, travel, property and life insurance and get a personalised quote based on your details."
+    },
+    "about": {
+      "title": "About Us",
+      "description": "SığortaPro is an online platform on a mission to make insurance simple, transparent and convenient for everyone. Learn about our mission and values."
+    },
+    "contact": {
+      "title": "Contact Us",
+      "description": "Contact SığortaPro: call 070 609 29 69 or message us on WhatsApp. We’ll help you choose the right insurance."
+    },
+    "apply": {
+      "title": "Online Insurance Application",
+      "description": "Prepare an online application for compulsory motor, CASCO, travel, property or life insurance in a few simple steps."
+    },
+    "privacy": {
+      "title": "Privacy Policy",
+      "description": "How personal information is collected, used and protected on the SığortaPro website."
+    },
+    "terms": {
+      "title": "Terms and Conditions",
+      "description": "Rules and conditions for using the SığortaPro website."
+    },
+    "notFound": {
+      "title": "Page not found"
+    }
+  },
+  "Common": {
+    "applyNow": "Apply now",
+    "apply": "Apply",
+    "details": "Learn more",
+    "getQuote": "Get a quote",
+    "priceOnRequest": "Price on request",
+    "fromPrice": "From {price} ₼",
+    "mandatory": "Mandatory",
+    "voluntary": "Voluntary",
+    "popular": "Popular",
+    "allProducts": "All insurance products",
+    "call": "Call",
+    "whatsapp": "WhatsApp",
+    "writeWhatsapp": "Message on WhatsApp",
+    "phone": "Phone",
+    "newTab": "(opens in a new tab)"
+  },
+  "Nav": {
+    "home": "Home",
+    "insurance": "Insurance",
+    "prices": "Prices",
+    "about": "About us",
+    "contact": "Contact",
+    "apply": "Apply now",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "mainNav": "Main navigation",
+    "mobileNav": "Mobile navigation",
+    "skipToContent": "Skip to main content",
+    "homeAria": "SığortaPro — home",
+    "productsMenu": "Insurance types",
+    "allProducts": "All insurance products",
+    "needHelp": "Need help?"
+  },
+  "LocaleSwitcher": {
+    "label": "Language",
+    "change": "Change language",
+    "az": "Azərbaycanca",
+    "en": "English",
+    "ru": "Русский"
+  },
+  "Hero": {
+    "badge": "Online insurance in Azerbaijan",
+    "title": "Protect your future with <brand>SığortaPro</brand>!",
+    "description": "Protect your car, home, travels and life with convenient, reliable insurance solutions.",
+    "ctaPrimary": "Choose insurance",
+    "ctaSecondary": "Apply now",
+    "quickLabel": "What would you like to insure?",
+    "quickPlaceholder": "Select insurance type",
+    "quickSubmit": "Get an offer",
+    "visualTitle": "Choose your cover",
+    "visualProtected": "Reliable protection",
+    "visualApplication": "Online application",
+    "visualApplicationText": "In a few simple steps",
+    "visualWhatsapp": "Chat on WhatsApp"
+  },
+  "Trust": {
+    "online": {
+      "title": "Online application",
+      "text": "From any device, at any time"
+    },
+    "advice": {
+      "title": "Personal advice",
+      "text": "Help choosing the right cover"
+    },
+    "contact": {
+      "title": "Easy to reach",
+      "text": "By phone or WhatsApp"
+    },
+    "languages": {
+      "title": "In three languages",
+      "text": "Azerbaijani, English and Russian"
+    }
+  },
+  "Products": {
+    "eyebrow": "Insurance products",
+    "title": "Choose the cover that fits you",
+    "description": "Motor, travel, property and life — each with clear terms and a convenient online application.",
+    "viewAll": "View all insurance products"
+  },
+  "HowItWorks": {
+    "eyebrow": "How it works",
+    "title": "Three simple steps to cover",
+    "description": "No complicated paperwork, no long queues — everything is clear and convenient.",
+    "choose": {
+      "title": "Choose your insurance",
+      "text": "Pick the type of cover you need and review the details."
+    },
+    "apply": {
+      "title": "Fill in the application",
+      "text": "Share the key details in just a few minutes."
+    },
+    "offer": {
+      "title": "Receive your offer",
+      "text": "Our specialist contacts you with a personalised offer."
+    }
+  },
+  "Benefits": {
+    "eyebrow": "Why SığortaPro?",
+    "title": "We make insurance simple and clear",
+    "description": "Every step is designed around your convenience — from choosing cover to applying for it.",
+    "easyOnline": {
+      "title": "Easy online application",
+      "text": "Prepare your application on any device with a clear, friendly form."
+    },
+    "timeSaving": {
+      "title": "Time-saving process",
+      "text": "Get started without visiting an office or waiting in line."
+    },
+    "personal": {
+      "title": "Personalised approach",
+      "text": "We listen to your needs and suggest a solution that fits."
+    },
+    "options": {
+      "title": "A range of insurance options",
+      "text": "Motor, travel, property and life insurance in one place."
+    },
+    "communication": {
+      "title": "Convenient communication",
+      "text": "Phone or WhatsApp — reach us whichever way suits you."
+    },
+    "simple": {
+      "title": "Simple, clear service",
+      "text": "We explain terms in plain language so you know exactly what you’re choosing."
+    }
+  },
+  "Pricing": {
+    "eyebrow": "Prices and plans",
+    "title": "Clear plans, personalised offers",
+    "description": "Key plan options for each type of insurance. Your exact price is calculated from your details.",
+    "coverage": "Coverage",
+    "duration": "Term",
+    "included": "Included",
+    "price": "Price",
+    "recommended": "Recommended",
+    "plan": "Plan",
+    "viewAll": "See all plans",
+    "previous": "Previous",
+    "next": "Next",
+    "disclaimer": "This information is for guidance only. Exact terms, coverage and price are determined individually and governed by the insurance contract."
+  },
+  "Faq": {
+    "eyebrow": "Questions",
+    "title": "Frequently asked questions",
+    "description": "Can’t find your answer? Give us a call or message us on WhatsApp.",
+    "items": [
+      {
+        "question": "How does SığortaPro work?",
+        "answer": "You choose the type of insurance you need and fill in the online application form. Our specialist then contacts you, answers your questions and prepares a personalised offer based on your details."
+      },
+      {
+        "question": "Why aren’t exact prices shown on the website?",
+        "answer": "Insurance premiums depend on the individual characteristics of the vehicle, property, trip or insured person. That’s why we provide the exact price in an offer prepared from your details."
+      },
+      {
+        "question": "How can I contact you?",
+        "answer": "Call us on 070 609 29 69 or message us on WhatsApp. You can also use the online application form on the website."
+      },
+      {
+        "question": "Which types of insurance can I apply for?",
+        "answer": "You can apply for compulsory motor insurance, CASCO, travel, property and life insurance."
+      },
+      {
+        "question": "How is my personal information used?",
+        "answer": "We use your details only to review your application and get in touch with you. You can find more information in our Privacy Policy."
+      }
+    ]
+  },
+  "Cta": {
+    "title": "Have a question? We’re here to help.",
+    "description": "Talk to our specialist by phone or WhatsApp, or start your application online."
+  },
+  "Footer": {
+    "description": "A convenient online platform for motor, travel, property and life insurance. We make insurance simple and clear.",
+    "navigation": "Navigation",
+    "insurance": "Insurance",
+    "contact": "Contact",
+    "contactText": "Questions? Call us or message us on WhatsApp.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms & Conditions",
+    "copyright": "© {year} SığortaPro. All rights reserved."
+  },
+  "WhatsApp": {
+    "fab": "Chat on WhatsApp"
+  },
+  "Breadcrumbs": {
+    "label": "Breadcrumb",
+    "home": "Home"
+  },
+  "ProductPage": {
+    "overview": "Overview",
+    "highlights": "Key features",
+    "coverageTitle": "What’s covered",
+    "coverageDescription": "Depending on the chosen programme, the insurance can cover the following risks.",
+    "coverageNote": "The exact list of risks, limits and exclusions is set out in the insurance contract.",
+    "benefitsTitle": "Why apply with SığortaPro",
+    "tariffsTitle": "Plans",
+    "tariffsDescription": "Explore the plan options. Your exact price is calculated from your details.",
+    "howTitle": "How to apply",
+    "faqTitle": "Frequently asked questions",
+    "relatedTitle": "Other insurance products",
+    "relatedDescription": "Other solutions you might find useful.",
+    "ctaTitle": "Apply now: {name}",
+    "ctaDescription": "Share a few key details — our specialist will help you get a personalised offer."
+  },
+  "InsurancePage": {
+    "eyebrow": "Insurance products",
+    "title": "Online insurance products in Azerbaijan",
+    "description": "Insurance solutions for your car, travels, property and life — each with clear information and a convenient online application.",
+    "compareTitle": "Which motor insurance do I need?",
+    "compareDescription": "Compulsory insurance and CASCO serve different purposes. Here are the key differences:",
+    "compulsoryPoints": [
+      "Required by law",
+      "Covers damage to third parties",
+      "Premium calculated according to rules set by legislation"
+    ],
+    "cascoPoints": ["Voluntary", "Protects your own car", "Terms and price depend on the chosen programme"],
+    "compareNote": "For broader protection, many drivers choose both."
+  },
+  "PricesPage": {
+    "eyebrow": "Prices",
+    "title": "Insurance prices and plans",
+    "description": "Explore the plan options for each type of insurance. Your exact price is calculated individually from your details — apply to get a quote.",
+    "viewProduct": "Learn more",
+    "faqTitle": "Questions about pricing",
+    "faq": [
+      {
+        "question": "How can I get a quote?",
+        "answer": "Fill in the online application, call us or message us on WhatsApp — our specialist will prepare a personalised offer based on your details."
+      },
+      {
+        "question": "What affects the price?",
+        "answer": "Depending on the type of insurance: vehicle characteristics, property type and value, trip length and destination, your age, as well as the selected coverage and deductible."
+      },
+      {
+        "question": "Are the plans on the website final?",
+        "answer": "No. The plans are for guidance only. Exact terms, coverage and price are determined individually and governed by the insurance contract."
+      },
+      {
+        "question": "How is the price of compulsory motor insurance calculated?",
+        "answer": "The premium for compulsory motor insurance is calculated according to rules set by legislation, taking into account the vehicle type and its technical characteristics."
+      }
+    ]
+  },
+  "AboutPage": {
+    "eyebrow": "About us",
+    "title": "Making insurance simple for everyone",
+    "description": "SığortaPro aims to turn choosing insurance into a modern, transparent and convenient digital experience.",
+    "whoTitle": "Who we are",
+    "whoText": [
+      "For many people, insurance means complicated jargon, long documents and lost time. SığortaPro was created to change that experience.",
+      "On our platform you can find clear information about motor, travel, property and life insurance, choose the option that suits you and prepare an online application. Our specialist is ready to answer your questions at every step."
+    ],
+    "missionTitle": "Our mission",
+    "missionText": "To create a simple, trustworthy insurance experience that helps people and families plan their future with confidence.",
+    "valuesTitle": "Our values",
+    "valuesDescription": "The principles behind every decision we make.",
+    "transparency": {
+      "title": "Transparency",
+      "text": "We explain terms openly and in plain language."
+    },
+    "simplicity": {
+      "title": "Simplicity",
+      "text": "We make every step as easy and intuitive as possible."
+    },
+    "trust": {
+      "title": "Trust",
+      "text": "We build long-term relationships on honesty."
+    },
+    "care": {
+      "title": "Care",
+      "text": "We treat every request with personal attention."
+    }
+  },
+  "ContactPage": {
+    "eyebrow": "Contact",
+    "title": "Get in touch",
+    "description": "Have a question or need help choosing insurance? Contact us in whichever way suits you.",
+    "phoneTitle": "Phone",
+    "phoneText": "Speak directly with our specialist.",
+    "whatsappTitle": "WhatsApp",
+    "whatsappText": "Send us your question in writing.",
+    "whatsappAction": "Start a chat",
+    "applyTitle": "Online application",
+    "applyText": "Fill in the form and take the first step towards a personalised offer.",
+    "applyAction": "Fill in the form",
+    "helpTitle": "How can we help?",
+    "helpItems": [
+      "Choosing the right type of insurance",
+      "Explaining terms and coverage in plain language",
+      "Preparing your online application",
+      "Getting a personalised quote"
+    ]
+  },
+  "ApplyPage": {
+    "eyebrow": "Online application",
+    "title": "Apply for insurance online",
+    "description": "Share your details in a few simple steps. Every field is clearly explained.",
+    "asideTitle": "Have a question?",
+    "asideText": "If you need help with your application, call us or message us on WhatsApp.",
+    "privacyNote": "Your details are used only to review your application."
+  },
+  "ApplyForm": {
+    "steps": {
+      "type": "Insurance type",
+      "details": "Details",
+      "contact": "Contact",
+      "review": "Review"
+    },
+    "progress": "Step {current} of {total}",
+    "typeTitle": "Which insurance are you interested in?",
+    "typeDescription": "Choose the type of insurance — in the next step we’ll ask only for what’s needed.",
+    "detailsTitle": "Key details",
+    "detailsDescription": "These details help us prepare a more accurate offer for you.",
+    "contactTitle": "How can we reach you?",
+    "contactDescription": "Our specialist will use these details to get in touch with you.",
+    "reviewTitle": "Review your details",
+    "reviewDescription": "If everything looks right, confirm your application. You can go back and edit any section if needed.",
+    "next": "Continue",
+    "back": "Back",
+    "submit": "Confirm application",
+    "submitting": "Checking…",
+    "edit": "Edit",
+    "optional": "optional",
+    "requiredHint": "Fields marked * are required",
+    "selectPlaceholder": "Select",
+    "change": "Change",
+    "fixErrors": "Please correct the highlighted fields.",
+    "fields": {
+      "insuranceType": "Insurance type",
+      "fullName": "Full name",
+      "fullNamePlaceholder": "e.g. Aysel Mammadova",
+      "phone": "Phone number",
+      "phonePlaceholder": "070 609 29 69",
+      "phoneHint": "Our specialist will contact you on this number",
+      "email": "Email",
+      "emailPlaceholder": "name@example.com",
+      "additionalInfo": "Additional information",
+      "additionalInfoPlaceholder": "Add any questions or extra requests",
+      "consent": "I agree to the processing of my personal data for reviewing my application and have read the <link>Privacy Policy</link>.",
+      "registrationNumber": "Registration number",
+      "registrationNumberPlaceholder": "10-AA-123",
+      "brandModel": "Make and model",
+      "brandModelPlaceholder": "e.g. Toyota Camry",
+      "year": "Year of manufacture",
+      "yearPlaceholder": "e.g. 2020",
+      "technicalDetails": "Technical details",
+      "vehicleType": "Vehicle type",
+      "engineVolume": "Engine capacity (cm³)",
+      "engineVolumePlaceholder": "e.g. 2000",
+      "vehicleValue": "Estimated vehicle value (₼)",
+      "vehicleValuePlaceholder": "e.g. 25000",
+      "cascoCoverage": "Desired coverage",
+      "destination": "Destination country",
+      "destinationPlaceholder": "e.g. Germany",
+      "startDate": "Start date",
+      "endDate": "End date",
+      "travelers": "Number of travellers",
+      "decrease": "Decrease",
+      "increase": "Increase",
+      "duration": "Insurance duration",
+      "durationValue": "{count, plural, one {# day} other {# days}}",
+      "durationHint": "Calculated automatically from your dates",
+      "durationEmpty": "Select your dates",
+      "propertyAddress": "Property address",
+      "propertyAddressPlaceholder": "City, street, building",
+      "propertyType": "Property type",
+      "propertyValue": "Estimated value (₼)",
+      "propertyValuePlaceholder": "e.g. 150000",
+      "propertyCoverage": "Desired coverage",
+      "propertyCoverageHint": "Select one or more options",
+      "age": "Your age",
+      "agePlaceholder": "e.g. 35",
+      "lifeTerm": "Desired insurance term"
+    },
+    "options": {
+      "vehicleType": {
+        "car": "Passenger car",
+        "truck": "Truck",
+        "bus": "Bus / minibus",
+        "motorcycle": "Motorcycle",
+        "other": "Other"
+      },
+      "cascoCoverage": {
+        "essential": "Essential",
+        "standard": "Standard",
+        "comprehensive": "Comprehensive",
+        "advice": "Not sure"
+      },
+      "cascoCoverageHint": {
+        "essential": "Theft, total loss, fire",
+        "standard": "Accidents, natural disasters, glass",
+        "comprehensive": "Broad cover and extra services",
+        "advice": "A specialist will suggest the right option"
+      },
+      "propertyType": {
+        "apartment": "Apartment",
+        "house": "Private house",
+        "country": "Country house",
+        "commercial": "Commercial property"
+      },
+      "propertyCoverage": {
+        "fire": "Fire",
+        "water": "Water damage",
+        "natural": "Natural disasters",
+        "theft": "Theft",
+        "liability": "Liability to neighbours"
+      },
+      "lifeTerm": {
+        "y1": "1 year",
+        "y5": "5 years",
+        "y10": "10 years",
+        "y15": "15 years",
+        "y20": "20 years or more"
+      }
+    },
+    "review": {
+      "type": "Insurance type",
+      "details": "Details",
+      "contact": "Contact details",
+      "notProvided": "Not provided",
+      "consentGiven": "Consent given"
+    },
+    "demoBanner": {
+      "title": "Demo mode",
+      "text": "The online form is currently in demonstration mode: your details are validated but not sent anywhere. To apply, please call us or message us on WhatsApp."
+    },
+    "demoSuccess": {
+      "badge": "Demo",
+      "title": "Your form passed all checks",
+      "text": "This is a demonstration — your application has not been sent or stored anywhere. You can send your details to us via WhatsApp or give us a call.",
+      "whatsapp": "Send details via WhatsApp",
+      "restart": "Start a new application"
+    },
+    "submitted": {
+      "title": "Your application has been sent",
+      "text": "Our specialist will contact you shortly.",
+      "reference": "Application number: {reference}",
+      "restart": "Start a new application"
+    },
+    "error": {
+      "title": "Something went wrong",
+      "text": "Please try again in a moment or give us a call.",
+      "retry": "Try again"
+    },
+    "whatsappIntro": "Hello! I’d like to apply for insurance via the SığortaPro website."
+  },
+  "Validation": {
+    "required": "This field is required",
+    "selectType": "Please choose an insurance type",
+    "selectOption": "Please choose an option",
+    "fullName": "Please enter your first and last name",
+    "phone": "Enter a valid phone number, e.g. 070 609 29 69",
+    "email": "Enter a valid email address",
+    "plate": "Enter a valid registration number, e.g. 10-AA-123",
+    "year": "Enter a valid year of manufacture",
+    "amount": "Enter a valid amount",
+    "engine": "Enter a valid engine capacity",
+    "date": "Please select a date",
+    "datePast": "The date can’t be in the past",
+    "dateRange": "The date must be within the next 2 years",
+    "endBeforeStart": "The end date can’t be before the start date",
+    "tripLength": "The trip can’t be longer than 365 days",
+    "travelers": "Choose between 1 and 10 travellers",
+    "age": "Age must be between 18 and 80",
+    "coverage": "Select at least one option",
+    "consent": "Please confirm your consent to continue",
+    "tooLong": "The text is too long",
+    "tooShort": "Please provide more detail"
+  },
+  "Legal": {
+    "intro": "The information on this page applies to the use of the SığortaPro website.",
+    "privacy": [
+      {
+        "title": "General provisions",
+        "body": [
+          "This Privacy Policy explains how personal information you provide while using the SığortaPro website (the “Website”) is collected, used and protected.",
+          "By using the Website, you agree to the terms of this policy."
+        ]
+      },
+      {
+        "title": "Information we collect",
+        "body": [
+          "Information you provide when completing the application form: full name, phone number, email address (optional) and details related to the chosen insurance type (for example, about a vehicle, trip or property).",
+          "Technical information necessary for the Website to function properly (for example, your selected language)."
+        ]
+      },
+      {
+        "title": "How we use information",
+        "body": [
+          "To review your application and contact you; to prepare a suitable insurance offer; to improve the quality of our service; and to comply with legal requirements."
+        ]
+      },
+      {
+        "title": "Sharing of information",
+        "body": [
+          "We do not sell your personal information. It may be shared only when necessary to process your application — with parties involved in providing the insurance service — or where required by law."
+        ]
+      },
+      {
+        "title": "Data protection",
+        "body": [
+          "We take appropriate organisational and technical measures to protect your information against unauthorised access, alteration and loss."
+        ]
+      },
+      {
+        "title": "Your rights",
+        "body": [
+          "In accordance with the legislation of the Republic of Azerbaijan, you have the right to access your personal information and to request its correction or deletion."
+        ]
+      },
+      {
+        "title": "Cookies",
+        "body": [
+          "The Website may use only technical cookies that are necessary for it to function properly. No advertising or tracking cookies are used."
+        ]
+      },
+      {
+        "title": "Changes and contact",
+        "body": [
+          "This policy may be updated from time to time; the updated version will be published on this page.",
+          "For questions about this Privacy Policy, please call 070 609 29 69."
+        ]
+      }
+    ],
+    "terms": [
+      {
+        "title": "General provisions",
+        "body": [
+          "These Terms and Conditions set out the rules for using the SığortaPro website (the “Website”). By using the Website, you accept these terms."
+        ]
+      },
+      {
+        "title": "Description of the service",
+        "body": [
+          "The Website lets you find information about insurance products and prepare an online application. Information on the Website is for guidance only and does not constitute a public offer."
+        ]
+      },
+      {
+        "title": "Prices and terms",
+        "body": [
+          "Plans, coverage and other information shown on the Website are preliminary. Exact insurance terms, coverage and premiums are determined individually and governed by the insurance contract concluded."
+        ]
+      },
+      {
+        "title": "User obligations",
+        "body": [
+          "To provide accurate and complete information when applying, to use the Website only for lawful purposes and not to interfere with its operation."
+        ]
+      },
+      {
+        "title": "Intellectual property",
+        "body": [
+          "Texts, design, logo and other materials on the Website belong to SığortaPro and may not be used without permission."
+        ]
+      },
+      {
+        "title": "Limitation of liability",
+        "body": [
+          "We strive to keep the information on the Website up to date, but we are not liable for consequences arising from technical interruptions or changes in information."
+        ]
+      },
+      {
+        "title": "Governing law",
+        "body": ["These terms are governed by the legislation of the Republic of Azerbaijan."]
+      },
+      {
+        "title": "Changes and contact",
+        "body": [
+          "These terms may be updated from time to time; the updated version will be published on this page.",
+          "For any questions, please call 070 609 29 69."
+        ]
+      }
+    ]
+  },
+  "NotFound": {
+    "code": "404",
+    "title": "Page not found",
+    "description": "The page you’re looking for doesn’t exist or has been moved.",
+    "home": "Back to home",
+    "browse": "Browse insurance products"
+  }
+}
