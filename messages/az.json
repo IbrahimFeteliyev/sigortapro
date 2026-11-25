@@ -12,7 +12,7 @@
     },
     "prices": {
       "title": "Sığorta qiymətləri və tariflər",
-      "description": "Avtomobil, KASKO, səyahət, əmlak və həyat sığortası üzrə tariflərlə tanış olun və məlumatlarınıza əsasən fərdi qiymət təklifi alın."
+      "description": "Standart əmlak sığortasının region üzrə qiymətləri, həyat sığortası tarif cədvəli və digər sığorta növləri üçün fərdi qiymət təklifi."
     },
     "about": {
       "title": "Haqqımızda",
@@ -20,7 +20,7 @@
     },
     "contact": {
       "title": "Əlaqə",
-      "description": "SığortaPro ilə əlaqə: 070 609 29 69 nömrəsinə zəng edin və ya WhatsApp-a yazın. Sığorta seçimində sizə kömək edək."
+      "description": "SığortaPro ilə əlaqə: {phone} nömrəsinə zəng edin və ya WhatsApp-a yazın. Sığorta seçimində sizə kömək edək."
     },
     "apply": {
       "title": "Onlayn sığorta müraciəti",
@@ -36,6 +36,10 @@
     },
     "notFound": {
       "title": "Səhifə tapılmadı"
+    },
+    "companies": {
+      "title": "Sığorta şirkətləri",
+      "description": "Azərbaycanın tanınmış sığorta şirkətləri: Atəşgah, PAŞA, MEGA, Qala, Xalq və Azərbaycan Sənaye Sığorta. Suallarınız üçün SığortaPro ilə əlaqə saxlayın."
     }
   },
   "Common": {
@@ -43,11 +47,8 @@
     "apply": "Müraciət et",
     "details": "Ətraflı",
     "getQuote": "Qiymət təklifi al",
-    "priceOnRequest": "Qiymət sorğu əsasında",
-    "fromPrice": "{price} ₼-dan",
     "mandatory": "Məcburi",
     "voluntary": "Könüllü",
-    "popular": "Populyar",
     "allProducts": "Bütün sığorta növləri",
     "call": "Zəng et",
     "whatsapp": "WhatsApp",
@@ -70,7 +71,8 @@
     "homeAria": "SığortaPro — ana səhifə",
     "productsMenu": "Sığorta növləri",
     "allProducts": "Bütün sığorta məhsulları",
-    "needHelp": "Köməyə ehtiyacınız var?"
+    "needHelp": "Köməyə ehtiyacınız var?",
+    "companies": "Sığorta şirkətləri"
   },
   "LocaleSwitcher": {
     "label": "Dil",
@@ -84,38 +86,18 @@
     "title": "Gələcəyinizi <brand>SığortaPro</brand> ilə qoruyun!",
     "description": "Avtomobilinizi, evinizi, səyahətinizi və həyatınızı rahat və etibarlı sığorta həlləri ilə qoruyun.",
     "ctaPrimary": "Sığorta seç",
-    "ctaSecondary": "Müraciət et",
     "quickLabel": "Hansı sığorta lazımdır?",
     "quickPlaceholder": "Sığorta növünü seçin",
     "quickSubmit": "Təklif al",
-    "visualTitle": "Sığortanı seçin",
     "visualProtected": "Etibarlı qoruma",
     "visualApplication": "Onlayn müraciət",
     "visualApplicationText": "Sadə addımlarla",
     "visualWhatsapp": "WhatsApp ilə əlaqə"
   },
-  "Trust": {
-    "online": {
-      "title": "Onlayn müraciət",
-      "text": "İstənilən cihazdan, istənilən vaxt"
-    },
-    "advice": {
-      "title": "Fərdi məsləhət",
-      "text": "Uyğun həllin seçimində kömək"
-    },
-    "contact": {
-      "title": "Rahat əlaqə",
-      "text": "Telefon və ya WhatsApp ilə"
-    },
-    "languages": {
-      "title": "Üç dildə",
-      "text": "Azərbaycan, ingilis və rus dillərində"
-    }
-  },
   "Products": {
     "eyebrow": "Sığorta məhsulları",
-    "title": "Sizə uyğun sığortanı seçin",
-    "description": "Avtomobil, səyahət, əmlak və həyat — hər biri üçün aydın şərtlər və rahat onlayn müraciət.",
+    "title": "Sizə lazım olan sığortanı seçin",
+    "description": "Sığorta növünə toxunun — müraciət formasını dərhal görəcəksiniz.",
     "viewAll": "Bütün sığorta növlərinə bax"
   },
   "HowItWorks": {
@@ -164,21 +146,6 @@
       "text": "Şərtləri sadə dildə izah edirik ki, nə seçdiyinizi dəqiq biləsiniz."
     }
   },
-  "Pricing": {
-    "eyebrow": "Qiymətlər və tariflər",
-    "title": "Şəffaf tariflər, fərdi təkliflər",
-    "description": "Hər sığorta növü üçün əsas tarif seçimləri. Dəqiq qiymət sizin məlumatlarınıza əsasən hesablanır.",
-    "coverage": "Əhatə",
-    "duration": "Müddət",
-    "included": "Daxildir",
-    "price": "Qiymət",
-    "recommended": "Tövsiyə olunur",
-    "plan": "Tarif",
-    "viewAll": "Bütün tariflərə bax",
-    "previous": "Əvvəlki",
-    "next": "Növbəti",
-    "disclaimer": "Məlumatlar tanışlıq məqsədi daşıyır. Dəqiq şərtlər, təminatlar və qiymət fərdi qaydada müəyyən edilir və sığorta müqaviləsi ilə tənzimlənir."
-  },
   "Faq": {
     "eyebrow": "Suallar",
     "title": "Tez-tez verilən suallar",
@@ -194,7 +161,7 @@
       },
       {
         "question": "Sizinlə necə əlaqə saxlaya bilərəm?",
-        "answer": "070 609 29 69 nömrəsinə zəng edə və ya WhatsApp vasitəsilə yaza bilərsiniz. Həmçinin saytdakı onlayn müraciət formasından istifadə edə bilərsiniz."
+        "answer": "{phone} nömrəsinə zəng edə və ya WhatsApp vasitəsilə yaza bilərsiniz. Həmçinin saytdakı onlayn müraciət formasından istifadə edə bilərsiniz."
       },
       {
         "question": "Hansı sığorta növləri üçün müraciət etmək olar?",
@@ -229,19 +196,43 @@
   },
   "ProductPage": {
     "overview": "Ümumi məlumat",
-    "highlights": "Əsas xüsusiyyətlər",
-    "coverageTitle": "Nələri əhatə edir",
-    "coverageDescription": "Seçilmiş proqramdan asılı olaraq sığorta aşağıdakı riskləri əhatə edə bilər.",
-    "coverageNote": "Dəqiq risklər siyahısı, limitlər və istisnalar sığorta müqaviləsində müəyyən edilir.",
-    "benefitsTitle": "SığortaPro ilə üstünlüklər",
-    "tariffsTitle": "Tariflər",
-    "tariffsDescription": "Tarif seçimləri ilə tanış olun. Dəqiq qiymət məlumatlarınıza əsasən hesablanır.",
     "howTitle": "Necə müraciət etmək olar",
     "faqTitle": "Tez-tez verilən suallar",
     "relatedTitle": "Digər sığorta növləri",
     "relatedDescription": "Sizi maraqlandıra biləcək digər həllər.",
     "ctaTitle": "{name} üçün müraciət edin",
-    "ctaDescription": "Əsas məlumatları qeyd edin — mütəxəssisimiz sizə fərdi təklif hazırlamağa kömək edəcək."
+    "ctaDescription": "Formu doldurun və ya zəng edin — mütəxəssisimiz sizə fərdi təklif hazırlamağa kömək edəcək.",
+    "applyTitle": {
+      "car-insurance": "İcbari sığorta üçün müraciət",
+      "casco": "KASKO üçün müraciət",
+      "travel": "Səyahət sığortası üçün müraciət",
+      "property": "Əmlak sığortasının növünü seçin",
+      "life": "Həyat sığortası üçün müraciət"
+    },
+    "applyDescription": "Bir neçə sahəni doldurun — mütəxəssisimiz fərdi təkliflə sizinlə əlaqə saxlayacaq.",
+    "coverageTitle": {
+      "car-insurance": "İcbari sığorta nəyi əhatə edir",
+      "casco": "KASKO nələri əhatə edə bilər",
+      "travel": "Səyahət sığortası nələri əhatə edə bilər",
+      "property": "Əmlakın KASKO sığortası nələri əhatə edə bilər",
+      "life": "Sağalmaz xəstəliklər"
+    },
+    "coverageDescription": {
+      "car-insurance": "İcbari sığorta sizin üçüncü şəxslər qarşısında mülki məsuliyyətinizi qoruyur.",
+      "casco": "Seçilmiş proqramdan asılı olaraq KASKO avtomobilinizi aşağıdakı hallardan qoruya bilər.",
+      "travel": "Seçilmiş proqramdan asılı olaraq səyahət sığortası aşağıdakı halları əhatə edə bilər.",
+      "property": "Könüllü Əmlakın KASKO sığortası əmlakın dəyərinə əsaslanır və aşağıdakı riskləri əhatə edə bilər.",
+      "life": "Sağalmaz xəstəliklərdən sığorta aşağıdakı ağır xəstəliklərin diaqnozu zamanı ödəniş nəzərdə tuta bilər."
+    },
+    "coverageNote": "Bu kateqoriyalar tanışlıq məqsədi daşıyır və müqavilə təminatı deyil. Dəqiq risklər, limitlər və istisnalar sığorta müqaviləsində müəyyən edilir.",
+    "voluntaryEyebrow": "Könüllü sığorta",
+    "voluntaryNote": "Bu təminatlar könüllü Əmlakın KASKO sığortasına aiddir və standart əmlak sığortası paketinə avtomatik daxil deyil. Dəqiq şərtlər polis müqaviləsində müəyyən edilir.",
+    "standardEyebrow": "Standart əmlak sığortası",
+    "standardTableTitle": "Region üzrə təminat və qiymət",
+    "standardTableDescription": "Standart paketdə təminat məbləği və sığorta haqqı əmlakın yerləşdiyi regiondan asılıdır.",
+    "standardTableNote": "Rəsmiləşdirmə zamanı polisin şərtləri ilə tanış olun. Sualınız varsa, mütəxəssisimizlə əlaqə saxlayın.",
+    "lifeTableTitle": "Tarif cədvəli",
+    "lifeTableDescription": "Kateqoriyanı seçin: sığorta haqqı yaş qrupu və təminat məbləğinə görə müəyyən edilir."
   },
   "InsurancePage": {
     "eyebrow": "Sığorta məhsulları",
@@ -263,22 +254,34 @@
   },
   "PricesPage": {
     "eyebrow": "Qiymətlər",
-    "title": "Sığorta qiymətləri və tariflər",
-    "description": "Hər sığorta növü üzrə tarif seçimləri ilə tanış olun. Dəqiq qiymət sizin məlumatlarınıza əsasən fərdi qaydada hesablanır — qiymət təklifi almaq üçün müraciət edin.",
-    "viewProduct": "Ətraflı məlumat",
+    "title": "Sığorta qiymətləri",
+    "description": "Standart əmlak və həyat sığortası üzrə tariflər, digər sığorta növləri üçün isə məlumatlarınıza əsaslanan fərdi qiymət təklifi.",
+    "propertyTitle": "Standart əmlak sığortası",
+    "propertyDescription": "Təminat məbləği və sığorta haqqı əmlakın yerləşdiyi regiondan asılıdır.",
+    "applyProperty": "Əmlak sığortası üçün müraciət et",
+    "lifeTitle": "Güvənli həyat sığortası",
+    "lifeDescription": "Qiymət sığorta kateqoriyası, yaş qrupu və təminat məbləğinə görə müəyyən edilir.",
+    "quoteTitle": "Fərdi qiymət təklifi",
+    "quoteDescription": "Bu sığorta növlərində qiymət sizin məlumatlarınıza əsasən hesablanır.",
+    "quoteNote": {
+      "car-insurance": "Sığorta haqqı qanunvericiliklə müəyyən edilmiş qaydada, nəqliyyat vasitəsinin növü və texniki göstəricilərinə görə hesablanır.",
+      "casco": "Qiymət avtomobilin bazar dəyəri, markası, modeli və buraxılış ilindən asılıdır.",
+      "travel": "Qiymət səfərin müddətindən, istiqamətindən və səyahətçilərin sayından asılıdır."
+    },
+    "getQuote": "Qiymət təklifi al",
     "faqTitle": "Qiymətlərlə bağlı suallar",
     "faq": [
       {
         "question": "Qiymət təklifini necə ala bilərəm?",
-        "answer": "Onlayn müraciət formasını doldurun, zəng edin və ya WhatsApp-a yazın — mütəxəssisimiz məlumatlarınıza əsasən fərdi təklif hazırlayacaq."
+        "answer": "Müvafiq sığorta səhifəsindəki formanı doldurun, {phone} nömrəsinə zəng edin və ya WhatsApp-a yazın — mütəxəssisimiz fərdi təklif hazırlayacaq."
       },
       {
-        "question": "Qiymətə hansı amillər təsir edir?",
-        "answer": "Sığorta növündən asılı olaraq: nəqliyyat vasitəsinin göstəriciləri, əmlakın növü və dəyəri, səfərin müddəti və istiqaməti, yaşınız, həmçinin seçilmiş təminatlar və azadolma məbləği."
+        "question": "Standart əmlak sığortasının qiyməti necə müəyyən edilir?",
+        "answer": "Standart paketdə təminat məbləği və sığorta haqqı əmlakın yerləşdiyi regiona görə sabitdir — məsələn, Bakı üçün 25 000 AZN təminat 50 AZN-dir."
       },
       {
-        "question": "Saytda göstərilən tariflər yekundurmu?",
-        "answer": "Xeyr. Tariflər tanışlıq məqsədi daşıyır. Dəqiq şərtlər, təminatlar və qiymət fərdi qaydada müəyyən edilir və sığorta müqaviləsi ilə tənzimlənir."
+        "question": "Həyat sığortasının qiyməti nədən asılıdır?",
+        "answer": "Qiymət sığorta kateqoriyasından, yaş qrupundan və seçilmiş təminat məbləğindən asılıdır. Tarif təsdiqlənməyən seçimlər üçün fərdi təklif hazırlanır."
       },
       {
         "question": "İcbari sığortanın qiyməti necə hesablanır?",
@@ -339,175 +342,33 @@
   "ApplyPage": {
     "eyebrow": "Onlayn müraciət",
     "title": "Sığorta üçün onlayn müraciət",
-    "description": "Bir neçə sadə addımda məlumatlarınızı qeyd edin. Hər sahə aydın izah olunub.",
+    "description": "Sığorta növünü seçin və qısa formanı doldurun. Hər sahə aydın izah olunub.",
     "asideTitle": "Sualınız var?",
     "asideText": "Müraciətlə bağlı köməyə ehtiyacınız olarsa, bizə zəng edin və ya WhatsApp-a yazın.",
     "privacyNote": "Məlumatlarınız yalnız müraciətinizə baxılması məqsədilə istifadə olunur."
   },
-  "ApplyForm": {
-    "steps": {
-      "type": "Sığorta növü",
-      "details": "Məlumatlar",
-      "contact": "Əlaqə",
-      "review": "Təsdiq"
-    },
-    "progress": "Addım {current} / {total}",
-    "typeTitle": "Hansı sığorta sizi maraqlandırır?",
-    "typeDescription": "Sığorta növünü seçin — növbəti addımda yalnız lazım olan məlumatları soruşacağıq.",
-    "detailsTitle": "Əsas məlumatlar",
-    "detailsDescription": "Bu məlumatlar sizə daha dəqiq təklif hazırlamağa kömək edəcək.",
-    "contactTitle": "Sizinlə necə əlaqə saxlayaq?",
-    "contactDescription": "Mütəxəssisimiz bu məlumatlar vasitəsilə sizinlə əlaqə saxlayacaq.",
-    "reviewTitle": "Məlumatları yoxlayın",
-    "reviewDescription": "Hər şey düzgündürsə, müraciəti təsdiqləyin. Lazım olarsa, istənilən bölməyə qayıdıb düzəliş edə bilərsiniz.",
-    "next": "Davam et",
-    "back": "Geri",
-    "submit": "Müraciəti təsdiqlə",
-    "submitting": "Yoxlanılır…",
-    "edit": "Düzəliş et",
-    "optional": "istəyə bağlı",
-    "requiredHint": "* ilə işarələnmiş xanalar məcburidir",
-    "selectPlaceholder": "Seçin",
-    "change": "Dəyiş",
-    "fixErrors": "Zəhmət olmasa qeyd olunan xanaları düzəldin.",
-    "fields": {
-      "insuranceType": "Sığorta növü",
-      "fullName": "Ad və soyad",
-      "fullNamePlaceholder": "Məs.: Aysel Məmmədova",
-      "phone": "Telefon nömrəsi",
-      "phonePlaceholder": "070 609 29 69",
-      "phoneHint": "Mütəxəssisimiz bu nömrə ilə sizinlə əlaqə saxlayacaq",
-      "email": "E-poçt",
-      "emailPlaceholder": "ad@example.com",
-      "additionalInfo": "Əlavə məlumat",
-      "additionalInfoPlaceholder": "Suallarınızı və ya əlavə istəklərinizi qeyd edin",
-      "consent": "Şəxsi məlumatlarımın müraciətə baxılması məqsədilə işlənməsinə razıyam və <link>Məxfilik siyasəti</link> ilə tanış oldum.",
-      "registrationNumber": "Dövlət qeydiyyat nişanı",
-      "registrationNumberPlaceholder": "10-AA-123",
-      "brandModel": "Marka və model",
-      "brandModelPlaceholder": "Məs.: Toyota Camry",
-      "year": "Buraxılış ili",
-      "yearPlaceholder": "Məs.: 2020",
-      "technicalDetails": "Texniki göstəricilər",
-      "vehicleType": "Nəqliyyat vasitəsinin növü",
-      "engineVolume": "Mühərrikin həcmi (sm³)",
-      "engineVolumePlaceholder": "Məs.: 2000",
-      "vehicleValue": "Avtomobilin təxmini dəyəri (₼)",
-      "vehicleValuePlaceholder": "Məs.: 25000",
-      "cascoCoverage": "İstədiyiniz təminat",
-      "destination": "Təyinat ölkəsi",
-      "destinationPlaceholder": "Məs.: Almaniya",
-      "startDate": "Başlama tarixi",
-      "endDate": "Bitmə tarixi",
-      "travelers": "Səyahətçilərin sayı",
-      "decrease": "Azalt",
-      "increase": "Artır",
-      "duration": "Sığorta müddəti",
-      "durationValue": "{count} gün",
-      "durationHint": "Tarixlərə əsasən avtomatik hesablanır",
-      "durationEmpty": "Tarixləri seçin",
-      "propertyAddress": "Əmlakın ünvanı",
-      "propertyAddressPlaceholder": "Şəhər, küçə, ev",
-      "propertyType": "Əmlakın növü",
-      "propertyValue": "Təxmini dəyər (₼)",
-      "propertyValuePlaceholder": "Məs.: 150000",
-      "propertyCoverage": "İstədiyiniz təminatlar",
-      "propertyCoverageHint": "Bir və ya bir neçə variant seçin",
-      "age": "Yaşınız",
-      "agePlaceholder": "Məs.: 35",
-      "lifeTerm": "İstədiyiniz sığorta müddəti"
-    },
-    "options": {
-      "vehicleType": {
-        "car": "Minik avtomobili",
-        "truck": "Yük avtomobili",
-        "bus": "Avtobus / mikroavtobus",
-        "motorcycle": "Motosiklet",
-        "other": "Digər"
-      },
-      "cascoCoverage": {
-        "essential": "Əsas",
-        "standard": "Standart",
-        "comprehensive": "Geniş",
-        "advice": "Əmin deyiləm"
-      },
-      "cascoCoverageHint": {
-        "essential": "Oğurluq, tam məhv olma, yanğın",
-        "standard": "Qəza, təbii fəlakətlər, şüşə zədələri",
-        "comprehensive": "Geniş əhatə və əlavə xidmətlər",
-        "advice": "Mütəxəssis sizə uyğun variantı təklif edəcək"
-      },
-      "propertyType": {
-        "apartment": "Mənzil",
-        "house": "Fərdi ev",
-        "country": "Bağ evi",
-        "commercial": "Kommersiya obyekti"
-      },
-      "propertyCoverage": {
-        "fire": "Yanğın",
-        "water": "Su basması",
-        "natural": "Təbii fəlakətlər",
-        "theft": "Oğurluq",
-        "liability": "Qonşular qarşısında məsuliyyət"
-      },
-      "lifeTerm": {
-        "y1": "1 il",
-        "y5": "5 il",
-        "y10": "10 il",
-        "y15": "15 il",
-        "y20": "20 il və daha çox"
-      }
-    },
-    "review": {
-      "type": "Sığorta növü",
-      "details": "Məlumatlar",
-      "contact": "Əlaqə məlumatları",
-      "notProvided": "Qeyd edilməyib",
-      "consentGiven": "Razılıq verilib"
-    },
-    "demoBanner": {
-      "title": "Nümayiş rejimi",
-      "text": "Onlayn forma hazırda nümayiş rejimində işləyir: məlumatlar yoxlanılır, lakin heç yerə göndərilmir. Müraciət üçün bizə zəng edin və ya WhatsApp-a yazın."
-    },
-    "demoSuccess": {
-      "badge": "Demo",
-      "title": "Forma uğurla yoxlanıldı",
-      "text": "Bu, nümayiş versiyasıdır — müraciətiniz göndərilmədi və heç yerdə saxlanılmadı. Məlumatlarınızı WhatsApp vasitəsilə bizə göndərə və ya zəng edə bilərsiniz.",
-      "whatsapp": "Məlumatları WhatsApp ilə göndər",
-      "restart": "Yeni müraciət"
-    },
-    "submitted": {
-      "title": "Müraciətiniz göndərildi",
-      "text": "Mütəxəssisimiz tezliklə sizinlə əlaqə saxlayacaq.",
-      "reference": "Müraciət nömrəsi: {reference}",
-      "restart": "Yeni müraciət"
-    },
-    "error": {
-      "title": "Xəta baş verdi",
-      "text": "Zəhmət olmasa bir az sonra yenidən cəhd edin və ya bizə zəng edin.",
-      "retry": "Yenidən cəhd et"
-    },
-    "whatsappIntro": "Salam! SığortaPro saytı vasitəsilə sığorta üçün müraciət etmək istəyirəm."
-  },
   "Validation": {
     "required": "Bu xananı doldurun",
-    "selectType": "Sığorta növünü seçin",
     "selectOption": "Variantlardan birini seçin",
+    "name": "Yalnız hərflərdən istifadə edin",
     "fullName": "Ad və soyadınızı tam daxil edin",
-    "phone": "Düzgün telefon nömrəsi daxil edin, məs.: 070 609 29 69",
+    "phone": "Düzgün nömrə daxil edin: 0XX XXX XX XX",
     "email": "Düzgün e-poçt ünvanı daxil edin",
-    "plate": "Qeydiyyat nişanını düzgün daxil edin, məs.: 10-AA-123",
+    "plate": "Nişanı düzgün daxil edin, məs.: 10-AA-100",
+    "fin": "FİN kod 7 simvoldan (hərf və rəqəm) ibarət olmalıdır",
+    "voen": "VÖEN 10 rəqəmdən ibarət olmalıdır",
+    "idNumber": "Nömrə seriyaya uyğun olmalıdır: AZE — 8, AA — 7 rəqəm",
+    "registrationCertificate": "Seriyanı (2 hərf) və nömrəni (6 rəqəm) daxil edin",
+    "drivingLicence": "Seriyanı (2 hərf) və nömrəni (6 rəqəm) daxil edin",
     "year": "Düzgün buraxılış ili daxil edin",
-    "amount": "Düzgün məbləğ daxil edin",
-    "engine": "Mühərrikin həcmini düzgün daxil edin",
+    "amount": "Məbləğ sıfırdan böyük olmalıdır",
     "date": "Tarixi seçin",
     "datePast": "Tarix bu gündən əvvəl ola bilməz",
     "dateRange": "Tarix növbəti 2 il ərzində olmalıdır",
-    "endBeforeStart": "Bitmə tarixi başlama tarixindən əvvəl ola bilməz",
-    "tripLength": "Səfər müddəti 365 gündən çox ola bilməz",
+    "endBeforeStart": "Bitmə tarixi başlanğıc tarixindən əvvəl ola bilməz",
+    "tripLength": "Səyahət müddəti 365 gündən çox ola bilməz",
     "travelers": "1 ilə 10 arasında say seçin",
     "age": "Yaş 18 ilə 80 arasında olmalıdır",
-    "coverage": "Ən azı bir variant seçin",
     "consent": "Davam etmək üçün razılığınızı təsdiqləyin",
     "tooLong": "Mətn çox uzundur",
     "tooShort": "Daha ətraflı qeyd edin"
@@ -563,7 +424,7 @@
         "title": "Dəyişikliklər və əlaqə",
         "body": [
           "Bu siyasət vaxtaşırı yenilənə bilər; yenilənmiş versiya bu səhifədə dərc olunur.",
-          "Məxfilik siyasəti ilə bağlı suallarınız üçün 070 609 29 69 nömrəsi ilə əlaqə saxlaya bilərsiniz."
+          "Məxfilik siyasəti ilə bağlı suallarınız üçün {phone} nömrəsi ilə əlaqə saxlaya bilərsiniz."
         ]
       }
     ],
@@ -612,7 +473,7 @@
         "title": "Dəyişikliklər və əlaqə",
         "body": [
           "Bu şərtlər vaxtaşırı yenilənə bilər; yenilənmiş versiya bu səhifədə dərc olunur.",
-          "Suallarınız üçün 070 609 29 69 nömrəsi ilə əlaqə saxlaya bilərsiniz."
+          "Suallarınız üçün {phone} nömrəsi ilə əlaqə saxlaya bilərsiniz."
         ]
       }
     ]
@@ -623,5 +484,167 @@
     "description": "Axtardığınız səhifə mövcud deyil və ya başqa ünvana köçürülüb.",
     "home": "Ana səhifəyə qayıt",
     "browse": "Sığorta məhsullarına bax"
+  },
+  "Companies": {
+    "eyebrow": "Sığorta şirkətləri",
+    "title": "Azərbaycanın tanınmış sığorta şirkətləri",
+    "description": "Bazarda fəaliyyət göstərən tanınmış sığorta şirkətləri. Sizə hansı seçimin uyğun olduğunu öyrənmək üçün SığortaPro ilə əlaqə saxlayın.",
+    "viewAll": "Ətraflı",
+    "disclaimer": "Şirkət adları yalnız məlumat məqsədilə göstərilir və rəsmi tərəfdaşlıq və ya təsdiq anlamına gəlmir. Bütün suallar üçün SığortaPro ilə əlaqə saxlayın: {phone}.",
+    "pageTitle": "Sığorta şirkətləri",
+    "pageDescription": "Azərbaycanda fəaliyyət göstərən tanınmış sığorta şirkətləri. Sualınız varsa, bir nömrə ilə SığortaPro-ya müraciət edin.",
+    "contactTitle": "Bütün suallar üçün bir əlaqə nömrəsi",
+    "contactText": "Hansı sığorta növü ilə maraqlanmağınızdan asılı olmayaraq, SığortaPro mütəxəssisi suallarınızı cavablandırır və müraciətinizdə kömək edir.",
+    "contactPoints": [
+      "Sığorta növlərinin sadə dildə izahı",
+      "Sizə uyğun sığortanın seçilməsində kömək",
+      "Müraciətin hazırlanmasında dəstək"
+    ]
+  },
+  "Forms": {
+    "optional": "istəyə bağlı",
+    "requiredHint": "* ilə işarələnmiş xanalar məcburidir",
+    "selectPlaceholder": "Seçin",
+    "submit": "Müraciət et",
+    "submitting": "Yoxlanılır…",
+    "next": "Növbəti",
+    "back": "Geri",
+    "progress": "Addım {current} / {total}",
+    "fixErrors": "Zəhmət olmasa qeyd olunan xanaları düzəldin.",
+    "decrease": "Azalt",
+    "increase": "Artır",
+    "yes": "Bəli",
+    "no": "Xeyr",
+    "none": "Yoxdur",
+    "firstName": "Ad",
+    "lastName": "Soyad",
+    "fullName": "Ad və soyad",
+    "fullNamePlaceholder": "Məs.: Aysel Məmmədova",
+    "phone": "Əlaqə nömrəsi",
+    "phonePlaceholder": "0XX XXX XX XX",
+    "email": "Elektron poçt",
+    "emailPlaceholder": "ad@example.com",
+    "consent": "Şəxsi məlumatlarımın müraciətə baxılması məqsədilə işlənməsinə razıyam və <link>Məxfilik siyasəti</link> ilə tanış oldum.",
+    "chooseProduct": "Sığorta növü",
+    "chooseProductHint": "Müraciət formasını görmək üçün yuxarıdan sığorta növünü seçin.",
+    "demoNote": "Nümayiş rejimi: məlumatlar yoxlanılır, lakin heç yerə göndərilmir və saxlanılmır.",
+    "demoBadge": "Demo",
+    "demoTitle": "Forma uğurla yoxlanıldı",
+    "demoText": "Bu, nümayiş versiyasıdır — müraciətiniz göndərilmədi və heç yerdə saxlanılmadı. Müraciət üçün bizə zəng edin və ya məlumatları WhatsApp vasitəsilə özünüz göndərin.",
+    "sendWhatsapp": "WhatsApp ilə göndər",
+    "sensitiveNote": "FİN kod, sənəd nömrələri və digər şəxsi identifikatorlar WhatsApp mesajına əlavə edilmir.",
+    "restart": "Yeni müraciət",
+    "submittedTitle": "Müraciətiniz göndərildi",
+    "submittedText": "Mütəxəssisimiz tezliklə sizinlə əlaqə saxlayacaq.",
+    "reference": "Müraciət nömrəsi: {reference}",
+    "errorTitle": "Xəta baş verdi",
+    "errorText": "Zəhmət olmasa bir az sonra yenidən cəhd edin və ya bizə zəng edin.",
+    "retry": "Yenidən cəhd et",
+    "whatsappIntro": "Salam! SığortaPro saytından müraciət: {product}",
+    "car": {
+      "stepVehicle": "Nəqliyyat vasitəsi",
+      "stepOwner": "Şəxsi məlumatlar",
+      "stepAddons": "Əlavə təminatlar",
+      "vehicleType": "Nəqliyyat vasitəsinin növü",
+      "engineCapacity": "Mühərrikin həcmi",
+      "year": "Buraxılış ili",
+      "yearPlaceholder": "Məs.: 2020",
+      "personType": "Şəxsin növü",
+      "fin": "FİN kod",
+      "finHint": "7 simvol (hərf və rəqəm) — vəsiqədə göstərilir",
+      "voen": "VÖEN",
+      "voenHint": "10 rəqəm",
+      "idSeries": "Seriya",
+      "idNumber": "Vəsiqənin nömrəsi",
+      "idNumberHint": "{digits} rəqəm",
+      "idDocument": "Şəxsiyyət vəsiqəsi",
+      "plate": "Dövlət qeydiyyat nişanı",
+      "plateHint": "Məs.: {example}",
+      "registrationCertificate": "Qeydiyyat şəhadətnaməsi",
+      "drivingLicence": "Sürücülük vəsiqəsinin seriyası və nömrəsi",
+      "documentHint": "Seriya və nömrə, məs.: {example}",
+      "taxi": "Taksi kimi istifadə olunur",
+      "taxiHint": "Nəqliyyat vasitəsi sərnişin daşımaq üçün taksi kimi istifadə olunursa qeyd edin.",
+      "addonsTitle": "Əlavə təminatlar",
+      "addonsDescription": "İstəyə görə icbari sığortaya əlavə könüllü təminat seçə bilərsiniz.",
+      "priceUnconfirmed": "Qiymət təsdiqlənməyib",
+      "total": "Əlavə təminatların cəmi",
+      "totalNone": "0 AZN",
+      "totalUnavailable": "Qiymət təsdiqləndikdən sonra",
+      "basePremiumNote": "İcbari sığorta haqqı qanunvericiliklə müəyyən edilmiş qaydada hesablanır və təklifdə ayrıca göstəriləcək."
+    },
+    "casco": {
+      "brand": "Avtomobilin markası",
+      "brandPlaceholder": "Məs.: Toyota",
+      "model": "Avtomobilin modeli",
+      "modelPlaceholder": "Məs.: Camry",
+      "year": "Buraxılış ili",
+      "yearPlaceholder": "Məs.: 2020",
+      "marketValue": "Avtomobilin təxmini bazar dəyəri (AZN)",
+      "marketValuePlaceholder": "Məs.: 25 000"
+    },
+    "travel": {
+      "destination": "Gediləcək ölkə və ya region",
+      "startDate": "Səyahətin başlanğıc tarixi",
+      "endDate": "Səyahətin bitmə tarixi",
+      "duration": "Sığorta müddəti",
+      "durationValue": "{count} gün",
+      "durationEmpty": "Tarixləri seçin",
+      "durationHint": "Tarixlərə əsasən avtomatik hesablanır",
+      "travelers": "Səyahət edən şəxslərin sayı"
+    },
+    "property": {
+      "optionsLegend": "Əmlak sığortasının növü",
+      "chooseOption": "Davam etmək üçün sığorta növünü seçin.",
+      "standardTitle": "Standart əmlak sığortası",
+      "standardDescription": "Region üzrə sabit təminat məbləği və sabit qiymət.",
+      "standardBadge": "Sabit qiymət",
+      "cascoTitle": "Əmlakın KASKO sığortası",
+      "cascoDescription": "Əmlakın faktiki dəyərinə əsaslanan fərdi qoruma.",
+      "cascoBadge": "Fərdi təklif",
+      "region": "Region",
+      "coverageAmount": "Təminat məbləği",
+      "price": "Sığorta haqqı",
+      "selectRegionHint": "Qiyməti görmək üçün region seçin.",
+      "address": "Əmlakın ünvanı",
+      "addressPlaceholder": "Şəhər, küçə, ev, mənzil",
+      "propertyType": "Əmlakın növü",
+      "marketValue": "Əmlakın təxmini bazar dəyəri (AZN)",
+      "marketValuePlaceholder": "Məs.: 150 000",
+      "cascoNote": "Sığorta haqqı əmlakın dəyərinə və polis şərtlərinə əsasən fərdi hesablanır — mütəxəssisimiz sizə qiymət təklifi hazırlayacaq.",
+      "getQuote": "Fərdi qiymət təklifi al"
+    },
+    "life": {
+      "category": "Sığorta kateqoriyası",
+      "ageGroup": "Yaş qrupu",
+      "ageGroupValue": "{min}–{max} yaş",
+      "amount": "Təminat məbləği",
+      "amountHint": "Əvvəlcə kateqoriyanı seçin",
+      "price": "Sığorta haqqı",
+      "priceSelect": "Kateqoriya, yaş qrupu və məbləği seçin",
+      "priceUnavailable": "Tarif hələ təsdiqlənməyib",
+      "priceUnavailableNote": "Bu seçim üçün təsdiqlənmiş qiymət yoxdur. Müraciət edin — mütəxəssisimiz fərdi təklif hazırlayacaq.",
+      "tableUnavailableNote": "Rəsmi tarif cədvəli təsdiqləndikdən sonra qiymətlər burada göstəriləcək. Hazırda fərdi təklif üçün müraciət edin.",
+      "age": "Yaş",
+      "agePlaceholder": "Məs.: 35",
+      "term": "Sığorta müddəti",
+      "termValue": "{years} il",
+      "documents": "Şəxsiyyət vəsiqəsi",
+      "documentsValue": "{count} fayl seçildi (göndərilmədi)"
+    },
+    "upload": {
+      "title": "Şəxsiyyət vəsiqəsi",
+      "description": "Vəsiqənin hər iki tərəfinin şəklini və ya PDF faylını əlavə edin.",
+      "dropTitle": "Faylı bura sürükləyin",
+      "dropHint": "JPG, JPEG, PNG və ya PDF · maks. {size} MB · ən çox {count} fayl",
+      "choose": "Fayl seçin",
+      "replace": "{name} faylını dəyiş",
+      "remove": "{name} faylını sil",
+      "previewAlt": "{name} önizləməsi",
+      "errorType": "{name}: yalnız JPG, JPEG, PNG və PDF faylları qəbul edilir",
+      "errorSize": "{name}: fayl {size} MB-dan böyükdür",
+      "errorCount": "Ən çox {count} fayl əlavə edə bilərsiniz",
+      "demoNotice": "Nümayiş: fayllar yalnız brauzerinizdə göstərilir — heç yerə yüklənmir, göndərilmir və saxlanılmır. Sənədlərin onlayn təqdimi hələ mümkün deyil."
+    }
   }
 }

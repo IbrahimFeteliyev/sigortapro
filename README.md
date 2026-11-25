@@ -1,13 +1,14 @@
 # SığortaPro — website (Phase 1, frontend only)
 
-Multilingual (AZ / EN / RU) marketing site and online application flow for SığortaPro, built with
+Multilingual (AZ / EN / RU) insurance website with per-product online application forms, built with
 Next.js 16 (App Router, Cache Components), TypeScript, Tailwind CSS 4, next-intl, Motion, React Hook
 Form and Zod.
 
-**Phase 1 scope:** no backend, database, auth, admin panel or payments. Product content lives in typed
-mock data, and the application form validates fully but **does not submit anywhere**. It ends in a clearly
-labelled demo state (with an optional, user-initiated WhatsApp hand-off). The data layer is ready to point
-at a Spring Boot REST API in Phase 2.
+**Phase 1 scope:** there is no backend, database, auth, admin panel or payment. Content and tariffs live
+in typed config files, and every form validates fully but **does not submit anywhere**. Each form ends in
+a clearly labelled demo state, with an optional WhatsApp hand-off that the user sends themselves. Nothing
+is ever stored: no localStorage, no sessionStorage, no analytics. The data layer is ready to point at a
+Spring Boot REST API in Phase 2.
 
 ## Getting started
 
@@ -30,117 +31,115 @@ npm run dev                  # http://localhost:3000 → redirects to /az
 | Variable                   | Required      | Description                                                                                                                                        |
 | -------------------------- | ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `NEXT_PUBLIC_SITE_URL`     | Yes, for prod | Public origin, e.g. `https://www.example.az`. Drives canonicals, hreflang, sitemap, robots, OG and JSON-LD URLs. The build warns if it is missing. |
-| `NEXT_PUBLIC_API_BASE_URL` | No (Phase 2)  | Spring Boot API origin. Empty means mock data plus demo-mode form.                                                                                 |
+| `NEXT_PUBLIC_API_BASE_URL` | No (Phase 2)  | Spring Boot API origin. If empty, the site uses mock data and the forms run in demo mode.                                                          |
 
 Both are inlined at **build** time, so rebuild after changing them.
+
+## Where to edit things
+
+| What                                                            | File                                              |
+| --------------------------------------------------------------- | ------------------------------------------------- |
+| **Phone number / WhatsApp** (single source of truth)            | `lib/site.ts` → `siteConfig.contact`              |
+| Product texts, FAQs, SEO, hero/card photos                      | `data/products.ts`                                |
+| Coverage cards (CASCO, travel, Property CASCO, illnesses…)      | `data/coverage.ts` (`confirmed` flag per product) |
+| Insurance companies (names, monograms, authorised logos)        | `data/companies.ts`                               |
+| Standard property tariffs by region                             | `data/property-tariffs.ts`                        |
+| Life tariffs (categories, age groups, amounts, prices)          | `data/life-tariffs.ts`                            |
+| Form options, document formats, AVTO+/AVTO EXTRA prices, upload | `data/form-options.ts`                            |
+| Photos (static imports + localized alt text)                    | `data/images.ts`, files in `public/images/`       |
+| UI text                                                         | `messages/{az,en,ru}.json`                        |
+
+Long-form translated text uses a `{phone}` placeholder that is filled from `siteConfig`, so the number is
+never typed into translations.
 
 ## Project structure
 
 ```
-app/
-  [locale]/                 Localized routes (root layout lives here; `locale` is a root param)
-    page.tsx                Home
-    insurance/              Catalogue + insurance/[slug] product pages (+ per-product OG images)
-    prices/ about/ contact/ apply/ privacy-policy/ terms/
-    [...rest]/ not-found.tsx  Localized 404 handling
-  global-not-found.tsx      404 for URLs outside any locale
-  sitemap.ts robots.ts manifest.ts icon.svg apple-icon.tsx logo.png/
+app/[locale]/
+  page.tsx                    Home: hero, product selection, steps, benefits, companies, FAQ
+  insurance/                  Catalogue + [slug] product pages (form embedded in the hero)
+  companies/ prices/ about/ contact/ apply/ privacy-policy/ terms/
 components/
-  layout/                   Header (mega-menu, mobile menu), LocaleSwitcher, Footer, WhatsAppFab
-  home/                     Homepage sections (Hero, TrustBar, Products, Benefits, Pricing)
-  insurance/                ProductCard, ProductGrid, ProductArt, TariffCard, PriceTag, ProductIcon
-  sections/                 Shared sections (PageHero, FAQ, CTA, HowItWorks, LegalDocument)
-  forms/                    Multi-step application form
-  ui/                       Primitives (buttons, Accordion, Carousel, Reveal, Breadcrumbs, JsonLd…)
-data/products.ts            Mock product content (AZ/EN/RU per field)
-i18n/                       next-intl routing, request config, navigation helpers
-lib/api/                    Data-access layer (products, applications, HTTP client)
-lib/validation/             Zod schema for the application form
-lib/                        SEO metadata, structured data, OG renderer, site config
-messages/{az,en,ru}.json    UI strings (az.json is the typed source of truth)
-proxy.ts                    Locale routing (Next 16 “proxy”, formerly middleware)
-assets/fonts/               Onest static TTFs (OFL) used only for generated OG images
+  forms/                      Product forms + shared kit
+    CarInsuranceForm          3 steps: vehicle → person & documents → AVTO+/AVTO EXTRA
+    CascoForm, TravelForm     Single-page forms
+    PropertyForms             Standard (region tariff) / Property CASCO (individual quote)
+    LifeForm, DocumentUpload  Category → age group → amount price lookup; local-only ID upload
+    kit.tsx, fields.tsx       Masked inputs, custom select, checkboxes, consent, errors
+    FormOutcome               Demo result (sensitive values masked, excluded from WhatsApp text)
+  insurance/                  ProductCard/Grid, CoverageGrid, PropertyTariffTable, LifeTariffTable, CompanyGrid
+  home/ layout/ sections/ ui/
+lib/
+  validation/                 fields.ts (shared rules) + schemas.ts (one Zod schema per form)
+  input-format.ts             Input masks (plate, FİN, phone, documents, amounts, names)
+  format.ts                   Deterministic AZN formatting (no Intl → no hydration mismatches)
+  api/                        products, content, applications (mock today, REST in Phase 2)
 ```
 
-## Internationalization
+## Forms and validation
 
-- Routes are always prefixed: `/az` (default), `/en`, `/ru`. `/` redirects to `/az`. Browser-language
-  detection is **off** on purpose, so the default is always Azerbaijani. Enable it with `localeDetection` in
-  `i18n/routing.ts`.
-- The language switcher keeps the current page.
-- UI text lives in `messages/*.json`; keys are type-checked against `az.json`. Run `npm run i18n:check`
-  after editing translations.
-- Validation messages are translation keys returned by the Zod schema and resolved in the UI, so every
-  error is localized.
-- Product content is stored per locale in `data/products.ts` (mirroring what the API will return
-  per `?lang=`).
+Every structured field is **masked while typing**, so invalid characters never enter it. **Zod** then
+validates the value, and the error appears in the current language.
 
-## Content and pricing
+| Field                    | Rule                                                                       |
+| ------------------------ | -------------------------------------------------------------------------- |
+| Registration plate       | `10-AA-100`: 2 digits, 2 letters, 3 digits, uppercase, max 7 characters    |
+| FİN                      | 7 letters/digits, uppercase                                                |
+| ID card                  | Series `AZE` → 8 digits, series `AA` → 7 digits                            |
+| VÖEN (legal entity)      | 10 digits                                                                  |
+| Registration certificate | 2 letters + 6 digits (configurable in `data/form-options.ts`)              |
+| Driving licence          | 2 letters + 6 digits (configurable)                                        |
+| Phone                    | `0XX XXX XX XX` or `+994 XX XXX XX XX`, valid operator/area code           |
+| Year / amounts / dates   | 1950 – next year; positive amounts; start ≥ today, end ≥ start, ≤ 365 days |
 
-- **No prices are shown.** Every `startingPrice` in `data/products.ts` is `null`, so cards show
-  “Qiymət sorğu əsasında” with a **“Qiymət təklifi al”** button. To publish a verified price, set
-  `startingPrice: { amount, currency: "AZN" }` on the product or tariff; the UI then renders it.
-- Coverage and plan descriptions are written as non-binding and are accompanied by a disclaimer. Have a
-  licensed insurer or partner verify all product wording before launch.
-- **Imagery:** product visuals are branded SVG illustrations (no stock photos). To use photography, put
-  files in `public/images/products/` and set `image: { src, alt: {az,en,ru} }` on a product. `ProductArt`
-  switches to an optimized `next/image` automatically.
+**Identity document upload (life insurance) is a local demonstration.** Files are previewed in the
+browser only. They are never uploaded, transmitted or persisted, and the UI says so.
 
-## Application form
+## Pricing data — what is real and what is pending
 
-`components/forms/ApplicationForm.tsx`: 4 steps (type → product-specific details → contact → review),
-React Hook Form and Zod, localized errors, focus management, deep links
-(`/az/apply?type=casco&plan=standard`).
+- **Standard property insurance:** the table you provided (Baku 25,000/50 AZN; Ganja, Sumgait and
+  Nakhchivan 20,000/40 AZN; other districts 15,000/30 AZN), shown live when a region is selected.
+- **Life insurance:** the categories and the 5,000/10,000/25,000/50,000 AZN amounts are set up, but
+  **no prices are filled in**, because the tariff tables were not available in a readable form. Every
+  cell shows "Tarif hələ təsdiqlənməyib". The age groups in `data/life-tariffs.ts` are a **placeholder**
+  structure: replace them with the official bands, then fill `lifePrices`.
+- **AVTO+ / AVTO EXTRA:** `price: null` until confirmed. The total is calculated automatically once
+  prices are set.
+- **Compulsory motor, CASCO, travel, Property CASCO:** individual quotes; no premium is calculated.
 
-- **Phase 1 (no API URL):** a banner explains demo mode; submission resolves locally to a “Demo” result.
-  It never claims the application was received and never shows an application number. Users can
-  optionally send their summary themselves via a pre-filled WhatsApp link.
-- **Phase 2:** with `NEXT_PUBLIC_API_BASE_URL` set, `submitApplication()` POSTs the payload instead
-  (see below), and the banner and demo state disappear.
+## Photos
+
+All photos are CC0 / public domain, found via the Openverse API (sources mostly StockSnap and rawpixel)
+and listed in `public/images/credits.json`. They were resized to ≤ 1200 px and compressed. None contain
+third-party contact details or ad branding. Replace them with your own professional photography at any
+time by keeping the file names or editing `data/images.ts`.
 
 ## Backend integration contract (Phase 2)
 
-`lib/api/products.ts` and `lib/api/applications.ts` switch from mocks to HTTP automatically when the API
-URL is set:
+| Method | Endpoint                             | Returns / body                                                                   |
+| ------ | ------------------------------------ | -------------------------------------------------------------------------------- |
+| GET    | `/api/v1/products?lang={az\|en\|ru}` | `InsuranceProduct[]` (see `types/insurance.ts`)                                  |
+| GET    | `/api/v1/products/{slug}?lang=…`     | `InsuranceProduct`, or `404`                                                     |
+| POST   | `/api/v1/applications`               | `{ product, form, locale, data }` (`lib/api/applications.ts`) → `{ reference? }` |
 
-| Method | Endpoint                             | Returns / body                                                            |
-| ------ | ------------------------------------ | ------------------------------------------------------------------------- |
-| GET    | `/api/v1/products?lang={az\|en\|ru}` | `InsuranceProduct[]` (see `types/insurance.ts`)                           |
-| GET    | `/api/v1/products/{slug}?lang=…`     | `InsuranceProduct`, or `404`                                              |
-| POST   | `/api/v1/applications`               | Body: `ApplicationPayload` (`lib/api/applications.ts`) → `{ reference? }` |
-
-Product data is cached with `"use cache"` and tag `products`. Call `revalidateTag("products")` (e.g. from
-an admin webhook route) to refresh pages after content changes. Phone numbers are normalized to E.164
-(`+994…`), and amounts and years are sent as numbers.
-
-## SEO
-
-- Per-page `generateMetadata`: unique title/description, canonical, `hreflang` (az/en/ru + `x-default`),
-  Open Graph and Twitter tags. Generated 1200×630 OG images per locale and per product.
-- JSON-LD: `Organization`, `WebSite` (every page), `Service` (products), `BreadcrumbList` (inner pages),
-  `ItemList` (catalogue) and `FAQPage` (only where the FAQ is visible). No ratings, reviews, addresses or
-  licences are claimed.
-- `sitemap.xml` lists all 39 localized URLs with alternates; `robots.txt` points to it.
-- Unknown product slugs and unknown paths return HTTP 404.
+Product data is cached with `"use cache"` and the `products` tag, so call `revalidateTag("products")`
+after content changes.
 
 ## Quality notes
 
-Lighthouse (mobile, simulated throttling) on the production build, median of 3–5 runs:
-Performance 94–100, Accessibility 100, Best Practices 100, SEO 100. LCP ≈ 0.9 s, CLS 0. Scores vary with
-hosting and hardware, so treat them as a baseline.
-
-- All pages are statically prerendered.
-- Fonts are self-hosted through `next/font`. Onest was chosen because it covers the Azerbaijani **ə/Ə**,
-  Cyrillic and the manat sign **₼**; many popular fonts lack the schwa.
-- Motion loads its features lazily, animations respect `prefers-reduced-motion`, and above-the-fold
-  content is never hidden behind scroll animations.
+Lighthouse (mobile, simulated throttling) on the production build, median of 3 runs per page:
+**Performance 99–100, Accessibility 100, Best Practices 100, SEO 100**, with LCP ≈ 0.9 s and CLS 0. On
+phones the homepage hero is text-first and the photo-led product cards follow immediately; this keeps
+LCP fast.
 
 ## Before launch
 
 1. Set `NEXT_PUBLIC_SITE_URL` to the real domain and rebuild.
-2. Have the Privacy Policy and Terms (`messages/*.json` → `Legal`) reviewed by a lawyer. They are generic
-   templates without company registration details.
-3. Verify all product and coverage wording with the insurer/partner, and add real prices only if verified.
-4. Optionally add real photography (see “Content and pricing”).
-5. If you add analytics or marketing pixels, add a cookie-consent mechanism and update the Privacy Policy
-   (it currently states that no tracking cookies are used).
+2. Fill in the **life tariff tables** and their real **age groups** (`data/life-tariffs.ts`), and the
+   **AVTO+ / AVTO EXTRA** prices and descriptions (`data/form-options.ts`).
+3. Confirm the **coverage lists** (`data/coverage.ts`), then set `confirmed: true` to remove the
+   "illustrative" notes.
+4. Add **authorised company logos** (`data/companies.ts` → `logo`). Until then neutral monograms are
+   shown. Confirm what may be said about each company. No partnership is claimed today.
+5. Confirm the **registration certificate and driving licence formats** (`data/form-options.ts`).
+6. Have the Privacy Policy and Terms reviewed by a lawyer.

@@ -31,3 +31,8 @@ export function absoluteUrl(locale: Locale, path = "") {
   const normalized = path === "/" ? "" : path;
   return `${siteConfig.url}/${locale}${normalized}`;
 }
+
+/** Fills the `{phone}` placeholder used in translated long-form text. */
+export function fillContact(text: string) {
+  return text.replaceAll("{phone}", siteConfig.contact.phoneDisplay);
+}

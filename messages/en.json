@@ -12,7 +12,7 @@
     },
     "prices": {
       "title": "Insurance Prices and Plans",
-      "description": "Explore plans for motor, CASCO, travel, property and life insurance and get a personalised quote based on your details."
+      "description": "Standard property insurance prices by region, the life insurance tariff table and individual quotes for other types of insurance."
     },
     "about": {
       "title": "About Us",
@@ -20,7 +20,7 @@
     },
     "contact": {
       "title": "Contact Us",
-      "description": "Contact SığortaPro: call 070 609 29 69 or message us on WhatsApp. We’ll help you choose the right insurance."
+      "description": "Contact SığortaPro: call {phone} or message us on WhatsApp. We’ll help you choose the right insurance."
     },
     "apply": {
       "title": "Online Insurance Application",
@@ -36,6 +36,10 @@
     },
     "notFound": {
       "title": "Page not found"
+    },
+    "companies": {
+      "title": "Insurance Companies",
+      "description": "Well-known insurance companies in Azerbaijan: Ateshgah, PASHA, MEGA, Qala, Xalq and Azerbaijan Industry Insurance. Contact SığortaPro with any questions."
     }
   },
   "Common": {
@@ -43,11 +47,8 @@
     "apply": "Apply",
     "details": "Learn more",
     "getQuote": "Get a quote",
-    "priceOnRequest": "Price on request",
-    "fromPrice": "From {price} ₼",
     "mandatory": "Mandatory",
     "voluntary": "Voluntary",
-    "popular": "Popular",
     "allProducts": "All insurance products",
     "call": "Call",
     "whatsapp": "WhatsApp",
@@ -70,7 +71,8 @@
     "homeAria": "SığortaPro — home",
     "productsMenu": "Insurance types",
     "allProducts": "All insurance products",
-    "needHelp": "Need help?"
+    "needHelp": "Need help?",
+    "companies": "Insurance companies"
   },
   "LocaleSwitcher": {
     "label": "Language",
@@ -84,38 +86,18 @@
     "title": "Protect your future with <brand>SığortaPro</brand>!",
     "description": "Protect your car, home, travels and life with convenient, reliable insurance solutions.",
     "ctaPrimary": "Choose insurance",
-    "ctaSecondary": "Apply now",
     "quickLabel": "What would you like to insure?",
     "quickPlaceholder": "Select insurance type",
     "quickSubmit": "Get an offer",
-    "visualTitle": "Choose your cover",
     "visualProtected": "Reliable protection",
     "visualApplication": "Online application",
     "visualApplicationText": "In a few simple steps",
     "visualWhatsapp": "Chat on WhatsApp"
   },
-  "Trust": {
-    "online": {
-      "title": "Online application",
-      "text": "From any device, at any time"
-    },
-    "advice": {
-      "title": "Personal advice",
-      "text": "Help choosing the right cover"
-    },
-    "contact": {
-      "title": "Easy to reach",
-      "text": "By phone or WhatsApp"
-    },
-    "languages": {
-      "title": "In three languages",
-      "text": "Azerbaijani, English and Russian"
-    }
-  },
   "Products": {
     "eyebrow": "Insurance products",
-    "title": "Choose the cover that fits you",
-    "description": "Motor, travel, property and life — each with clear terms and a convenient online application.",
+    "title": "Choose the insurance you need",
+    "description": "Tap an insurance type — the application form opens right away.",
     "viewAll": "View all insurance products"
   },
   "HowItWorks": {
@@ -164,21 +146,6 @@
       "text": "We explain terms in plain language so you know exactly what you’re choosing."
     }
   },
-  "Pricing": {
-    "eyebrow": "Prices and plans",
-    "title": "Clear plans, personalised offers",
-    "description": "Key plan options for each type of insurance. Your exact price is calculated from your details.",
-    "coverage": "Coverage",
-    "duration": "Term",
-    "included": "Included",
-    "price": "Price",
-    "recommended": "Recommended",
-    "plan": "Plan",
-    "viewAll": "See all plans",
-    "previous": "Previous",
-    "next": "Next",
-    "disclaimer": "This information is for guidance only. Exact terms, coverage and price are determined individually and governed by the insurance contract."
-  },
   "Faq": {
     "eyebrow": "Questions",
     "title": "Frequently asked questions",
@@ -194,7 +161,7 @@
       },
       {
         "question": "How can I contact you?",
-        "answer": "Call us on 070 609 29 69 or message us on WhatsApp. You can also use the online application form on the website."
+        "answer": "Call us on {phone} or message us on WhatsApp. You can also use the online application forms on the website."
       },
       {
         "question": "Which types of insurance can I apply for?",
@@ -229,19 +196,43 @@
   },
   "ProductPage": {
     "overview": "Overview",
-    "highlights": "Key features",
-    "coverageTitle": "What’s covered",
-    "coverageDescription": "Depending on the chosen programme, the insurance can cover the following risks.",
-    "coverageNote": "The exact list of risks, limits and exclusions is set out in the insurance contract.",
-    "benefitsTitle": "Why apply with SığortaPro",
-    "tariffsTitle": "Plans",
-    "tariffsDescription": "Explore the plan options. Your exact price is calculated from your details.",
     "howTitle": "How to apply",
     "faqTitle": "Frequently asked questions",
     "relatedTitle": "Other insurance products",
     "relatedDescription": "Other solutions you might find useful.",
     "ctaTitle": "Apply now: {name}",
-    "ctaDescription": "Share a few key details — our specialist will help you get a personalised offer."
+    "ctaDescription": "Fill in the form or give us a call — our specialist will help you get a personalised offer.",
+    "applyTitle": {
+      "car-insurance": "Apply for compulsory insurance",
+      "casco": "Apply for CASCO",
+      "travel": "Apply for travel insurance",
+      "property": "Choose your property insurance",
+      "life": "Apply for life insurance"
+    },
+    "applyDescription": "Fill in a few fields — our specialist will contact you with a personalised offer.",
+    "coverageTitle": {
+      "car-insurance": "What compulsory insurance covers",
+      "casco": "What CASCO may cover",
+      "travel": "What travel insurance may cover",
+      "property": "What Property CASCO may cover",
+      "life": "Critical illnesses"
+    },
+    "coverageDescription": {
+      "car-insurance": "Compulsory insurance protects your civil liability towards third parties.",
+      "casco": "Depending on the chosen programme, CASCO can protect your car in the following situations.",
+      "travel": "Depending on the chosen programme, travel insurance can cover the following situations.",
+      "property": "Voluntary Property CASCO is based on the property’s value and may cover the following risks.",
+      "life": "Critical illness insurance may provide a payment upon diagnosis of the following serious illnesses."
+    },
+    "coverageNote": "These categories are for guidance only and are not a contractual guarantee. The exact risks, limits and exclusions are set out in the insurance contract.",
+    "voluntaryEyebrow": "Voluntary insurance",
+    "voluntaryNote": "These covers relate to voluntary Property CASCO and are not automatically included in the standard property insurance package. Exact terms are set out in the policy.",
+    "standardEyebrow": "Standard property insurance",
+    "standardTableTitle": "Cover and price by region",
+    "standardTableDescription": "In the standard package, the sum insured and the premium depend on where the property is located.",
+    "standardTableNote": "Please review the policy terms when you take out the policy. Questions? Talk to our specialist.",
+    "lifeTableTitle": "Tariff table",
+    "lifeTableDescription": "Choose a category: the premium depends on the age group and coverage amount."
   },
   "InsurancePage": {
     "eyebrow": "Insurance products",
@@ -259,22 +250,34 @@
   },
   "PricesPage": {
     "eyebrow": "Prices",
-    "title": "Insurance prices and plans",
-    "description": "Explore the plan options for each type of insurance. Your exact price is calculated individually from your details — apply to get a quote.",
-    "viewProduct": "Learn more",
+    "title": "Insurance prices",
+    "description": "Tariffs for standard property and life insurance, and an individual quote based on your details for other types of insurance.",
+    "propertyTitle": "Standard property insurance",
+    "propertyDescription": "The sum insured and premium depend on where the property is located.",
+    "applyProperty": "Apply for property insurance",
+    "lifeTitle": "Secure life insurance",
+    "lifeDescription": "The price depends on the insurance category, age group and coverage amount.",
+    "quoteTitle": "Individual quote",
+    "quoteDescription": "For these types of insurance, the price is calculated from your details.",
+    "quoteNote": {
+      "car-insurance": "The premium is calculated according to rules set by legislation, based on the vehicle type and technical characteristics.",
+      "casco": "The price depends on the car’s market value, make, model and year of manufacture.",
+      "travel": "The price depends on the trip length, destination and number of travellers."
+    },
+    "getQuote": "Get a quote",
     "faqTitle": "Questions about pricing",
     "faq": [
       {
         "question": "How can I get a quote?",
-        "answer": "Fill in the online application, call us or message us on WhatsApp — our specialist will prepare a personalised offer based on your details."
+        "answer": "Fill in the form on the relevant insurance page, call {phone} or message us on WhatsApp — our specialist will prepare a personalised offer."
       },
       {
-        "question": "What affects the price?",
-        "answer": "Depending on the type of insurance: vehicle characteristics, property type and value, trip length and destination, your age, as well as the selected coverage and deductible."
+        "question": "How is the price of standard property insurance set?",
+        "answer": "In the standard package, the sum insured and premium are fixed by region — for example, AZN 25,000 of cover in Baku costs AZN 50."
       },
       {
-        "question": "Are the plans on the website final?",
-        "answer": "No. The plans are for guidance only. Exact terms, coverage and price are determined individually and governed by the insurance contract."
+        "question": "What does the price of life insurance depend on?",
+        "answer": "It depends on the insurance category, age group and chosen coverage amount. For options without a confirmed tariff, we prepare an individual offer."
       },
       {
         "question": "How is the price of compulsory motor insurance calculated?",
@@ -335,167 +338,26 @@
   "ApplyPage": {
     "eyebrow": "Online application",
     "title": "Apply for insurance online",
-    "description": "Share your details in a few simple steps. Every field is clearly explained.",
+    "description": "Choose the type of insurance and fill in a short form. Every field is clearly explained.",
     "asideTitle": "Have a question?",
     "asideText": "If you need help with your application, call us or message us on WhatsApp.",
     "privacyNote": "Your details are used only to review your application."
   },
-  "ApplyForm": {
-    "steps": {
-      "type": "Insurance type",
-      "details": "Details",
-      "contact": "Contact",
-      "review": "Review"
-    },
-    "progress": "Step {current} of {total}",
-    "typeTitle": "Which insurance are you interested in?",
-    "typeDescription": "Choose the type of insurance — in the next step we’ll ask only for what’s needed.",
-    "detailsTitle": "Key details",
-    "detailsDescription": "These details help us prepare a more accurate offer for you.",
-    "contactTitle": "How can we reach you?",
-    "contactDescription": "Our specialist will use these details to get in touch with you.",
-    "reviewTitle": "Review your details",
-    "reviewDescription": "If everything looks right, confirm your application. You can go back and edit any section if needed.",
-    "next": "Continue",
-    "back": "Back",
-    "submit": "Confirm application",
-    "submitting": "Checking…",
-    "edit": "Edit",
-    "optional": "optional",
-    "requiredHint": "Fields marked * are required",
-    "selectPlaceholder": "Select",
-    "change": "Change",
-    "fixErrors": "Please correct the highlighted fields.",
-    "fields": {
-      "insuranceType": "Insurance type",
-      "fullName": "Full name",
-      "fullNamePlaceholder": "e.g. Aysel Mammadova",
-      "phone": "Phone number",
-      "phonePlaceholder": "070 609 29 69",
-      "phoneHint": "Our specialist will contact you on this number",
-      "email": "Email",
-      "emailPlaceholder": "name@example.com",
-      "additionalInfo": "Additional information",
-      "additionalInfoPlaceholder": "Add any questions or extra requests",
-      "consent": "I agree to the processing of my personal data for reviewing my application and have read the <link>Privacy Policy</link>.",
-      "registrationNumber": "Registration number",
-      "registrationNumberPlaceholder": "10-AA-123",
-      "brandModel": "Make and model",
-      "brandModelPlaceholder": "e.g. Toyota Camry",
-      "year": "Year of manufacture",
-      "yearPlaceholder": "e.g. 2020",
-      "technicalDetails": "Technical details",
-      "vehicleType": "Vehicle type",
-      "engineVolume": "Engine capacity (cm³)",
-      "engineVolumePlaceholder": "e.g. 2000",
-      "vehicleValue": "Estimated vehicle value (₼)",
-      "vehicleValuePlaceholder": "e.g. 25000",
-      "cascoCoverage": "Desired coverage",
-      "destination": "Destination country",
-      "destinationPlaceholder": "e.g. Germany",
-      "startDate": "Start date",
-      "endDate": "End date",
-      "travelers": "Number of travellers",
-      "decrease": "Decrease",
-      "increase": "Increase",
-      "duration": "Insurance duration",
-      "durationValue": "{count, plural, one {# day} other {# days}}",
-      "durationHint": "Calculated automatically from your dates",
-      "durationEmpty": "Select your dates",
-      "propertyAddress": "Property address",
-      "propertyAddressPlaceholder": "City, street, building",
-      "propertyType": "Property type",
-      "propertyValue": "Estimated value (₼)",
-      "propertyValuePlaceholder": "e.g. 150000",
-      "propertyCoverage": "Desired coverage",
-      "propertyCoverageHint": "Select one or more options",
-      "age": "Your age",
-      "agePlaceholder": "e.g. 35",
-      "lifeTerm": "Desired insurance term"
-    },
-    "options": {
-      "vehicleType": {
-        "car": "Passenger car",
-        "truck": "Truck",
-        "bus": "Bus / minibus",
-        "motorcycle": "Motorcycle",
-        "other": "Other"
-      },
-      "cascoCoverage": {
-        "essential": "Essential",
-        "standard": "Standard",
-        "comprehensive": "Comprehensive",
-        "advice": "Not sure"
-      },
-      "cascoCoverageHint": {
-        "essential": "Theft, total loss, fire",
-        "standard": "Accidents, natural disasters, glass",
-        "comprehensive": "Broad cover and extra services",
-        "advice": "A specialist will suggest the right option"
-      },
-      "propertyType": {
-        "apartment": "Apartment",
-        "house": "Private house",
-        "country": "Country house",
-        "commercial": "Commercial property"
-      },
-      "propertyCoverage": {
-        "fire": "Fire",
-        "water": "Water damage",
-        "natural": "Natural disasters",
-        "theft": "Theft",
-        "liability": "Liability to neighbours"
-      },
-      "lifeTerm": {
-        "y1": "1 year",
-        "y5": "5 years",
-        "y10": "10 years",
-        "y15": "15 years",
-        "y20": "20 years or more"
-      }
-    },
-    "review": {
-      "type": "Insurance type",
-      "details": "Details",
-      "contact": "Contact details",
-      "notProvided": "Not provided",
-      "consentGiven": "Consent given"
-    },
-    "demoBanner": {
-      "title": "Demo mode",
-      "text": "The online form is currently in demonstration mode: your details are validated but not sent anywhere. To apply, please call us or message us on WhatsApp."
-    },
-    "demoSuccess": {
-      "badge": "Demo",
-      "title": "Your form passed all checks",
-      "text": "This is a demonstration — your application has not been sent or stored anywhere. You can send your details to us via WhatsApp or give us a call.",
-      "whatsapp": "Send details via WhatsApp",
-      "restart": "Start a new application"
-    },
-    "submitted": {
-      "title": "Your application has been sent",
-      "text": "Our specialist will contact you shortly.",
-      "reference": "Application number: {reference}",
-      "restart": "Start a new application"
-    },
-    "error": {
-      "title": "Something went wrong",
-      "text": "Please try again in a moment or give us a call.",
-      "retry": "Try again"
-    },
-    "whatsappIntro": "Hello! I’d like to apply for insurance via the SığortaPro website."
-  },
   "Validation": {
     "required": "This field is required",
-    "selectType": "Please choose an insurance type",
     "selectOption": "Please choose an option",
+    "name": "Please use letters only",
     "fullName": "Please enter your first and last name",
-    "phone": "Enter a valid phone number, e.g. 070 609 29 69",
+    "phone": "Enter a valid number: 0XX XXX XX XX",
     "email": "Enter a valid email address",
-    "plate": "Enter a valid registration number, e.g. 10-AA-123",
+    "plate": "Enter a valid plate, e.g. 10-AA-100",
+    "fin": "The FİN code must be 7 characters (letters and digits)",
+    "voen": "The tax ID must be 10 digits",
+    "idNumber": "The number must match the series: AZE — 8, AA — 7 digits",
+    "registrationCertificate": "Enter the series (2 letters) and number (6 digits)",
+    "drivingLicence": "Enter the series (2 letters) and number (6 digits)",
     "year": "Enter a valid year of manufacture",
-    "amount": "Enter a valid amount",
-    "engine": "Enter a valid engine capacity",
+    "amount": "The amount must be greater than zero",
     "date": "Please select a date",
     "datePast": "The date can’t be in the past",
     "dateRange": "The date must be within the next 2 years",
@@ -503,7 +365,6 @@
     "tripLength": "The trip can’t be longer than 365 days",
     "travelers": "Choose between 1 and 10 travellers",
     "age": "Age must be between 18 and 80",
-    "coverage": "Select at least one option",
     "consent": "Please confirm your consent to continue",
     "tooLong": "The text is too long",
     "tooShort": "Please provide more detail"
@@ -559,7 +420,7 @@
         "title": "Changes and contact",
         "body": [
           "This policy may be updated from time to time; the updated version will be published on this page.",
-          "For questions about this Privacy Policy, please call 070 609 29 69."
+          "For questions about this Privacy Policy, please call {phone}."
         ]
       }
     ],
@@ -608,7 +469,7 @@
         "title": "Changes and contact",
         "body": [
           "These terms may be updated from time to time; the updated version will be published on this page.",
-          "For any questions, please call 070 609 29 69."
+          "For any questions, please call {phone}."
         ]
       }
     ]
@@ -619,5 +480,167 @@
     "description": "The page you’re looking for doesn’t exist or has been moved.",
     "home": "Back to home",
     "browse": "Browse insurance products"
+  },
+  "Companies": {
+    "eyebrow": "Insurance companies",
+    "title": "Well-known insurance companies in Azerbaijan",
+    "description": "Established insurers operating in the market. Contact SığortaPro to find out which option suits you.",
+    "viewAll": "Learn more",
+    "disclaimer": "Company names are shown for information only and do not imply an official partnership or endorsement. For any questions, contact SığortaPro: {phone}.",
+    "pageTitle": "Insurance companies",
+    "pageDescription": "Well-known insurance companies operating in Azerbaijan. Have a question? Reach SığortaPro on a single number.",
+    "contactTitle": "One number for every question",
+    "contactText": "Whatever type of insurance you’re interested in, a SığortaPro specialist answers your questions and helps with your application.",
+    "contactPoints": [
+      "Plain-language explanations of insurance types",
+      "Help choosing the right insurance",
+      "Support preparing your application"
+    ]
+  },
+  "Forms": {
+    "optional": "optional",
+    "requiredHint": "Fields marked * are required",
+    "selectPlaceholder": "Select",
+    "submit": "Apply",
+    "submitting": "Checking…",
+    "next": "Next",
+    "back": "Back",
+    "progress": "Step {current} of {total}",
+    "fixErrors": "Please correct the highlighted fields.",
+    "decrease": "Decrease",
+    "increase": "Increase",
+    "yes": "Yes",
+    "no": "No",
+    "none": "None",
+    "firstName": "First name",
+    "lastName": "Last name",
+    "fullName": "Full name",
+    "fullNamePlaceholder": "e.g. Aysel Mammadova",
+    "phone": "Contact number",
+    "phonePlaceholder": "0XX XXX XX XX",
+    "email": "Email",
+    "emailPlaceholder": "name@example.com",
+    "consent": "I agree to the processing of my personal data for reviewing my application and have read the <link>Privacy Policy</link>.",
+    "chooseProduct": "Insurance type",
+    "chooseProductHint": "Choose an insurance type above to see its application form.",
+    "demoNote": "Demo mode: your details are validated but not sent or stored anywhere.",
+    "demoBadge": "Demo",
+    "demoTitle": "Your form passed all checks",
+    "demoText": "This is a demonstration — your application has not been sent or stored anywhere. To apply, give us a call or send your details yourself via WhatsApp.",
+    "sendWhatsapp": "Send via WhatsApp",
+    "sensitiveNote": "FİN codes, document numbers and other personal identifiers are not added to the WhatsApp message.",
+    "restart": "Start a new application",
+    "submittedTitle": "Your application has been sent",
+    "submittedText": "Our specialist will contact you shortly.",
+    "reference": "Application number: {reference}",
+    "errorTitle": "Something went wrong",
+    "errorText": "Please try again in a moment or give us a call.",
+    "retry": "Try again",
+    "whatsappIntro": "Hello! Application from the SığortaPro website: {product}",
+    "car": {
+      "stepVehicle": "Vehicle",
+      "stepOwner": "Personal details",
+      "stepAddons": "Extra cover",
+      "vehicleType": "Vehicle type",
+      "engineCapacity": "Engine capacity",
+      "year": "Year of manufacture",
+      "yearPlaceholder": "e.g. 2020",
+      "personType": "Person type",
+      "fin": "FİN code",
+      "finHint": "7 characters (letters and digits) — shown on your ID card",
+      "voen": "Tax ID (VÖEN)",
+      "voenHint": "10 digits",
+      "idSeries": "Series",
+      "idNumber": "ID card number",
+      "idNumberHint": "{digits} digits",
+      "idDocument": "ID card",
+      "plate": "Registration plate",
+      "plateHint": "e.g. {example}",
+      "registrationCertificate": "Registration certificate",
+      "drivingLicence": "Driving licence series and number",
+      "documentHint": "Series and number, e.g. {example}",
+      "taxi": "Used as a taxi",
+      "taxiHint": "Tick if the vehicle is used as a taxi to carry passengers.",
+      "addonsTitle": "Extra cover",
+      "addonsDescription": "Optionally add voluntary cover on top of compulsory insurance.",
+      "priceUnconfirmed": "Price not confirmed",
+      "total": "Extra cover total",
+      "totalNone": "AZN 0",
+      "totalUnavailable": "Once prices are confirmed",
+      "basePremiumNote": "The compulsory insurance premium is calculated according to rules set by legislation and will be shown separately in your offer."
+    },
+    "casco": {
+      "brand": "Car make",
+      "brandPlaceholder": "e.g. Toyota",
+      "model": "Car model",
+      "modelPlaceholder": "e.g. Camry",
+      "year": "Year of manufacture",
+      "yearPlaceholder": "e.g. 2020",
+      "marketValue": "Estimated market value (AZN)",
+      "marketValuePlaceholder": "e.g. 25 000"
+    },
+    "travel": {
+      "destination": "Destination country or region",
+      "startDate": "Trip start date",
+      "endDate": "Trip end date",
+      "duration": "Insurance duration",
+      "durationValue": "{count, plural, one {# day} other {# days}}",
+      "durationEmpty": "Select your dates",
+      "durationHint": "Calculated automatically from your dates",
+      "travelers": "Number of travellers"
+    },
+    "property": {
+      "optionsLegend": "Type of property insurance",
+      "chooseOption": "Choose an insurance type to continue.",
+      "standardTitle": "Standard property insurance",
+      "standardDescription": "A fixed sum insured and a fixed price by region.",
+      "standardBadge": "Fixed price",
+      "cascoTitle": "Property CASCO",
+      "cascoDescription": "Individual protection based on the property’s actual value.",
+      "cascoBadge": "Individual offer",
+      "region": "Region",
+      "coverageAmount": "Sum insured",
+      "price": "Premium",
+      "selectRegionHint": "Choose a region to see the price.",
+      "address": "Property address",
+      "addressPlaceholder": "City, street, building, flat",
+      "propertyType": "Property type",
+      "marketValue": "Estimated market value (AZN)",
+      "marketValuePlaceholder": "e.g. 150 000",
+      "cascoNote": "The premium is calculated individually from the property’s value and the policy terms — our specialist will prepare a quote for you.",
+      "getQuote": "Get an individual quote"
+    },
+    "life": {
+      "category": "Insurance category",
+      "ageGroup": "Age group",
+      "ageGroupValue": "{min}–{max} years",
+      "amount": "Coverage amount",
+      "amountHint": "Choose a category first",
+      "price": "Premium",
+      "priceSelect": "Choose a category, age group and amount",
+      "priceUnavailable": "Tariff not confirmed yet",
+      "priceUnavailableNote": "There is no confirmed price for this option yet. Apply and our specialist will prepare an individual offer.",
+      "tableUnavailableNote": "Prices will appear here once the official tariff table is confirmed. For now, please apply for an individual offer.",
+      "age": "Age",
+      "agePlaceholder": "e.g. 35",
+      "term": "Insurance term",
+      "termValue": "{years, plural, one {# year} other {# years}}",
+      "documents": "ID card",
+      "documentsValue": "{count, plural, one {# file selected} other {# files selected}} (not sent)"
+    },
+    "upload": {
+      "title": "ID card",
+      "description": "Add a photo or PDF of both sides of your ID card.",
+      "dropTitle": "Drag a file here",
+      "dropHint": "JPG, JPEG, PNG or PDF · max {size} MB · up to {count} files",
+      "choose": "Choose a file",
+      "replace": "Replace {name}",
+      "remove": "Remove {name}",
+      "previewAlt": "Preview of {name}",
+      "errorType": "{name}: only JPG, JPEG, PNG and PDF files are accepted",
+      "errorSize": "{name}: the file is larger than {size} MB",
+      "errorCount": "You can add up to {count} files",
+      "demoNotice": "Demo: files are only shown in your browser — they are not uploaded, sent or stored anywhere. Online document submission isn’t available yet."
+    }
   }
 }

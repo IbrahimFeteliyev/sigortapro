@@ -5,7 +5,7 @@ import { JsonLd } from "@/components/ui/JsonLd";
 import { Reveal } from "@/components/ui/Reveal";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
-import { siteConfig } from "@/lib/site";
+import { fillContact, siteConfig } from "@/lib/site";
 import { faqSchema } from "@/lib/structured-data";
 
 export function FaqSection({
@@ -26,6 +26,7 @@ export function FaqSection({
 }) {
   const common = useTranslations("Common");
   const headingId = `${id}-heading`;
+  const filled = items.map((item) => ({ question: item.question, answer: fillContact(item.answer) }));
 
   return (
     <section id={id} aria-labelledby={headingId} className="container-page py-20 sm:py-28">
@@ -53,10 +54,10 @@ export function FaqSection({
           </div>
         </Reveal>
         <Reveal className="lg:col-span-8" delay={0.08}>
-          <Accordion items={items} />
+          <Accordion items={filled} />
         </Reveal>
       </div>
-      {withSchema ? <JsonLd data={faqSchema(items)} /> : null}
+      {withSchema ? <JsonLd data={faqSchema(filled)} /> : null}
     </section>
   );
 }

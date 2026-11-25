@@ -4,8 +4,8 @@ import type { InsuranceProductSummary } from "@/types/insurance";
 import { ProductCard } from "./ProductCard";
 
 /**
- * Bento layout: the two motor products lead in wide cards, the remaining
- * three share the second row. Collapses gracefully on smaller screens.
+ * Large, photo-led selection grid: the two motor products lead in wide
+ * cards, the other three share the second row.
  */
 export function ProductGrid({
   products,
@@ -33,8 +33,13 @@ export function ProductGrid({
             <ProductCard
               product={product}
               headingLevel={headingLevel}
-              artClassName={
+              imageClassName={
                 featured ? "aspect-[16/9]" : lastOdd ? "aspect-[16/9] lg:aspect-[4/3]" : "aspect-[4/3]"
+              }
+              sizes={
+                featured
+                  ? "(min-width: 1024px) 600px, (min-width: 640px) 50vw, 100vw"
+                  : "(min-width: 1024px) 400px, (min-width: 640px) 50vw, 100vw"
               }
             />
           </RevealItem>

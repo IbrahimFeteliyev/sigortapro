@@ -5,17 +5,16 @@ import { Reveal } from "@/components/ui/Reveal";
 import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 import { Link } from "@/i18n/navigation";
 import { siteConfig } from "@/lib/site";
-import type { InsuranceSlug } from "@/types/insurance";
 
 export function CtaSection({
   title,
   description,
-  applyType,
+  applyHref = "/apply",
 }: {
   title?: string;
   description?: string;
-  /** Pre-selects an insurance type in the application form. */
-  applyType?: InsuranceSlug;
+  /** Where the primary button leads, e.g. a product form anchor. */
+  applyHref?: string;
 }) {
   const t = useTranslations("Cta");
   const common = useTranslations("Common");
@@ -42,10 +41,7 @@ export function CtaSection({
               </p>
             </div>
             <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap lg:col-span-5 lg:justify-end">
-              <Link
-                href={applyType ? { pathname: "/apply", query: { type: applyType } } : "/apply"}
-                className={buttonStyles({ variant: "light", size: "lg" })}
-              >
+              <Link href={applyHref} className={buttonStyles({ variant: "light", size: "lg" })}>
                 {common("applyNow")}
                 <ArrowRight aria-hidden className="size-4" />
               </Link>

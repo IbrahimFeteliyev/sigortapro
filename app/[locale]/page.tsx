@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import { Benefits } from "@/components/home/Benefits";
+import { CompaniesSection } from "@/components/home/CompaniesSection";
 import { Hero } from "@/components/home/Hero";
-import { PricingSection } from "@/components/home/PricingSection";
 import { ProductsSection } from "@/components/home/ProductsSection";
-import { TrustBar } from "@/components/home/TrustBar";
 import { CtaSection } from "@/components/sections/CtaSection";
 import { FaqSection } from "@/components/sections/FaqSection";
 import { HowItWorks } from "@/components/sections/HowItWorks";
+import { getCompanies } from "@/lib/api/content";
 import { getProductSummaries } from "@/lib/api/products";
 import { resolveLocale } from "@/lib/i18n";
 import { buildPageMetadata } from "@/lib/seo";
@@ -35,11 +35,10 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
   return (
     <>
       <Hero products={products} />
-      <TrustBar />
       <ProductsSection products={products} />
       <HowItWorks />
       <Benefits />
-      <PricingSection products={products} />
+      <CompaniesSection companies={getCompanies()} />
       <FaqSection
         eyebrow={faq("eyebrow")}
         title={faq("title")}

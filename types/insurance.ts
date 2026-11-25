@@ -1,3 +1,4 @@
+import type { StaticImageData } from "next/image";
 import type { Locale } from "@/i18n/routing";
 
 export const INSURANCE_SLUGS = ["car-insurance", "casco", "travel", "property", "life"] as const;
@@ -16,20 +17,15 @@ export interface Money {
   currency: "AZN";
 }
 
-/* -------------------------------------------------------------------------- */
-/*  Records — the shape of the content store (mock data today, CMS/API later) */
-/* -------------------------------------------------------------------------- */
-
-export interface TariffRecord {
-  id: string;
-  name: LocalizedText;
-  summary: LocalizedText;
-  duration: LocalizedText;
-  features: LocalizedText[];
-  /** `null` when no verified price exists — the UI shows "Get a quote". */
-  startingPrice: Money | null;
-  highlighted?: boolean;
+/** Local static import today; a CDN URL string once the API serves media. */
+export interface ImageAsset {
+  src: StaticImageData | string;
+  alt: string;
 }
+
+/* -------------------------------------------------------------------------- */
+/*  Records — the content store (mock data today, CMS/API later)              */
+/* -------------------------------------------------------------------------- */
 
 export interface TitledTextRecord {
   title: LocalizedText;
@@ -50,15 +46,12 @@ export interface ProductRecord {
   shortDescription: LocalizedText;
   description: LocalizedText[];
   highlights: LocalizedText[];
-  coverage: TitledTextRecord[];
   benefits: TitledTextRecord[];
-  tariffs: TariffRecord[];
   faqs: FaqRecord[];
-  /** `null` when no verified price exists — the UI shows "Get a quote". */
-  startingPrice: Money | null;
   related: InsuranceSlug[];
-  /** Optional photography. When absent the UI renders a branded illustration. */
-  image?: { src: string; alt: LocalizedText };
+  /** Keys into `data/images.ts`. */
+  heroImage: string;
+  cardImage: string;
   seo: {
     title: LocalizedText;
     description: LocalizedText;
@@ -68,19 +61,8 @@ export interface ProductRecord {
 
 /* -------------------------------------------------------------------------- */
 /*  View models — localized DTOs consumed by the UI.                          */
-/*  These mirror what a REST endpoint such as                                 */
-/*  GET /api/v1/products/{slug}?lang=az is expected to return.                */
+/*  They mirror what GET /api/v1/products/{slug}?lang=az is expected to return.*/
 /* -------------------------------------------------------------------------- */
-
-export interface Tariff {
-  id: string;
-  name: string;
-  summary: string;
-  duration: string;
-  features: string[];
-  startingPrice: Money | null;
-  highlighted: boolean;
-}
 
 export interface TitledText {
   title: string;
@@ -101,19 +83,25 @@ export interface InsuranceProduct {
   shortDescription: string;
   description: string[];
   highlights: string[];
-  coverage: TitledText[];
   benefits: TitledText[];
-  tariffs: Tariff[];
   faqs: Faq[];
-  startingPrice: Money | null;
   related: InsuranceSlug[];
-  image: { src: string; alt: string } | null;
+  heroImage: ImageAsset;
+  cardImage: ImageAsset;
   seo: { title: string; description: string; keywords: string[] };
 }
 
 export type InsuranceProductSummary = Pick<
   InsuranceProduct,
-  "slug" | "isMandatory" | "name" | "shortName" | "tagline" | "shortDescription" | "startingPrice" | "image"
-> & {
-  featuredTariff: Tariff | null;
-};
+  "slug" | "isMandatory" | "name" | "shortName" | "tagline" | "shortDescription" | "cardImage"
+>;
+
+/** A potential-coverage card. Illustrative only — the contract defines terms. */
+export interface CoverageItem {
+  id: string;
+  title: string;
+  description: string;
+  image: ImageAsset | null;
+  /** Icon key (see `components/insurance/CoverageIcon.tsx`) when there is no photo. */
+  icon: string | null;
+}

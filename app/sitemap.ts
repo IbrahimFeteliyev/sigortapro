@@ -13,6 +13,7 @@ const pages: { path: string; priority: number; changeFrequency: "weekly" | "mont
     changeFrequency: "monthly" as const,
   })),
   { path: "/prices", priority: 0.8, changeFrequency: "monthly" },
+  { path: "/companies", priority: 0.7, changeFrequency: "monthly" },
   { path: "/apply", priority: 0.7, changeFrequency: "monthly" },
   { path: "/about", priority: 0.6, changeFrequency: "monthly" },
   { path: "/contact", priority: 0.6, changeFrequency: "monthly" },

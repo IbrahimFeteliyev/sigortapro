@@ -31,11 +31,11 @@ export interface NavProduct {
   shortDescription: string;
 }
 
-type NavKey = "home" | "insurance" | "prices" | "about" | "contact";
+type NavKey = "home" | "insurance" | "companies" | "about" | "contact";
 const NAV_ITEMS: { key: NavKey; href: string }[] = [
   { key: "home", href: "/" },
   { key: "insurance", href: "/insurance" },
-  { key: "prices", href: "/prices" },
+  { key: "companies", href: "/companies" },
   { key: "about", href: "/about" },
   { key: "contact", href: "/contact" },
 ];
@@ -96,6 +96,13 @@ export function Header({ products }: { products: NavProduct[] }) {
           </nav>
 
           <div className="ml-auto flex items-center gap-1.5 sm:gap-2">
+            <a
+              href={siteConfig.contact.phoneHref}
+              className="hidden items-center gap-2 rounded-full px-3 py-2 text-sm font-semibold whitespace-nowrap text-ink transition-colors hover:bg-surface 2xl:inline-flex"
+            >
+              <Phone aria-hidden className="size-4 text-brand-600" />
+              {siteConfig.contact.phoneDisplay}
+            </a>
             <LocaleSwitcher className="hidden sm:block" />
             <Link href="/apply" className={buttonStyles({ className: "hidden md:inline-flex" })}>
               {t("apply")}
@@ -134,7 +141,7 @@ function DesktopNavLink({ href, active, children }: { href: string; active: bool
       href={href}
       aria-current={active ? "page" : undefined}
       className={cn(
-        "relative inline-flex h-11 items-center rounded-full px-4 text-[0.9375rem] transition-colors hover:bg-surface",
+        "relative inline-flex h-11 items-center rounded-full px-3 text-[0.9375rem] whitespace-nowrap transition-colors hover:bg-surface xl:px-4",
         active ? "font-semibold text-ink" : "font-medium text-ink-soft hover:text-ink",
       )}
     >
@@ -142,7 +149,7 @@ function DesktopNavLink({ href, active, children }: { href: string; active: bool
       <span
         aria-hidden
         className={cn(
-          "absolute inset-x-4 bottom-1 h-0.5 rounded-full bg-brand-600 transition-opacity duration-200",
+          "absolute inset-x-3 bottom-1 h-0.5 rounded-full bg-brand-600 transition-opacity duration-200 xl:inset-x-4",
           active ? "opacity-100" : "opacity-0",
         )}
       />
@@ -194,7 +201,7 @@ function ProductsMenu({ products, active }: { products: NavProduct[]; active: bo
         aria-controls={panelId}
         onClick={() => setOpen((value) => !value)}
         className={cn(
-          "relative inline-flex h-11 items-center gap-1 rounded-full px-4 text-[0.9375rem] transition-colors hover:bg-surface",
+          "relative inline-flex h-11 items-center gap-1 rounded-full px-3 text-[0.9375rem] whitespace-nowrap transition-colors hover:bg-surface xl:px-4",
           active ? "font-semibold text-ink" : "font-medium text-ink-soft hover:text-ink",
         )}
       >
@@ -206,7 +213,7 @@ function ProductsMenu({ products, active }: { products: NavProduct[]; active: bo
         <span
           aria-hidden
           className={cn(
-            "absolute inset-x-4 bottom-1 h-0.5 rounded-full bg-brand-600 transition-opacity",
+            "absolute inset-x-3 bottom-1 h-0.5 rounded-full bg-brand-600 transition-opacity xl:inset-x-4",
             active ? "opacity-100" : "opacity-0",
           )}
         />

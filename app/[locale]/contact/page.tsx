@@ -19,7 +19,12 @@ const PATH = "/contact";
 export async function generateMetadata({ params }: PageProps<"/[locale]/contact">): Promise<Metadata> {
   const locale = await resolveLocale(params);
   const t = await getTranslations({ locale, namespace: "Metadata.contact" });
-  return buildPageMetadata({ locale, path: PATH, title: t("title"), description: t("description") });
+  return buildPageMetadata({
+    locale,
+    path: PATH,
+    title: t("title"),
+    description: t("description", { phone: siteConfig.contact.phoneDisplay }),
+  });
 }
 
 function ContactCard({

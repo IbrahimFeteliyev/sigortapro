@@ -3,19 +3,14 @@ import type { LocalizedText, ProductRecord } from "@/types/insurance";
 /**
  * Phase 1 mock content store.
  *
- * Every price is `null` on purpose: no verified tariffs are available yet, so
- * the UI shows "Get a quote" instead of a number. When the Spring Boot API
- * arrives, these records move to the backend and `lib/api/products.ts` swaps
- * its data source — no component changes required.
- *
- * Coverage and tariff texts are intentionally descriptive and non-binding;
- * actual terms are defined by the insurance contract.
+ * Product texts are descriptive and non-binding; actual terms are defined by
+ * the insurance contract. Prices live in dedicated tariff files
+ * (`data/property-tariffs.ts`, `data/life-tariffs.ts`) and coverage cards in
+ * `data/coverage.ts`. When the Spring Boot API arrives, these records move to
+ * the backend and `lib/api/products.ts` swaps its data source.
  */
 
 const l = (az: string, en: string, ru: string): LocalizedText => ({ az, en, ru });
-
-const usuallyOneYear = l("Adətən 1 il", "Usually 1 year", "Обычно 1 год");
-const longTerm = l("Uzunmüddətli", "Long-term", "Долгосрочно");
 
 export const products: ProductRecord[] = [
   /* ---------------------------------------------------------------------- */
@@ -23,6 +18,8 @@ export const products: ProductRecord[] = [
   /* ---------------------------------------------------------------------- */
   {
     slug: "car-insurance",
+    heroImage: "carHero",
+    cardImage: "carDriving",
     isMandatory: true,
     name: l("İcbari avtomobil sığortası", "Compulsory motor insurance", "Обязательное автострахование"),
     shortName: l("İcbari sığorta", "Compulsory motor", "Обязательное авто"),
@@ -58,36 +55,6 @@ export const products: ProductRecord[] = [
       l("Üçüncü şəxslərə dəyən zərər", "Third-party damage", "Ущерб третьим лицам"),
       l("Onlayn müraciət", "Online application", "Онлайн-заявка"),
     ],
-    coverage: [
-      {
-        title: l(
-          "Üçüncü şəxslərin həyatı və sağlamlığı",
-          "Life and health of third parties",
-          "Жизнь и здоровье третьих лиц",
-        ),
-        description: l(
-          "Yol-nəqliyyat hadisəsi nəticəsində digər şəxslərin həyatına və sağlamlığına vurulan zərər — qanunvericilikdə nəzərdə tutulmuş limitlər daxilində.",
-          "Harm caused to other people's life and health in a road accident, within the limits set by legislation.",
-          "Вред, причинённый жизни и здоровью других людей в ДТП, — в пределах лимитов, установленных законодательством.",
-        ),
-      },
-      {
-        title: l("Üçüncü şəxslərin əmlakı", "Third-party property", "Имущество третьих лиц"),
-        description: l(
-          "Digər avtomobillərə, binalara və ya başqa əmlaka dəyən zərər — qanunvericiliklə müəyyən olunmuş limitlər çərçivəsində.",
-          "Damage to other vehicles, buildings or other property, within the statutory limits.",
-          "Ущерб другим автомобилям, зданиям или иному имуществу — в пределах установленных законом лимитов.",
-        ),
-      },
-      {
-        title: l("Qanuni tələbə uyğunluq", "Legal compliance", "Соответствие закону"),
-        description: l(
-          "Qüvvədə olan polis nəqliyyat vasitəsini qanunvericiliyin tələblərinə uyğun idarə etməyə imkan verir.",
-          "A valid policy lets you drive in line with legal requirements.",
-          "Действующий полис позволяет управлять автомобилем в соответствии с требованиями законодательства.",
-        ),
-      },
-    ],
     benefits: [
       {
         title: l("Sadə onlayn müraciət", "Simple online application", "Простая онлайн-заявка"),
@@ -120,38 +87,6 @@ export const products: ProductRecord[] = [
           "Apply from anywhere, with no queues.",
           "Подавайте заявку из любого места, без очередей.",
         ),
-      },
-    ],
-    tariffs: [
-      {
-        id: "compulsory",
-        name: l("İcbari polis", "Compulsory policy", "Обязательный полис"),
-        summary: l(
-          "Üçüncü şəxslər qarşısında mülki məsuliyyət — qanunvericiliklə müəyyən edilmiş limitlər daxilində.",
-          "Third-party civil liability within the limits set by legislation.",
-          "Гражданская ответственность перед третьими лицами — в пределах лимитов, установленных законодательством.",
-        ),
-        duration: usuallyOneYear,
-        features: [
-          l(
-            "Sığorta haqqı qanunvericiliklə müəyyən edilmiş qaydada hesablanır",
-            "Premium calculated according to rules set by legislation",
-            "Взнос рассчитывается в порядке, установленном законодательством",
-          ),
-          l(
-            "Üçüncü şəxslərin sağlamlığına dəyən zərər",
-            "Harm to third parties' health",
-            "Вред здоровью третьих лиц",
-          ),
-          l(
-            "Üçüncü şəxslərin əmlakına dəyən zərər",
-            "Damage to third parties' property",
-            "Ущерб имуществу третьих лиц",
-          ),
-          l("Onlayn müraciət imkanı", "Online application", "Возможность онлайн-заявки"),
-        ],
-        startingPrice: null,
-        highlighted: true,
       },
     ],
     faqs: [
@@ -204,7 +139,6 @@ export const products: ProductRecord[] = [
         ),
       },
     ],
-    startingPrice: null,
     related: ["casco", "travel", "property"],
     seo: {
       title: l(
@@ -234,6 +168,8 @@ export const products: ProductRecord[] = [
   /* ---------------------------------------------------------------------- */
   {
     slug: "casco",
+    heroImage: "cascoHero",
+    cardImage: "cascoHero",
     isMandatory: false,
     name: l("KASKO sığortası", "CASCO insurance", "Страхование КАСКО"),
     shortName: l("KASKO", "CASCO", "КАСКО"),
@@ -263,40 +199,6 @@ export const products: ProductRecord[] = [
       l("Könüllü sığorta", "Voluntary cover", "Добровольное страхование"),
       l("Öz avtomobilinizin qorunması", "Protects your own car", "Защита вашего автомобиля"),
       l("Çevik şərtlər", "Flexible terms", "Гибкие условия"),
-    ],
-    coverage: [
-      {
-        title: l("Yol qəzaları", "Road accidents", "ДТП"),
-        description: l(
-          "Toqquşma, aşma və digər yol hadisələri nəticəsində avtomobilə dəyən zərər.",
-          "Damage to your car from collisions, rollovers and other road incidents.",
-          "Ущерб автомобилю в результате столкновений, опрокидывания и других дорожных происшествий.",
-        ),
-      },
-      {
-        title: l("Oğurluq və qanunsuz hərəkətlər", "Theft and vandalism", "Угон и противоправные действия"),
-        description: l(
-          "Avtomobilin oğurlanması, həmçinin üçüncü şəxslərin qanunsuz hərəkətləri nəticəsində dəyən zərər.",
-          "Theft of the vehicle and damage caused by unlawful acts of third parties.",
-          "Угон автомобиля и ущерб от противоправных действий третьих лиц.",
-        ),
-      },
-      {
-        title: l("Yanğın və təbii fəlakətlər", "Fire and natural disasters", "Пожар и стихийные бедствия"),
-        description: l(
-          "Yanğın, dolu, sel, güclü külək kimi hadisələrin vurduğu zərər.",
-          "Damage caused by fire, hail, floods, strong winds and similar events.",
-          "Ущерб от пожара, града, наводнения, сильного ветра и подобных событий.",
-        ),
-      },
-      {
-        title: l("Şüşə zədələri", "Glass damage", "Повреждение стёкол"),
-        description: l(
-          "Ön şüşə, yan şüşələr və faralara dəyən zərər — seçilmiş proqramdan asılı olaraq.",
-          "Damage to the windscreen, side windows and headlights, depending on the chosen programme.",
-          "Повреждение лобового и боковых стёкол, фар — в зависимости от выбранной программы.",
-        ),
-      },
     ],
     benefits: [
       {
@@ -330,66 +232,6 @@ export const products: ProductRecord[] = [
           "Share your details online and receive an offer at your convenience.",
           "Укажите данные онлайн и получите предложение в удобное время.",
         ),
-      },
-    ],
-    tariffs: [
-      {
-        id: "essential",
-        name: l("Əsas", "Essential", "Базовый"),
-        summary: l(
-          "Ən vacib risklərə qarşı qənaətcil qoruma.",
-          "Cost-effective protection against key risks.",
-          "Экономичная защита от ключевых рисков.",
-        ),
-        duration: usuallyOneYear,
-        features: [
-          l("Oğurluq", "Theft", "Угон"),
-          l("Tam məhv olma", "Total loss", "Полная гибель"),
-          l("Yanğın", "Fire", "Пожар"),
-        ],
-        startingPrice: null,
-      },
-      {
-        id: "standard",
-        name: l("Standart", "Standard", "Стандарт"),
-        summary: l(
-          "Gündəlik istifadə üçün balanslaşdırılmış qoruma.",
-          "Balanced protection for everyday driving.",
-          "Сбалансированная защита для ежедневных поездок.",
-        ),
-        duration: usuallyOneYear,
-        features: [
-          l("Əsas proqramdakı risklər", "Everything in Essential", "Всё из тарифа «Базовый»"),
-          l("Yol qəzaları", "Road accidents", "ДТП"),
-          l("Təbii fəlakətlər", "Natural disasters", "Стихийные бедствия"),
-          l("Şüşə zədələri", "Glass damage", "Повреждение стёкол"),
-        ],
-        startingPrice: null,
-        highlighted: true,
-      },
-      {
-        id: "comprehensive",
-        name: l("Geniş", "Comprehensive", "Расширенный"),
-        summary: l(
-          "Maksimum rahatlıq üçün geniş əhatə dairəsi.",
-          "Broad cover for maximum peace of mind.",
-          "Широкое покрытие для максимального спокойствия.",
-        ),
-        duration: usuallyOneYear,
-        features: [
-          l("Standart proqramdakı risklər", "Everything in Standard", "Всё из тарифа «Стандарт»"),
-          l(
-            "Üçüncü şəxslərin qanunsuz hərəkətləri",
-            "Unlawful acts of third parties",
-            "Противоправные действия третьих лиц",
-          ),
-          l(
-            "Evakuator və əlavə xidmətlər (müqaviləyə əsasən)",
-            "Towing and extra services (per contract)",
-            "Эвакуатор и доп. услуги (по договору)",
-          ),
-        ],
-        startingPrice: null,
       },
     ],
     faqs: [
@@ -434,7 +276,6 @@ export const products: ProductRecord[] = [
         ),
       },
     ],
-    startingPrice: null,
     related: ["car-insurance", "property", "travel"],
     seo: {
       title: l(
@@ -460,6 +301,8 @@ export const products: ProductRecord[] = [
   /* ---------------------------------------------------------------------- */
   {
     slug: "travel",
+    heroImage: "travelHero",
+    cardImage: "travelDestination",
     isMandatory: false,
     name: l("Səyahət sığortası", "Travel insurance", "Страхование путешественников"),
     shortName: l("Səyahət", "Travel", "Путешествия"),
@@ -489,40 +332,6 @@ export const products: ProductRecord[] = [
       l("Tibbi xərclər", "Medical expenses", "Медицинские расходы"),
       l("Səfər müddətinə uyğun", "Matched to your trip length", "С учётом длительности поездки"),
       l("Bir və ya bir neçə səyahətçi", "One or more travellers", "Один или несколько путешественников"),
-    ],
-    coverage: [
-      {
-        title: l("Təcili tibbi yardım", "Emergency medical care", "Экстренная медицинская помощь"),
-        description: l(
-          "Xaricdə qəfil xəstəlik və ya bədbəxt hadisə zamanı müalicə xərcləri.",
-          "Treatment costs for sudden illness or accidents abroad.",
-          "Расходы на лечение при внезапной болезни или несчастном случае за границей.",
-        ),
-      },
-      {
-        title: l("Tibbi nəqliyyat", "Medical transportation", "Медицинская транспортировка"),
-        description: l(
-          "Zərurət yarandıqda xəstəxanaya və ya vətənə tibbi daşınma xərcləri.",
-          "Costs of medical transport to a hospital or back home when necessary.",
-          "Расходы на транспортировку в больницу или на родину при необходимости.",
-        ),
-      },
-      {
-        title: l("Baqaj", "Luggage", "Багаж"),
-        description: l(
-          "Baqajın itməsi və ya gecikməsi — seçilmiş proqramdan asılı olaraq.",
-          "Lost or delayed luggage, depending on the chosen programme.",
-          "Потеря или задержка багажа — в зависимости от выбранной программы.",
-        ),
-      },
-      {
-        title: l("Səfərin ləğvi", "Trip cancellation", "Отмена поездки"),
-        description: l(
-          "Üzrlü səbəbdən səfərin ləğvi ilə bağlı xərclər — əlavə seçim kimi.",
-          "Costs related to cancelling a trip for a valid reason, as an optional add-on.",
-          "Расходы, связанные с отменой поездки по уважительной причине, — как дополнительная опция.",
-        ),
-      },
     ],
     benefits: [
       {
@@ -556,57 +365,6 @@ export const products: ProductRecord[] = [
           "Know what's covered before you go.",
           "Знайте, что покрывается, ещё до поездки.",
         ),
-      },
-    ],
-    tariffs: [
-      {
-        id: "basic",
-        name: l("Əsas", "Basic", "Базовый"),
-        summary: l(
-          "Qısa səfərlər üçün əsas tibbi qoruma.",
-          "Essential medical cover for short trips.",
-          "Базовая медицинская защита для коротких поездок.",
-        ),
-        duration: l("Səfər müddətinə görə", "For the length of your trip", "На срок поездки"),
-        features: [
-          l("Təcili tibbi yardım", "Emergency medical care", "Экстренная медицинская помощь"),
-          l("Tibbi nəqliyyat", "Medical transportation", "Медицинская транспортировка"),
-          l("Tək səfər üçün", "Single trip", "Для одной поездки"),
-        ],
-        startingPrice: null,
-      },
-      {
-        id: "standard",
-        name: l("Standart", "Standard", "Стандарт"),
-        summary: l(
-          "Turizm və işgüzar səfərlər üçün balanslaşdırılmış seçim.",
-          "A balanced choice for holidays and business trips.",
-          "Сбалансированный выбор для отдыха и деловых поездок.",
-        ),
-        duration: l("Səfər müddətinə görə", "For the length of your trip", "На срок поездки"),
-        features: [
-          l("Əsas proqramdakı təminatlar", "Everything in Basic", "Всё из тарифа «Базовый»"),
-          l("Bədbəxt hadisələr", "Personal accident", "Несчастные случаи"),
-          l("Baqajın itməsi və ya gecikməsi", "Lost or delayed luggage", "Потеря или задержка багажа"),
-        ],
-        startingPrice: null,
-        highlighted: true,
-      },
-      {
-        id: "multi-trip",
-        name: l("İllik çoxsəfərli", "Annual multi-trip", "Годовой мультитрип"),
-        summary: l(
-          "Tez-tez səyahət edənlər üçün il ərzində bir neçə səfəri əhatə edən seçim.",
-          "For frequent travellers — several trips covered within a year.",
-          "Для частых путешественников — несколько поездок в течение года.",
-        ),
-        duration: l("1 il", "1 year", "1 год"),
-        features: [
-          l("İl ərzində bir neçə səfər", "Multiple trips per year", "Несколько поездок в год"),
-          l("Standart proqramdakı təminatlar", "Everything in Standard", "Всё из тарифа «Стандарт»"),
-          l("Səfərin ləğvi (əlavə seçim)", "Trip cancellation (optional)", "Отмена поездки (опция)"),
-        ],
-        startingPrice: null,
       },
     ],
     faqs: [
@@ -659,7 +417,6 @@ export const products: ProductRecord[] = [
         ),
       },
     ],
-    startingPrice: null,
     related: ["life", "property", "casco"],
     seo: {
       title: l(
@@ -685,6 +442,8 @@ export const products: ProductRecord[] = [
   /* ---------------------------------------------------------------------- */
   {
     slug: "property",
+    heroImage: "propertyHero",
+    cardImage: "propertyCasco",
     isMandatory: false,
     name: l("Əmlak sığortası", "Property insurance", "Страхование имущества"),
     shortName: l("Əmlak", "Property", "Имущество"),
@@ -694,9 +453,9 @@ export const products: ProductRecord[] = [
       "Ваш дом и имущество под надёжной защитой",
     ),
     shortDescription: l(
-      "Mənzil, ev və digər əmlakın yanğın, su basması, təbii fəlakət və oğurluq risklərindən qorunması.",
-      "Protection for apartments, houses and other property against fire, water damage, natural disasters and theft.",
-      "Защита квартир, домов и другого имущества от пожара, затопления, стихийных бедствий и кражи.",
+      "Region üzrə sabit qiymətli standart paket və ya əmlakın dəyərinə əsaslanan Əmlakın KASKO sığortası.",
+      "A fixed-price standard package by region, or Property CASCO based on your property’s actual value.",
+      "Стандартный пакет с фиксированной ценой по региону или КАСКО имущества с учётом его реальной стоимости.",
     ),
     description: [
       l(
@@ -705,61 +464,15 @@ export const products: ProductRecord[] = [
         "Страхование имущества помогает защитить квартиру, частный дом или коммерческое помещение от финансовых последствий непредвиденных событий. Страховка может покрывать как конструктив здания, так и внутреннюю отделку и вещи.",
       ),
       l(
-        "Hər bir əmlak fərqlidir. Ona görə də əhatə dairəsi əmlakın növü, yerləşdiyi ünvan və dəyəri nəzərə alınaraq seçilir. SığortaPro mütəxəssisi sizə ən uyğun qoruma variantını seçməkdə kömək edəcək.",
-        "Every property is different, so the scope of cover is chosen based on the property type, location and value. A SığortaPro specialist will help you choose the most suitable protection.",
-        "Каждый объект уникален, поэтому объём покрытия подбирается с учётом типа имущества, его расположения и стоимости. Специалист SığortaPro поможет выбрать наиболее подходящую защиту.",
+        "İki seçim mövcuddur: standart əmlak sığortası region üzrə sabit təminat məbləği və sabit qiymətlə təqdim olunur, Əmlakın KASKO sığortası isə əmlakın faktiki dəyərinə və polis şərtlərinə əsasən fərdi qaydada hesablanır.",
+        "There are two options: standard property insurance comes with a fixed sum insured and a fixed price per region, while Property CASCO is priced individually based on the property’s actual value and the policy conditions.",
+        "Доступны два варианта: стандартное страхование имущества с фиксированной страховой суммой и ценой по региону и КАСКО имущества, стоимость которого рассчитывается индивидуально с учётом реальной стоимости объекта и условий полиса.",
       ),
     ],
     highlights: [
+      l("Region üzrə sabit qiymət", "Fixed price by region", "Фиксированная цена по региону"),
       l("Mənzil və fərdi ev", "Apartments and houses", "Квартиры и дома"),
-      l("Təmir və əşyalar", "Renovation and belongings", "Отделка и вещи"),
-      l("Fərdi əhatə dairəsi", "Tailored cover", "Индивидуальное покрытие"),
-    ],
-    coverage: [
-      {
-        title: l("Yanğın", "Fire", "Пожар"),
-        description: l(
-          "Yanğın, ildırım vurması və partlayış nəticəsində dəyən zərər.",
-          "Damage caused by fire, lightning and explosion.",
-          "Ущерб от пожара, удара молнии и взрыва.",
-        ),
-      },
-      {
-        title: l("Su basması", "Water damage", "Затопление"),
-        description: l(
-          "Su təchizatı, kanalizasiya və istilik sistemlərindən sızma nəticəsində dəyən zərər.",
-          "Damage from leaks in water supply, sewage and heating systems.",
-          "Ущерб от протечек систем водоснабжения, канализации и отопления.",
-        ),
-      },
-      {
-        title: l("Təbii fəlakətlər", "Natural disasters", "Стихийные бедствия"),
-        description: l(
-          "Zəlzələ, sel, güclü külək və digər təbii hadisələr — müqavilə şərtlərinə uyğun olaraq.",
-          "Earthquakes, floods, storms and other natural events, according to the contract terms.",
-          "Землетрясение, наводнение, сильный ветер и другие природные явления — согласно условиям договора.",
-        ),
-      },
-      {
-        title: l("Oğurluq və qanunsuz hərəkətlər", "Theft and vandalism", "Кража и противоправные действия"),
-        description: l(
-          "Oğurluq, soyğunçuluq və üçüncü şəxslərin qəsdən vurduğu zərər.",
-          "Burglary, robbery and deliberate damage by third parties.",
-          "Кража, грабёж и умышленное повреждение третьими лицами.",
-        ),
-      },
-      {
-        title: l(
-          "Qonşular qarşısında məsuliyyət",
-          "Liability to neighbours",
-          "Ответственность перед соседями",
-        ),
-        description: l(
-          "Sizin əmlakınızdan qonşulara dəyən zərər — əlavə seçim kimi.",
-          "Damage your property causes to neighbours, as an optional add-on.",
-          "Ущерб, причинённый соседям из-за вашего имущества, — как дополнительная опция.",
-        ),
-      },
+      l("Dəyərə əsaslanan KASKO", "Value-based CASCO", "КАСКО по стоимости"),
     ],
     benefits: [
       {
@@ -771,11 +484,11 @@ export const products: ProductRecord[] = [
         ),
       },
       {
-        title: l("Çevik seçimlər", "Flexible options", "Гибкие варианты"),
+        title: l("İki aydın seçim", "Two clear options", "Два понятных варианта"),
         description: l(
-          "Yalnız sizə lazım olan riskləri seçin.",
-          "Choose only the risks you need.",
-          "Выбирайте только нужные вам риски.",
+          "Standart paket və ya əmlakın dəyərinə əsaslanan KASKO.",
+          "A standard package or value-based CASCO.",
+          "Стандартный пакет или КАСКО по стоимости имущества.",
         ),
       },
       {
@@ -793,66 +506,6 @@ export const products: ProductRecord[] = [
           "Just share the address and a few key details.",
           "Достаточно указать адрес и основные данные.",
         ),
-      },
-    ],
-    tariffs: [
-      {
-        id: "apartment",
-        name: l("Mənzil", "Apartment", "Квартира"),
-        summary: l(
-          "Mənzil, təmir və ev əşyaları üçün qoruma.",
-          "Protection for your apartment, renovation and belongings.",
-          "Защита квартиры, отделки и домашних вещей.",
-        ),
-        duration: usuallyOneYear,
-        features: [
-          l("Yanğın və su basması", "Fire and water damage", "Пожар и затопление"),
-          l("Təmir və daxili bəzək", "Renovation and interior finishes", "Ремонт и внутренняя отделка"),
-          l("Ev əşyaları (seçimə görə)", "Household belongings (optional)", "Домашнее имущество (опция)"),
-        ],
-        startingPrice: null,
-      },
-      {
-        id: "house",
-        name: l("Fərdi ev", "Private house", "Частный дом"),
-        summary: l(
-          "Fərdi ev və həyətyanı tikililər üçün geniş qoruma.",
-          "Broad protection for a private house and outbuildings.",
-          "Широкая защита частного дома и хозяйственных построек.",
-        ),
-        duration: usuallyOneYear,
-        features: [
-          l("Binanın konstruksiyası", "Building structure", "Конструктив здания"),
-          l("Təbii fəlakətlər", "Natural disasters", "Стихийные бедствия"),
-          l("Oğurluq və qanunsuz hərəkətlər", "Theft and vandalism", "Кража и противоправные действия"),
-          l("Həyətyanı tikililər (seçimə görə)", "Outbuildings (optional)", "Хозпостройки (опция)"),
-        ],
-        startingPrice: null,
-        highlighted: true,
-      },
-      {
-        id: "commercial",
-        name: l("Kommersiya obyekti", "Commercial property", "Коммерческий объект"),
-        summary: l(
-          "Ofis, mağaza və digər kommersiya obyektləri üçün.",
-          "For offices, shops and other commercial premises.",
-          "Для офисов, магазинов и других коммерческих объектов.",
-        ),
-        duration: usuallyOneYear,
-        features: [
-          l("Bina və avadanlıq", "Premises and equipment", "Помещение и оборудование"),
-          l(
-            "Mallar və inventar (seçimə görə)",
-            "Stock and inventory (optional)",
-            "Товары и инвентарь (опция)",
-          ),
-          l(
-            "Üçüncü şəxslər qarşısında məsuliyyət (seçimə görə)",
-            "Third-party liability (optional)",
-            "Ответственность перед третьими лицами (опция)",
-          ),
-        ],
-        startingPrice: null,
       },
     ],
     faqs: [
@@ -881,11 +534,15 @@ export const products: ProductRecord[] = [
         ),
       },
       {
-        question: l("Hansı riskləri seçməliyəm?", "Which risks should I choose?", "Какие риски выбрать?"),
+        question: l(
+          "Standart sığorta ilə Əmlakın KASKO sığortası arasında fərq nədir?",
+          "What is the difference between standard insurance and Property CASCO?",
+          "Чем стандартное страхование отличается от КАСКО имущества?",
+        ),
         answer: l(
-          "Bu, əmlakın növündən və yerləşdiyi yerdən asılıdır. Məsələn, çoxmərtəbəli binada su basması riski daha aktual ola bilər. Mütəxəssisimiz sizə uyğun riskləri seçməyə kömək edəcək.",
-          "It depends on the property type and location. For example, water damage may be more relevant in an apartment building. Our specialist will help you choose.",
-          "Это зависит от типа и расположения объекта. Например, в многоквартирном доме особенно актуален риск затопления. Наш специалист поможет сделать выбор.",
+          "Standart sığortada təminat məbləği və qiymət region üzrə sabitdir. Əmlakın KASKO sığortasında isə təminat əmlakın faktiki dəyərinə və polis şərtlərinə əsaslanır, qiymət fərdi qaydada hesablanır.",
+          "With standard insurance, the sum insured and price are fixed by region. With Property CASCO, cover is based on the property’s actual value and the policy conditions, and the price is calculated individually.",
+          "В стандартном страховании страховая сумма и цена фиксированы по региону. В КАСКО имущества покрытие зависит от реальной стоимости объекта и условий полиса, а цена рассчитывается индивидуально.",
         ),
       },
       {
@@ -901,7 +558,6 @@ export const products: ProductRecord[] = [
         ),
       },
     ],
-    startingPrice: null,
     related: ["life", "casco", "car-insurance"],
     seo: {
       title: l(
@@ -927,6 +583,8 @@ export const products: ProductRecord[] = [
   /* ---------------------------------------------------------------------- */
   {
     slug: "life",
+    heroImage: "lifeHero",
+    cardImage: "lifeFamily",
     isMandatory: false,
     name: l("Güvənli həyat sığortası", "Secure life insurance", "Надёжное страхование жизни"),
     shortName: l("Həyat", "Life", "Жизнь"),
@@ -947,41 +605,15 @@ export const products: ProductRecord[] = [
         "Страхование жизни — долгосрочное решение, которое помогает защитить финансовую стабильность вашей семьи. При наступлении страхового случая, предусмотренного договором, страховая выплата может поддержать ваших близких в трудный момент.",
       ),
       l(
-        "Sığortanın müddəti, məbləği və şərtləri yaşınızdan, ehtiyaclarınızdan və seçdiyiniz proqramdan asılıdır. SığortaPro mütəxəssisi müxtəlif variantları aydın şəkildə izah edərək düzgün qərar verməyinizə kömək edir.",
-        "The term, sum insured and conditions depend on your age, needs and the programme you choose. A SığortaPro specialist will clearly explain the options so you can make the right decision.",
-        "Срок, страховая сумма и условия зависят от вашего возраста, потребностей и выбранной программы. Специалист SığortaPro понятно объяснит варианты, чтобы вы могли принять верное решение.",
+        "Qiymət yaş qrupunuzdan, seçdiyiniz təminat məbləğindən və sığorta kateqoriyasından asılıdır: sağalmaz xəstəliklərdən sığorta, istənilən səbəbdən ölüm və ya hər ikisi birlikdə. SığortaPro mütəxəssisi variantları aydın şəkildə izah edərək düzgün qərar verməyinizə kömək edir.",
+        "The price depends on your age group, the coverage amount and the insurance category: critical illness cover, death from any cause, or both combined. A SığortaPro specialist will clearly explain the options so you can make the right decision.",
+        "Стоимость зависит от возрастной группы, страховой суммы и категории страхования: от неизлечимых заболеваний, смерти по любой причине или обоих рисков вместе. Специалист SığortaPro понятно объяснит варианты, чтобы вы могли принять верное решение.",
       ),
     ],
     highlights: [
       l("Ailə üçün maliyyə dayağı", "Financial support for family", "Финансовая опора семьи"),
-      l("Uzunmüddətli qoruma", "Long-term protection", "Долгосрочная защита"),
-      l("Çevik müddət", "Flexible term", "Гибкий срок"),
-    ],
-    coverage: [
-      {
-        title: l("Həyat riski", "Life cover", "Риск смерти"),
-        description: l(
-          "Müqavilə müddətində sığortalının vəfatı halında faydalanan şəxslərə ödəniş.",
-          "A payment to beneficiaries if the insured person passes away during the contract term.",
-          "Выплата выгодоприобретателям в случае смерти застрахованного в период действия договора.",
-        ),
-      },
-      {
-        title: l("Bədbəxt hadisələr", "Accidents", "Несчастные случаи"),
-        description: l(
-          "Bədbəxt hadisə nəticəsində əlillik və ya sağlamlığa zərər — seçilmiş proqrama uyğun olaraq.",
-          "Disability or injury resulting from an accident, depending on the chosen programme.",
-          "Инвалидность или травма в результате несчастного случая — в зависимости от выбранной программы.",
-        ),
-      },
-      {
-        title: l("Ağır xəstəliklər", "Critical illness", "Критические заболевания"),
-        description: l(
-          "Bəzi proqramlarda ağır xəstəlik diaqnozu zamanı ödəniş — əlavə seçim kimi.",
-          "Some programmes offer a payment upon diagnosis of a critical illness, as an optional add-on.",
-          "Некоторые программы предусматривают выплату при диагностике тяжёлого заболевания — как дополнительная опция.",
-        ),
-      },
+      l("3 sığorta kateqoriyası", "3 insurance categories", "3 категории страхования"),
+      l("5 000 – 50 000 AZN təminat", "AZN 5,000–50,000 cover", "Покрытие 5 000 – 50 000 AZN"),
     ],
     benefits: [
       {
@@ -1015,65 +647,6 @@ export const products: ProductRecord[] = [
           "Careful handling of your personal information.",
           "Бережное отношение к вашим персональным данным.",
         ),
-      },
-    ],
-    tariffs: [
-      {
-        id: "term",
-        name: l("Risk həyat sığortası", "Term life", "Рисковое страхование"),
-        summary: l(
-          "Müəyyən müddət ərzində həyat riskinə qarşı sadə qoruma.",
-          "Straightforward life cover for a fixed period.",
-          "Простая защита жизни на определённый срок.",
-        ),
-        duration: l("1 ildən", "From 1 year", "От 1 года"),
-        features: [
-          l("Həyat riski", "Life cover", "Риск смерти"),
-          l("Bədbəxt hadisələr (seçimə görə)", "Accidents (optional)", "Несчастные случаи (опция)"),
-          l("Çevik müddət", "Flexible term", "Гибкий срок"),
-        ],
-        startingPrice: null,
-      },
-      {
-        id: "family",
-        name: l("Ailə planı", "Family plan", "Семейный план"),
-        summary: l(
-          "Ailənin maliyyə sabitliyi üçün genişləndirilmiş qoruma.",
-          "Extended protection for your family's financial stability.",
-          "Расширенная защита финансовой стабильности семьи.",
-        ),
-        duration: longTerm,
-        features: [
-          l("Həyat riski", "Life cover", "Риск смерти"),
-          l("Bədbəxt hadisələr", "Accidents", "Несчастные случаи"),
-          l(
-            "Ağır xəstəliklər (seçimə görə)",
-            "Critical illness (optional)",
-            "Критические заболевания (опция)",
-          ),
-        ],
-        startingPrice: null,
-        highlighted: true,
-      },
-      {
-        id: "savings",
-        name: l("Yığım həyat sığortası", "Savings life insurance", "Накопительное страхование"),
-        summary: l(
-          "Qorumanı uzunmüddətli yığımla birləşdirən seçim.",
-          "Combines protection with long-term savings.",
-          "Сочетает защиту с долгосрочными накоплениями.",
-        ),
-        duration: longTerm,
-        features: [
-          l("Həyat riski", "Life cover", "Риск смерти"),
-          l(
-            "Müqavilə sonunda yığım məbləği (şərtlərə əsasən)",
-            "Savings payout at the end of the term (per terms)",
-            "Накопленная сумма в конце срока (по условиям)",
-          ),
-          l("Uzunmüddətli planlaşdırma", "Long-term planning", "Долгосрочное планирование"),
-        ],
-        startingPrice: null,
       },
     ],
     faqs: [
@@ -1122,7 +695,6 @@ export const products: ProductRecord[] = [
         ),
       },
     ],
-    startingPrice: null,
     related: ["property", "travel", "casco"],
     seo: {
       title: l(

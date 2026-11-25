@@ -1,5 +1,6 @@
-import { Eye, HeartHandshake, Scale, Sparkles, Target, type LucideIcon } from "lucide-react";
+import { Eye, HeartHandshake, Scale, Sparkles, type LucideIcon } from "lucide-react";
 import type { Metadata } from "next";
+import Image from "next/image";
 import { getTranslations } from "next-intl/server";
 import { CtaSection } from "@/components/sections/CtaSection";
 import { HowItWorks } from "@/components/sections/HowItWorks";
@@ -8,6 +9,7 @@ import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { LogoMark } from "@/components/ui/Logo";
 import { Reveal, RevealGroup, RevealItem } from "@/components/ui/Reveal";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { photos } from "@/data/images";
 import { resolveLocale } from "@/lib/i18n";
 import { buildPageMetadata } from "@/lib/seo";
 
@@ -54,24 +56,21 @@ export default async function AboutPage({ params }: PageProps<"/[locale]/about">
             </div>
           </div>
           <Reveal className="lg:col-span-6" delay={0.08}>
-            <figure className="relative isolate overflow-hidden rounded-[2rem] bg-hero-panel p-8 text-white sm:p-12">
-              <svg
+            <figure className="relative isolate overflow-hidden rounded-[2rem] p-8 pt-56 text-white sm:p-12 sm:pt-72">
+              <Image
+                src={photos.aboutTeam.src}
+                alt={photos.aboutTeam.alt[locale]}
+                fill
+                sizes="(min-width: 1024px) 560px, 100vw"
+                placeholder="blur"
+                className="-z-10 object-cover"
+              />
+              <div
                 aria-hidden
-                viewBox="0 0 400 400"
-                fill="none"
-                className="absolute -right-24 -bottom-24 -z-10 size-[26rem] text-white/10"
-              >
-                <circle cx="200" cy="200" r="80" stroke="currentColor" />
-                <circle cx="200" cy="200" r="130" stroke="currentColor" />
-                <circle cx="200" cy="200" r="180" stroke="currentColor" />
-              </svg>
-              <div className="flex items-center gap-3">
-                <LogoMark className="size-11" />
-                <span className="grid size-11 place-items-center rounded-xl bg-white/10 ring-1 ring-white/15">
-                  <Target aria-hidden className="size-5 text-brand-200" />
-                </span>
-              </div>
-              <figcaption className="mt-10 text-sm font-semibold tracking-wide text-brand-200">
+                className="absolute inset-0 -z-10 bg-linear-to-t from-brand-950 via-brand-950/75 to-brand-950/5"
+              />
+              <LogoMark className="size-11" />
+              <figcaption className="mt-6 text-sm font-semibold tracking-wide text-brand-200">
                 {t("missionTitle")}
               </figcaption>
               <blockquote className="mt-3 text-2xl leading-snug font-medium tracking-tight sm:text-[1.75rem]">

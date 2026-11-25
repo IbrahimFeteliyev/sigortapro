@@ -1,5 +1,6 @@
 import "server-only";
 import { cacheLife, cacheTag } from "next/cache";
+import { photo } from "@/data/image-lookup";
 import { products } from "@/data/products";
 import type { Locale } from "@/i18n/routing";
 import {
@@ -26,27 +27,14 @@ function localize(record: ProductRecord, locale: Locale): InsuranceProduct {
     shortDescription: record.shortDescription[locale],
     description: record.description.map((p) => p[locale]),
     highlights: record.highlights.map((h) => h[locale]),
-    coverage: record.coverage.map((c) => ({
-      title: c.title[locale],
-      description: c.description[locale],
-    })),
     benefits: record.benefits.map((b) => ({
       title: b.title[locale],
       description: b.description[locale],
     })),
-    tariffs: record.tariffs.map((t) => ({
-      id: t.id,
-      name: t.name[locale],
-      summary: t.summary[locale],
-      duration: t.duration[locale],
-      features: t.features.map((f) => f[locale]),
-      startingPrice: t.startingPrice,
-      highlighted: t.highlighted ?? false,
-    })),
     faqs: record.faqs.map((f) => ({ question: f.question[locale], answer: f.answer[locale] })),
-    startingPrice: record.startingPrice,
     related: record.related,
-    image: record.image ? { src: record.image.src, alt: record.image.alt[locale] } : null,
+    heroImage: photo(record.heroImage, locale),
+    cardImage: photo(record.cardImage, locale),
     seo: {
       title: record.seo.title[locale],
       description: record.seo.description[locale],
@@ -63,9 +51,7 @@ function toSummary(product: InsuranceProduct): InsuranceProductSummary {
     shortName: product.shortName,
     tagline: product.tagline,
     shortDescription: product.shortDescription,
-    startingPrice: product.startingPrice,
-    image: product.image,
-    featuredTariff: product.tariffs.find((t) => t.highlighted) ?? product.tariffs[0] ?? null,
+    cardImage: product.cardImage,
   };
 }
 

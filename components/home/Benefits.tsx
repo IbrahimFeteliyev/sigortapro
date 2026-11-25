@@ -8,10 +8,12 @@ import {
   UserRound,
   type LucideIcon,
 } from "lucide-react";
-import { useTranslations } from "next-intl";
+import Image from "next/image";
+import { useLocale, useTranslations } from "next-intl";
 import { RevealGroup, RevealItem } from "@/components/ui/Reveal";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
+import { photos } from "@/data/images";
 import { siteConfig } from "@/lib/site";
 
 type BenefitKey = "easyOnline" | "timeSaving" | "personal" | "options" | "communication" | "simple";
@@ -29,6 +31,7 @@ export function Benefits() {
   const t = useTranslations("Benefits");
   const nav = useTranslations("Nav");
   const common = useTranslations("Common");
+  const locale = useLocale();
 
   return (
     <section aria-labelledby="benefits-heading" className="container-page py-20 sm:py-28">
@@ -40,17 +43,19 @@ export function Benefits() {
             title={t("title")}
             description={t("description")}
           />
-          <div className="relative mt-10 overflow-hidden rounded-[1.75rem] bg-hero-panel p-7 text-white">
-            <svg
+          <div className="relative isolate mt-10 overflow-hidden rounded-[1.75rem] p-7 pt-40 text-white sm:pt-48">
+            <Image
+              src={photos.travelSupport.src}
+              alt={photos.travelSupport.alt[locale]}
+              fill
+              sizes="(min-width: 1024px) 460px, 100vw"
+              placeholder="blur"
+              className="-z-10 object-cover"
+            />
+            <div
               aria-hidden
-              viewBox="0 0 200 200"
-              fill="none"
-              className="absolute -right-16 -bottom-16 size-56 text-white/10"
-            >
-              <circle cx="100" cy="100" r="40" stroke="currentColor" />
-              <circle cx="100" cy="100" r="70" stroke="currentColor" />
-              <circle cx="100" cy="100" r="99" stroke="currentColor" />
-            </svg>
+              className="absolute inset-0 -z-10 bg-linear-to-t from-brand-950 via-brand-950/70 to-transparent"
+            />
             <p className="text-lg font-semibold">{nav("needHelp")}</p>
             <a
               href={siteConfig.contact.phoneHref}

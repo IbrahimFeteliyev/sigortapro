@@ -31,6 +31,7 @@ export async function Footer({
   const navigation = [
     { href: "/", label: nav("home") },
     { href: "/insurance", label: nav("insurance") },
+    { href: "/companies", label: nav("companies") },
     { href: "/prices", label: nav("prices") },
     { href: "/about", label: nav("about") },
     { href: "/contact", label: nav("contact") },

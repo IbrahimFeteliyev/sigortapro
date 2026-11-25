@@ -15,7 +15,10 @@ import { organizationSchema, websiteSchema } from "@/lib/structured-data";
 import "../globals.css";
 
 const onest = Onest({
-  subsets: ["latin", "latin-ext", "cyrillic"],
+  // The subsets option only controls preloading: Latin + Latin-ext (Azerbaijani ə, ğ, ı…)
+  // are preloaded for the default locales; Cyrillic still loads on demand via
+  // unicode-range on Russian pages.
+  subsets: ["latin", "latin-ext"],
   display: "swap",
   variable: "--font-onest",
 });

@@ -1,6 +1,7 @@
 import { getTranslations } from "next-intl/server";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import type { Locale } from "@/i18n/routing";
+import { fillContact } from "@/lib/site";
 import { PageHero } from "./PageHero";
 
 interface LegalSection {
@@ -67,7 +68,7 @@ export async function LegalDocument({
                 </h2>
                 <div className="mt-4 space-y-4 leading-relaxed text-ink-soft">
                   {section.body.map((paragraph) => (
-                    <p key={paragraph}>{paragraph}</p>
+                    <p key={paragraph}>{fillContact(paragraph)}</p>
                   ))}
                 </div>
               </section>

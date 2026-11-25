@@ -11,7 +11,7 @@ import "./globals.css";
  */
 
 const onest = Onest({
-  subsets: ["latin", "latin-ext", "cyrillic"],
+  subsets: ["latin", "latin-ext"],
   display: "swap",
   variable: "--font-onest",
 });
