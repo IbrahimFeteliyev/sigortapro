@@ -173,7 +173,7 @@ export function CarInsuranceForm({ productName }: { productName: string }) {
             <li key={label} aria-current={index === step ? "step" : undefined}>
               <span className="block h-1.5 overflow-hidden rounded-full bg-line">
                 <m.span
-                  className="block h-full rounded-full bg-brand-600"
+                  className="block h-full rounded-full bg-brand-900"
                   initial={false}
                   animate={{ width: index <= step ? "100%" : "0%" }}
                   transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
@@ -391,8 +391,8 @@ export function CarInsuranceForm({ productName }: { productName: string }) {
                       />
                     ))}
                   </div>
-                  <div className="flex items-center justify-between gap-4 rounded-2xl bg-brand-950 px-5 py-4 text-white">
-                    <span className="text-sm font-medium text-brand-100">{tc("total")}</span>
+                  <div className="flex items-center justify-between gap-4 rounded-2xl bg-surface px-5 py-4 text-ink">
+                    <span className="text-sm font-medium text-muted">{tc("total")}</span>
                     <AnimatePresence mode="wait" initial={false}>
                       <m.span
                         key={totalLabel}

@@ -138,12 +138,10 @@ export function DocumentUpload({ onCountChange }: { onCountChange?: (count: numb
           onDrop={onDrop}
           className={cn(
             "mt-3 flex flex-col items-center justify-center rounded-2xl border-2 border-dashed px-4 py-7 text-center transition-colors",
-            dragging
-              ? "border-brand-500 bg-brand-50"
-              : "border-line-strong bg-surface hover:border-brand-300",
+            dragging ? "border-ink bg-surface-strong" : "border-line-strong bg-surface hover:border-ink/40",
           )}
         >
-          <span className="grid size-12 place-items-center rounded-2xl bg-white text-brand-600 shadow-xs">
+          <span className="grid size-12 place-items-center rounded-2xl bg-white text-ink shadow-xs">
             <CloudUpload aria-hidden className="size-6" />
           </span>
           <p className="mt-3 text-sm font-semibold text-ink">{t("dropTitle")}</p>
@@ -154,7 +152,7 @@ export function DocumentUpload({ onCountChange }: { onCountChange?: (count: numb
             type="button"
             onClick={() => openPicker()}
             aria-describedby={hintId}
-            className="mt-4 rounded-full bg-white px-4 py-2 text-sm font-semibold text-brand-700 shadow-xs ring-1 ring-line transition-colors hover:bg-brand-50"
+            className="mt-4 rounded-full bg-white px-4 py-2 text-sm font-semibold text-ink shadow-xs ring-1 ring-line transition-colors hover:bg-surface"
           >
             {t("choose")}
           </button>
@@ -191,7 +189,7 @@ export function DocumentUpload({ onCountChange }: { onCountChange?: (count: numb
                       className="size-full object-cover"
                     />
                   ) : (
-                    <span className="flex flex-col items-center gap-2 text-brand-700">
+                    <span className="flex flex-col items-center gap-2 text-ink">
                       <FileText aria-hidden className="size-10" />
                       <span className="text-xs font-semibold">PDF</span>
                     </span>
@@ -225,8 +223,8 @@ export function DocumentUpload({ onCountChange }: { onCountChange?: (count: numb
         ) : null}
       </AnimatePresence>
 
-      <p className="mt-3 flex items-start gap-2 rounded-2xl bg-brand-50 px-3.5 py-3 text-xs leading-relaxed text-brand-900">
-        <ShieldCheck aria-hidden className="mt-0.5 size-4 shrink-0 text-brand-700" />
+      <p className="mt-3 flex items-start gap-2 rounded-2xl bg-surface px-3.5 py-3 text-xs leading-relaxed text-ink-soft">
+        <ShieldCheck aria-hidden className="mt-0.5 size-4 shrink-0 text-ink" />
         {t("demoNotice")}
       </p>
     </div>

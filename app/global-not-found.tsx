@@ -32,7 +32,7 @@ export default function GlobalNotFound() {
     <html lang="az" className={onest.variable}>
       <body className="grid min-h-dvh place-items-center bg-white px-5 text-ink antialiased">
         <main className="flex max-w-md flex-col items-center py-20 text-center">
-          <p className="text-gradient-brand text-7xl font-semibold tracking-tight">{az.NotFound.code}</p>
+          <p className="text-7xl font-semibold tracking-tight text-brand-900">{az.NotFound.code}</p>
           <ul className="mt-8 w-full space-y-3">
             {copy.map((item) => (
               <li

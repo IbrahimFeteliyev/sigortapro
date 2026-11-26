@@ -4,7 +4,7 @@ import { getTranslations } from "next-intl/server";
 import { Logo } from "@/components/ui/Logo";
 import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 import { Link } from "@/i18n/navigation";
-import type { Locale } from "@/i18n/routing";
+import type { AppPathname, Locale } from "@/i18n/routing";
 import { siteConfig } from "@/lib/site";
 import type { InsuranceSlug } from "@/types/insurance";
 
@@ -28,7 +28,7 @@ export async function Footer({
     getCurrentYear(),
   ]);
 
-  const navigation = [
+  const navigation: { href: AppPathname; label: string }[] = [
     { href: "/", label: nav("home") },
     { href: "/insurance", label: nav("insurance") },
     { href: "/companies", label: nav("companies") },
@@ -42,7 +42,7 @@ export async function Footer({
 
   return (
     <footer className="border-t border-line bg-surface">
-      <div className="container-page grid gap-12 py-16 sm:grid-cols-2 lg:grid-cols-12 lg:gap-8">
+      <div className="container-page grid gap-10 py-14 sm:grid-cols-2 lg:grid-cols-12 lg:gap-8">
         <div className="sm:col-span-2 lg:col-span-4">
           <Link href="/" aria-label={nav("homeAria")} className="inline-block rounded-xl">
             <Logo />
@@ -87,10 +87,10 @@ export async function Footer({
             <li>
               <a
                 href={siteConfig.contact.phoneHref}
-                className="inline-flex items-center gap-3 font-semibold text-ink transition-colors hover:text-brand-700"
+                className="inline-flex items-center gap-3 font-semibold text-ink transition-colors hover:text-ink-soft"
               >
                 <span className="grid size-9 place-items-center rounded-full bg-white shadow-xs ring-1 ring-line">
-                  <Phone aria-hidden className="size-4 text-brand-600" />
+                  <Phone aria-hidden className="size-4 text-ink" />
                 </span>
                 {siteConfig.contact.phoneDisplay}
               </a>
@@ -100,7 +100,7 @@ export async function Footer({
                 href={siteConfig.contact.whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 font-semibold text-ink transition-colors hover:text-brand-700"
+                className="inline-flex items-center gap-3 font-semibold text-ink transition-colors hover:text-ink-soft"
               >
                 <span className="grid size-9 place-items-center rounded-full bg-white shadow-xs ring-1 ring-line">
                   <WhatsAppIcon className="size-4 text-whatsapp" />

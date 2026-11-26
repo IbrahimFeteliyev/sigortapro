@@ -239,7 +239,7 @@ export function CheckboxInput({
     <label
       className={cn(
         "flex cursor-pointer items-start gap-3.5 rounded-2xl bg-white p-4 ring-1 ring-line-strong transition-[box-shadow,background-color] hover:ring-ink/30",
-        "has-[:checked]:bg-brand-50/60 has-[:checked]:ring-2 has-[:checked]:ring-brand-600",
+        "has-[:checked]:bg-surface has-[:checked]:ring-2 has-[:checked]:ring-ink",
         className,
       )}
     >
@@ -247,7 +247,7 @@ export function CheckboxInput({
         type="checkbox"
         value={value}
         {...register(name)}
-        className="mt-0.5 size-5 shrink-0 cursor-pointer accent-brand-600"
+        className="mt-0.5 size-5 shrink-0 cursor-pointer accent-brand-900"
       />
       <span className="min-w-0 flex-1">
         <span className="block font-semibold text-ink">{label}</span>
@@ -273,7 +273,7 @@ export function ConsentInput() {
           aria-required
           aria-invalid={error ? true : undefined}
           aria-describedby={error ? "field-consent-error" : undefined}
-          className="mt-0.5 size-5 shrink-0 cursor-pointer accent-brand-600"
+          className="mt-0.5 size-5 shrink-0 cursor-pointer accent-brand-900"
         />
         <span>
           {t.rich("consent", {
@@ -281,7 +281,7 @@ export function ConsentInput() {
               <Link
                 href="/privacy-policy"
                 target="_blank"
-                className="font-semibold text-brand-700 underline underline-offset-2 hover:text-brand-800"
+                className="font-semibold text-ink underline underline-offset-2"
               >
                 {chunks}
               </Link>
@@ -323,13 +323,13 @@ export function ChoiceGroup({
             key={option.value}
             className={cn(
               "group flex cursor-pointer items-start gap-3 rounded-2xl bg-white p-4 ring-1 ring-line-strong transition-[box-shadow,background-color] hover:ring-ink/30",
-              "has-[:checked]:bg-brand-50/60 has-[:checked]:ring-2 has-[:checked]:ring-brand-600",
-              "has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-offset-2 has-[:focus-visible]:outline-brand-600",
+              "has-[:checked]:bg-surface has-[:checked]:ring-2 has-[:checked]:ring-ink",
+              "has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-offset-2 has-[:focus-visible]:outline-ink",
             )}
           >
             <input type="radio" value={option.value} {...register(name)} className="sr-only" />
             {option.icon ? (
-              <span className="grid size-10 shrink-0 place-items-center rounded-xl bg-surface text-brand-700 group-has-[:checked]:bg-brand-gradient group-has-[:checked]:text-white">
+              <span className="grid size-10 shrink-0 place-items-center rounded-xl bg-surface text-ink group-has-[:checked]:bg-ink group-has-[:checked]:text-white">
                 {option.icon}
               </span>
             ) : null}
@@ -341,7 +341,7 @@ export function ChoiceGroup({
             </span>
             <span
               aria-hidden
-              className="mt-0.5 grid size-5 shrink-0 place-items-center rounded-full ring-1 ring-line-strong group-has-[:checked]:bg-brand-600 group-has-[:checked]:ring-brand-600"
+              className="mt-0.5 grid size-5 shrink-0 place-items-center rounded-full ring-1 ring-line-strong group-has-[:checked]:bg-ink group-has-[:checked]:ring-ink"
             >
               <span className="size-2 rounded-full bg-white opacity-0 group-has-[:checked]:opacity-100" />
             </span>

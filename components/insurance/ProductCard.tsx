@@ -1,13 +1,17 @@
-import { ArrowRight } from "lucide-react";
 import Image from "next/image";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { buttonStyles } from "@/components/ui/button";
 import { Link } from "@/i18n/navigation";
+import type { Locale } from "@/i18n/routing";
+import { formatAzn } from "@/lib/format";
+import { priceHint } from "@/lib/pricing";
 import { cn } from "@/lib/utils";
 import type { InsuranceProductSummary } from "@/types/insurance";
-import { ProductIcon } from "./ProductIcon";
 
-/** Photo-led product card: the card opens the product page, the button jumps to its form. */
+/**
+ * Listing-style product card: a large photo, the name, one line of text and
+ * the price line. The whole card opens the product page (form at the top).
+ */
 export function ProductCard({
   product,
   imageClassName = "aspect-[4/3]",
@@ -22,18 +26,13 @@ export function ProductCard({
   preload?: boolean;
 }) {
   const t = useTranslations("Common");
+  const locale = useLocale() as Locale;
   const Heading = headingLevel;
-  const href = `/insurance/${product.slug}` as const;
+  const hint = priceHint(product.slug);
 
   return (
-    <article
-      className={cn(
-        "group relative flex h-full flex-col overflow-hidden rounded-[1.75rem] bg-white shadow-card ring-1 ring-line",
-        "transition-[box-shadow,transform] duration-300 ease-out-soft hover:-translate-y-1 hover:shadow-card-hover",
-        "motion-reduce:transition-none motion-reduce:hover:translate-y-0",
-      )}
-    >
-      <div className={cn("relative overflow-hidden bg-surface", imageClassName)}>
+    <article className="group relative flex h-full flex-col">
+      <div className={cn("relative overflow-hidden rounded-2xl bg-surface", imageClassName)}>
         <Image
           src={product.cardImage.src}
           alt={product.cardImage.alt}
@@ -41,46 +40,39 @@ export function ProductCard({
           sizes={sizes}
           preload={preload}
           placeholder={typeof product.cardImage.src === "string" ? "empty" : "blur"}
-          className="object-cover transition-transform duration-700 ease-out-soft group-hover:scale-[1.04] motion-reduce:transition-none"
+          className="object-cover transition-transform duration-700 ease-out-soft group-hover:scale-[1.03] motion-reduce:transition-none"
         />
-        <div
-          aria-hidden
-          className="absolute inset-0 bg-linear-to-t from-ink/35 via-transparent to-transparent"
-        />
-        <span className="absolute bottom-4 left-4 grid size-11 place-items-center rounded-2xl bg-white/95 text-brand-700 shadow-float">
-          <ProductIcon slug={product.slug} className="size-5" />
-        </span>
         {product.isMandatory ? (
-          <span className="absolute top-4 left-4 inline-flex items-center gap-1.5 rounded-full bg-white/95 px-3 py-1.5 text-xs font-semibold text-ink shadow-xs">
-            <span aria-hidden className="size-1.5 rounded-full bg-brand-600" />
+          <span className="absolute top-3 left-3 rounded-full bg-white px-3 py-1 text-xs font-semibold text-ink shadow-xs">
             {t("mandatory")}
           </span>
         ) : null}
       </div>
-      <div className="flex flex-1 flex-col p-5 sm:p-6">
-        <Heading className="text-xl font-semibold text-ink">
+      <div className="flex flex-1 flex-col pt-4">
+        <Heading className="text-lg leading-snug font-semibold text-ink">
           <Link
-            href={href}
-            className="outline-none after:absolute after:inset-0 after:rounded-[1.75rem] after:content-[''] focus-visible:after:ring-2 focus-visible:after:ring-brand-600"
+            href={`/insurance/${product.slug}`}
+            className="outline-none after:absolute after:inset-0 after:rounded-2xl after:content-[''] focus-visible:after:ring-2 focus-visible:after:ring-ink focus-visible:after:ring-offset-4"
           >
             {product.name}
           </Link>
         </Heading>
-        <p className="mt-2 line-clamp-3 text-[0.9375rem] leading-relaxed text-muted">
+        <p className="mt-1 line-clamp-2 text-[0.9375rem] leading-relaxed text-muted">
           {product.shortDescription}
         </p>
-        <div className="relative z-10 mt-auto flex items-center justify-between gap-3 pt-5">
-          <Link href={`${href}#apply`} className={buttonStyles({ size: "md" })}>
+        <div className="mt-auto flex items-center justify-between gap-3 pt-3">
+          <p className="text-[0.9375rem] font-semibold text-ink">
+            {hint.kind === "from"
+              ? t("fromPrice", { price: formatAzn(hint.amount, locale) })
+              : t(hint.kind === "statutory" ? "statutoryPrice" : "individualPrice")}
+          </p>
+          <Link
+            href={{ pathname: `/insurance/${product.slug}`, hash: "apply" }}
+            className={buttonStyles({ variant: "secondary", size: "sm", className: "relative z-10" })}
+          >
             {t("apply")}
             <span className="sr-only"> — {product.name}</span>
           </Link>
-          <span
-            aria-hidden
-            className="inline-flex items-center gap-1 text-sm font-semibold text-brand-700 transition-transform group-hover:translate-x-0.5"
-          >
-            {t("details")}
-            <ArrowRight className="size-4" />
-          </span>
         </div>
       </div>
     </article>

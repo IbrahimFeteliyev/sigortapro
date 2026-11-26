@@ -37,12 +37,11 @@ export default async function ApplyPage({ params }: PageProps<"/[locale]/apply">
     <>
       <PageHero
         breadcrumbs={<Breadcrumbs locale={locale} items={[{ name: t("eyebrow") }]} currentPath={PATH} />}
-        eyebrow={t("eyebrow")}
         title={t("title")}
         description={t("description")}
       />
 
-      <section className="container-page pb-24">
+      <section className="container-page pb-16 sm:pb-24">
         <div className="grid gap-8 lg:grid-cols-12 lg:gap-10">
           <div className="lg:col-span-8">
             <FormMessages>
@@ -52,26 +51,21 @@ export default async function ApplyPage({ params }: PageProps<"/[locale]/apply">
 
           <aside className="lg:col-span-4">
             <div className="space-y-4 lg:sticky lg:top-24">
-              <div className="relative isolate overflow-hidden rounded-[1.75rem] p-7 pt-36 text-white">
-                <Image
-                  src={image.src}
-                  alt={image.alt[locale]}
-                  fill
-                  sizes="(min-width: 1024px) 380px, 100vw"
-                  placeholder="blur"
-                  className="-z-10 object-cover"
-                />
-                <div
-                  aria-hidden
-                  className="absolute inset-0 -z-10 bg-linear-to-t from-brand-950 via-brand-950/75 to-brand-950/10"
-                />
-                <h2 className="text-xl font-semibold">{t("asideTitle")}</h2>
-                <p className="mt-2 leading-relaxed text-brand-100">{t("asideText")}</p>
-                <div className="mt-6 grid gap-3">
-                  <a
-                    href={siteConfig.contact.phoneHref}
-                    className={buttonStyles({ variant: "light", size: "lg" })}
-                  >
+              <div className="rounded-3xl p-5 ring-1 ring-line">
+                <div className="relative aspect-[3/2] overflow-hidden rounded-2xl bg-surface">
+                  <Image
+                    src={image.src}
+                    alt={image.alt[locale]}
+                    fill
+                    sizes="(min-width: 1024px) 360px, 100vw"
+                    placeholder="blur"
+                    className="object-cover"
+                  />
+                </div>
+                <h2 className="mt-5 text-xl font-semibold text-ink">{t("asideTitle")}</h2>
+                <p className="mt-1.5 leading-relaxed text-muted">{t("asideText")}</p>
+                <div className="mt-5 grid gap-3">
+                  <a href={siteConfig.contact.phoneHref} className={buttonStyles({ size: "lg" })}>
                     <Phone aria-hidden className="size-4" />
                     {siteConfig.contact.phoneDisplay}
                   </a>
@@ -79,19 +73,22 @@ export default async function ApplyPage({ params }: PageProps<"/[locale]/apply">
                     href={siteConfig.contact.whatsappUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={buttonStyles({ variant: "outlineLight", size: "lg" })}
+                    className={buttonStyles({ variant: "secondary", size: "lg" })}
                   >
-                    <WhatsAppIcon className="size-5" />
+                    <WhatsAppIcon className="size-5 text-whatsapp" />
                     {common("writeWhatsapp")}
                     <span className="sr-only">{common("newTab")}</span>
                   </a>
                 </div>
               </div>
-              <div className="flex gap-3 rounded-[1.5rem] bg-surface p-5 text-sm leading-relaxed text-muted">
-                <LockKeyhole aria-hidden className="mt-0.5 size-4 shrink-0 text-brand-600" />
+              <div className="flex gap-3 rounded-2xl bg-surface p-5 text-sm leading-relaxed text-muted">
+                <LockKeyhole aria-hidden className="mt-0.5 size-4 shrink-0 text-ink" />
                 <p>
                   {t("privacyNote")}{" "}
-                  <Link href="/privacy-policy" className="font-semibold text-brand-700 hover:text-brand-800">
+                  <Link
+                    href="/privacy-policy"
+                    className="font-semibold text-ink underline underline-offset-2"
+                  >
                     {footer("privacy")}
                   </Link>
                 </p>

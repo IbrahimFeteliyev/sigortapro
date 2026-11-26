@@ -1,4 +1,4 @@
-import type { Locale } from "@/i18n/routing";
+import type { AppPathname, Locale } from "@/i18n/routing";
 import { absoluteUrl, siteConfig } from "@/lib/site";
 import type { Faq, InsuranceProduct } from "@/types/insurance";
 
@@ -43,7 +43,7 @@ export function websiteSchema(locale: Locale, description: string) {
 export interface BreadcrumbEntry {
   name: string;
   /** Locale-less path; omit for the current page. */
-  path?: string;
+  path?: AppPathname;
 }
 
 export function breadcrumbSchema(locale: Locale, items: BreadcrumbEntry[], currentPath: string) {

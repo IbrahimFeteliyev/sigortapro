@@ -1,9 +1,8 @@
-import { CircleCheck, Info, Phone } from "lucide-react";
+import { Phone } from "lucide-react";
 import type { Metadata } from "next";
 import Image from "next/image";
 import { getTranslations } from "next-intl/server";
 import { CompanyGrid } from "@/components/insurance/CompanyGrid";
-import { CtaSection } from "@/components/sections/CtaSection";
 import { PageHero } from "@/components/sections/PageHero";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { buttonStyles } from "@/components/ui/button";
@@ -36,27 +35,23 @@ export default async function CompaniesPage({ params }: PageProps<"/[locale]/com
     <>
       <PageHero
         breadcrumbs={<Breadcrumbs locale={locale} items={[{ name: nav("companies") }]} currentPath={PATH} />}
-        eyebrow={t("eyebrow")}
         title={t("pageTitle")}
         description={t("pageDescription")}
       />
 
-      <section aria-label={t("eyebrow")} className="container-page pb-16">
+      <section aria-label={t("pageTitle")} className="container-page pb-12 sm:pb-16">
         <CompanyGrid companies={getCompanies()} />
-        <p className="mt-6 flex max-w-3xl gap-2.5 text-sm leading-relaxed text-muted">
-          <Info aria-hidden className="mt-0.5 size-4 shrink-0 text-subtle" />
-          {t("disclaimer", { phone: siteConfig.contact.phoneDisplay })}
-        </p>
+        <p className="mt-6 max-w-3xl text-sm leading-relaxed text-muted">{t("disclaimer")}</p>
       </section>
 
-      <section aria-labelledby="one-contact-heading" className="container-page pb-20 sm:pb-28">
-        <div className="grid items-center gap-10 rounded-[2rem] bg-surface p-6 sm:p-10 lg:grid-cols-2 lg:gap-14 lg:p-12">
-          <Reveal className="relative aspect-[4/3] overflow-hidden rounded-[1.5rem]">
+      <section aria-labelledby="one-contact-heading" className="container-page pb-16 sm:pb-24">
+        <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
+          <Reveal className="relative aspect-[3/2] overflow-hidden rounded-3xl bg-surface">
             <Image
               src={image.src}
               alt={image.alt[locale]}
               fill
-              sizes="(min-width: 1024px) 520px, 100vw"
+              sizes="(min-width: 1024px) 560px, 100vw"
               placeholder="blur"
               className="object-cover"
             />
@@ -64,19 +59,11 @@ export default async function CompaniesPage({ params }: PageProps<"/[locale]/com
           <div>
             <h2
               id="one-contact-heading"
-              className="text-3xl leading-tight font-semibold text-ink sm:text-4xl"
+              className="text-[1.75rem] leading-tight font-semibold text-ink sm:text-[2.125rem]"
             >
               {t("contactTitle")}
             </h2>
-            <p className="mt-4 text-lg leading-relaxed text-muted">{t("contactText")}</p>
-            <ul className="mt-6 space-y-3">
-              {(t.raw("contactPoints") as string[]).map((point) => (
-                <li key={point} className="flex gap-3 text-ink-soft">
-                  <CircleCheck aria-hidden className="mt-0.5 size-5 shrink-0 text-brand-600" />
-                  {point}
-                </li>
-              ))}
-            </ul>
+            <p className="mt-3 text-lg leading-relaxed text-muted">{t("contactText")}</p>
             <div className="mt-8 flex flex-wrap gap-3">
               <a href={siteConfig.contact.phoneHref} className={buttonStyles({ size: "lg" })}>
                 <Phone aria-hidden className="size-4" />
@@ -96,8 +83,6 @@ export default async function CompaniesPage({ params }: PageProps<"/[locale]/com
           </div>
         </div>
       </section>
-
-      <CtaSection />
     </>
   );
 }

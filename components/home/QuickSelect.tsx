@@ -38,7 +38,7 @@ export function QuickSelect({
       method="get"
       onSubmit={onSubmit}
       onAnimationEnd={() => setShake(false)}
-      className={`mt-10 flex max-w-xl items-center gap-2 rounded-full bg-white p-2 shadow-float ring-1 ring-line transition-shadow focus-within:ring-2 focus-within:ring-brand-600 ${shake ? "ring-2 ring-brand-600" : ""}`}
+      className={`mt-8 flex max-w-xl items-center gap-2 rounded-full bg-white p-2 shadow-float ring-1 ring-line transition-shadow focus-within:ring-2 focus-within:ring-ink ${shake ? "ring-2 ring-ink" : ""}`}
     >
       <div className="min-w-0 flex-1 pr-3 pl-5">
         <p id="hero-quick-label" className="text-xs font-semibold text-ink">

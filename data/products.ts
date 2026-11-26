@@ -657,9 +657,9 @@ export const products: ProductRecord[] = [
           "Кто может оформить страхование жизни?",
         ),
         answer: l(
-          "Adətən müəyyən yaş həddinə uyğun gələn istənilən şəxs. Yaş məhdudiyyətləri və tələblər seçilmiş proqramdan asılıdır.",
-          "Usually anyone within the eligible age range. Age limits and requirements depend on the chosen programme.",
-          "Как правило, любой человек, подходящий по возрасту. Возрастные ограничения и требования зависят от выбранной программы.",
+          "Tarif cədvəli 0–65 yaş aralığını əhatə edir. Dəqiq tələblər seçilmiş proqramdan asılıdır.",
+          "The tariff table covers ages 0 to 65. Exact requirements depend on the chosen programme.",
+          "Тарифная таблица охватывает возраст от 0 до 65 лет. Точные требования зависят от выбранной программы.",
         ),
       },
       {

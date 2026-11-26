@@ -67,7 +67,7 @@ export function PropertyApplication({
                 // Phones: compact row with a square thumbnail. sm+: large photo card.
                 "group relative flex overflow-hidden rounded-2xl bg-white text-left ring-1 transition-[box-shadow,transform] duration-200 sm:block",
                 selected
-                  ? "shadow-card-hover ring-2 ring-brand-600"
+                  ? "shadow-card-hover ring-2 ring-ink"
                   : "ring-line-strong hover:-translate-y-0.5 hover:shadow-card",
               )}
             >
@@ -87,13 +87,13 @@ export function PropertyApplication({
                   {badge}
                 </span>
                 {selected ? (
-                  <span className="absolute top-2.5 right-2.5 grid size-7 place-items-center rounded-full bg-brand-600 text-white">
+                  <span className="absolute top-2.5 right-2.5 grid size-7 place-items-center rounded-full bg-ink text-white">
                     <Check aria-hidden className="size-4" strokeWidth={3} />
                   </span>
                 ) : null}
               </span>
               <span className="block min-w-0 flex-1 p-3.5">
-                <span className="mb-1.5 inline-flex items-center gap-1 rounded-full bg-brand-50 px-2 py-0.5 text-[0.6875rem] font-semibold text-brand-800 sm:hidden">
+                <span className="mb-1.5 inline-flex items-center gap-1 rounded-full bg-surface px-2 py-0.5 text-[0.6875rem] font-semibold text-ink sm:hidden">
                   <Icon aria-hidden className="size-3 text-brand-600" />
                   {badge}
                 </span>
@@ -352,7 +352,7 @@ function PropertyCascoForm({ productName }: { productName: string }) {
         className="space-y-4"
       >
         <ErrorNotice show={showErrors} />
-        <p className="rounded-2xl bg-brand-50 px-4 py-3 text-sm leading-relaxed text-brand-900">
+        <p className="rounded-2xl bg-surface px-4 py-3 text-sm leading-relaxed text-ink-soft">
           {tp("cascoNote")}
         </p>
         <div className="grid gap-4 sm:grid-cols-2">

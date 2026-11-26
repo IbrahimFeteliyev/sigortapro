@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
-import { Benefits } from "@/components/home/Benefits";
 import { CompaniesSection } from "@/components/home/CompaniesSection";
 import { Hero } from "@/components/home/Hero";
 import { ProductsSection } from "@/components/home/ProductsSection";
@@ -37,14 +36,8 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
       <Hero products={products} />
       <ProductsSection products={products} />
       <HowItWorks />
-      <Benefits />
       <CompaniesSection companies={getCompanies()} />
-      <FaqSection
-        eyebrow={faq("eyebrow")}
-        title={faq("title")}
-        description={faq("description")}
-        items={faq.raw("items") as Faq[]}
-      />
+      <FaqSection title={faq("title")} items={faq.raw("items") as Faq[]} />
       <CtaSection />
     </>
   );

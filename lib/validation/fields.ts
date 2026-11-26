@@ -1,5 +1,6 @@
 import { z } from "zod";
 import { documentFormats } from "@/data/form-options";
+import { LIFE_MAX_AGE, LIFE_MIN_AGE } from "@/data/life-tariffs";
 import { unformat, unformatAmount } from "@/lib/input-format";
 
 /*
@@ -99,11 +100,12 @@ export const amountField = z
   .min(1, k("required"))
   .refine((v) => unformatAmount(v) > 0, k("amount"));
 
+/** Age of the insured person, within the life tariff bands. */
 export const ageField = z
   .string()
   .trim()
   .min(1, k("required"))
-  .refine((v) => /^\d{1,3}$/.test(v) && Number(v) >= 18 && Number(v) <= 80, k("age"));
+  .refine((v) => /^\d{1,3}$/.test(v) && Number(v) >= LIFE_MIN_AGE && Number(v) <= LIFE_MAX_AGE, k("age"));
 
 /** A real calendar date in `YYYY-MM-DD` form. */
 export const isoDateField = z

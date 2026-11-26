@@ -15,13 +15,9 @@ export default async function NotFound() {
   const [t, products] = await Promise.all([getTranslations("NotFound"), getProductSummaries(locale)]);
 
   return (
-    <section className="relative isolate overflow-hidden">
-      <div
-        aria-hidden
-        className="absolute inset-0 -z-10 bg-dot-grid [mask-image:radial-gradient(50%_60%_at_50%_30%,black,transparent)]"
-      />
+    <section>
       <div className="container-page flex flex-col items-center py-24 text-center sm:py-32">
-        <p className="text-gradient-brand text-7xl font-semibold tracking-tight sm:text-8xl">{t("code")}</p>
+        <p className="text-7xl font-semibold tracking-tight text-brand-900 sm:text-8xl">{t("code")}</p>
         <h1 className="mt-6 text-3xl font-semibold text-ink sm:text-4xl">{t("title")}</h1>
         <p className="mt-4 max-w-md text-lg text-muted">{t("description")}</p>
         <div className="mt-10 flex flex-wrap justify-center gap-3">

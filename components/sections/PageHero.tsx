@@ -1,16 +1,15 @@
 import type { ReactNode } from "react";
-import { Eyebrow } from "@/components/ui/SectionHeading";
 import { cn } from "@/lib/utils";
 
-/** Header block for inner pages: breadcrumbs, eyebrow, H1 and lead text. */
+/** Header block for inner pages: breadcrumbs, H1 and one line of lead text. */
 export function PageHero({
-  eyebrow,
   title,
   description,
   breadcrumbs,
   children,
   className,
 }: {
+  /** Accepted for compatibility; inner pages no longer show an eyebrow. */
   eyebrow?: string;
   title: ReactNode;
   description?: ReactNode;
@@ -19,27 +18,14 @@ export function PageHero({
   className?: string;
 }) {
   return (
-    <section className={cn("relative isolate overflow-hidden", className)}>
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-[460px] bg-linear-to-b from-brand-50 via-brand-50/40 to-white"
-      />
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-[460px] bg-dot-grid [mask-image:radial-gradient(60%_70%_at_70%_0%,black,transparent)]"
-      />
-      <div className="container-page pt-8 pb-12 sm:pt-10 sm:pb-16">
-        {breadcrumbs}
-        <div className="mt-10 max-w-3xl">
-          {eyebrow ? <Eyebrow>{eyebrow}</Eyebrow> : null}
-          <h1 className="mt-3 text-[2.5rem] leading-[1.06] font-semibold text-ink sm:text-5xl lg:text-[3.5rem]">
-            {title}
-          </h1>
-          {description ? (
-            <p className="mt-5 max-w-2xl text-lg leading-relaxed text-muted sm:text-xl">{description}</p>
-          ) : null}
-          {children}
-        </div>
+    <section className={cn("container-page pt-6 pb-10 sm:pt-8 sm:pb-12", className)}>
+      {breadcrumbs}
+      <div className="mt-8 max-w-3xl sm:mt-10">
+        <h1 className="text-[2.25rem] leading-[1.08] font-semibold text-ink sm:text-5xl">{title}</h1>
+        {description ? (
+          <p className="mt-4 max-w-2xl text-lg leading-relaxed text-muted">{description}</p>
+        ) : null}
+        {children}
       </div>
     </section>
   );

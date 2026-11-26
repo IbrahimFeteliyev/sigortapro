@@ -4,8 +4,8 @@ import type { InsuranceProductSummary } from "@/types/insurance";
 import { ProductCard } from "./ProductCard";
 
 /**
- * Large, photo-led selection grid: the two motor products lead in wide
- * cards, the other three share the second row.
+ * Photo-led selection grid: the two motor products lead in wide cards,
+ * the other three share the second row.
  */
 export function ProductGrid({
   products,
@@ -17,7 +17,7 @@ export function ProductGrid({
   className?: string;
 }) {
   return (
-    <RevealGroup className={cn("grid gap-5 sm:grid-cols-2 lg:grid-cols-6", className)}>
+    <RevealGroup className={cn("grid gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-6", className)}>
       {products.map((product, index) => {
         const featured = index < 2;
         const lastOdd = index === products.length - 1 && products.length % 2 === 1;
@@ -34,7 +34,7 @@ export function ProductGrid({
               product={product}
               headingLevel={headingLevel}
               imageClassName={
-                featured ? "aspect-[16/9]" : lastOdd ? "aspect-[16/9] lg:aspect-[4/3]" : "aspect-[4/3]"
+                featured ? "aspect-[3/2]" : lastOdd ? "aspect-[3/2] lg:aspect-[4/3]" : "aspect-[4/3]"
               }
               sizes={
                 featured

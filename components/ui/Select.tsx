@@ -147,15 +147,15 @@ export function Select({
         className={cn(
           "flex w-full cursor-pointer items-center gap-3 text-left outline-none",
           variant === "field" &&
-            "h-13 rounded-2xl bg-white px-4 ring-1 ring-line-strong transition-shadow ring-inset hover:ring-ink/30 focus-visible:ring-2 focus-visible:ring-brand-600",
-          variant === "field" && open && "ring-2 ring-brand-600",
+            "h-13 rounded-2xl bg-white px-4 ring-1 ring-line-strong transition-shadow ring-inset hover:ring-ink/30 focus-visible:ring-2 focus-visible:ring-ink",
+          variant === "field" && open && "ring-2 ring-ink",
           variant === "field" &&
             invalid &&
             "ring-danger-600 hover:ring-danger-600 focus-visible:ring-danger-600",
           variant === "bare" && "h-7 bg-transparent focus-visible:outline-none",
         )}
       >
-        {selected?.icon ? <span className="shrink-0 text-brand-600">{selected.icon}</span> : null}
+        {selected?.icon ? <span className="shrink-0 text-ink">{selected.icon}</span> : null}
         <span
           id={`${baseId}-value`}
           className={cn(
@@ -214,14 +214,14 @@ export function Select({
                     <span
                       className={cn(
                         "grid size-9 shrink-0 place-items-center rounded-xl",
-                        isSelected ? "bg-brand-gradient text-white" : "bg-brand-50 text-brand-700",
+                        isSelected ? "bg-ink text-white" : "bg-surface text-ink",
                       )}
                     >
                       {option.icon}
                     </span>
                   ) : null}
                   <span className="min-w-0 flex-1">{option.label}</span>
-                  {isSelected ? <Check aria-hidden className="size-4 shrink-0 text-brand-600" /> : null}
+                  {isSelected ? <Check aria-hidden className="size-4 shrink-0 text-ink" /> : null}
                 </li>
               );
             })}

@@ -21,7 +21,7 @@ export default async function OpenGraphImage({ params }: { params: Promise<{ loc
   const messages = dictionaries[locale];
 
   return renderOgImage({
-    eyebrow: messages.Hero.badge,
+    eyebrow: messages.Metadata.siteName,
     title: messages.Hero.title.replace(/<\/?brand>/g, ""),
     subtitle: messages.Hero.description,
   });

@@ -13,7 +13,7 @@ export function controlClass(invalid?: boolean, className?: string) {
     // 16px text prevents iOS zoom on focus.
     "block h-13 w-full rounded-2xl bg-white px-4 text-base text-ink outline-none placeholder:text-subtle",
     "ring-1 ring-line-strong transition-shadow duration-150 ring-inset hover:ring-ink/30",
-    "focus-visible:ring-2 focus-visible:ring-brand-600 focus-visible:outline-none",
+    "focus-visible:ring-2 focus-visible:ring-ink focus-visible:outline-none",
     invalid && "ring-danger-600 hover:ring-danger-600 focus-visible:ring-danger-600",
     className,
   );
@@ -136,14 +136,14 @@ export function ChoiceCard({
     <label
       className={cn(
         "group relative flex cursor-pointer items-start gap-4 rounded-2xl bg-white p-4 ring-1 ring-line-strong transition-[box-shadow,background-color] duration-150 sm:p-5",
-        "hover:ring-ink/30 has-[:checked]:bg-brand-50/60 has-[:checked]:ring-2 has-[:checked]:ring-brand-600",
-        "has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-offset-2 has-[:focus-visible]:outline-brand-600",
+        "hover:ring-ink/30 has-[:checked]:bg-surface has-[:checked]:ring-2 has-[:checked]:ring-ink",
+        "has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-offset-2 has-[:focus-visible]:outline-ink",
         className,
       )}
     >
       <input type="radio" className="sr-only" {...inputProps} />
       {icon ? (
-        <span className="grid size-11 shrink-0 place-items-center rounded-xl bg-surface text-brand-700 transition-colors group-has-[:checked]:bg-brand-gradient group-has-[:checked]:text-white">
+        <span className="grid size-11 shrink-0 place-items-center rounded-xl bg-surface text-ink transition-colors group-has-[:checked]:bg-ink group-has-[:checked]:text-white">
           {icon}
         </span>
       ) : null}
@@ -155,7 +155,7 @@ export function ChoiceCard({
       </span>
       <span
         aria-hidden
-        className="mt-0.5 grid size-5 shrink-0 place-items-center rounded-full ring-1 ring-line-strong transition-colors group-has-[:checked]:bg-brand-600 group-has-[:checked]:ring-brand-600"
+        className="mt-0.5 grid size-5 shrink-0 place-items-center rounded-full ring-1 ring-line-strong transition-colors group-has-[:checked]:bg-ink group-has-[:checked]:ring-ink"
       >
         <span className="size-2 rounded-full bg-white opacity-0 transition-opacity group-has-[:checked]:opacity-100" />
       </span>
@@ -174,8 +174,8 @@ export function ChoiceChip({
     <label
       className={cn(
         "inline-flex cursor-pointer items-center gap-2 rounded-full bg-white px-4 py-2.5 text-[0.9375rem] font-medium text-ink-soft ring-1 ring-line-strong transition-[box-shadow,background-color,color] duration-150 select-none",
-        "hover:ring-ink/30 has-[:checked]:bg-brand-50 has-[:checked]:text-brand-800 has-[:checked]:ring-2 has-[:checked]:ring-brand-600",
-        "has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-offset-2 has-[:focus-visible]:outline-brand-600",
+        "hover:ring-ink/30 has-[:checked]:bg-surface has-[:checked]:text-ink has-[:checked]:ring-2 has-[:checked]:ring-ink",
+        "has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-offset-2 has-[:focus-visible]:outline-ink",
         className,
       )}
     >

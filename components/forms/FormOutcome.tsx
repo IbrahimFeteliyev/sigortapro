@@ -71,8 +71,8 @@ export function FormOutcome({
   return (
     <m.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.35 }}>
       <div className="flex items-start gap-4">
-        <span className="grid size-12 shrink-0 place-items-center rounded-2xl bg-brand-50">
-          <FlaskConical aria-hidden className="size-6 text-brand-700" />
+        <span className="grid size-12 shrink-0 place-items-center rounded-2xl bg-surface">
+          <FlaskConical aria-hidden className="size-6 text-ink" />
         </span>
         <div>
           <span className="inline-flex rounded-full bg-brand-950 px-2.5 py-1 text-xs font-semibold tracking-wide text-white uppercase">

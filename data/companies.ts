@@ -1,27 +1,62 @@
 /**
- * Insurance companies shown on the site.
+ * Insurance companies shown on the site, with their original logos
+ * (downloaded from each company's official website, see README).
  *
- * Only names are published. No phone numbers, WhatsApp numbers or other
- * contact details — all customer communication goes through SığortaPro.
- * No partnership or certification is claimed.
- *
- * `logo` stays empty until an authorised logo file is provided by the company;
- * the UI then renders it at a uniform size instead of the monogram.
+ * No phone numbers, WhatsApp numbers or other contact details are published —
+ * all customer communication goes through SığortaPro. No partnership or
+ * certification is claimed.
  */
 export interface InsuranceCompany {
   id: string;
   name: string;
-  /** Short monogram used while no authorised logo is available. */
-  monogram: string;
-  /** Path under /public, e.g. "/images/companies/pasha.svg" — authorised assets only. */
-  logo: string | null;
+  /** Path under /public. */
+  logo: string;
+  /** Intrinsic logo size (keeps the aspect ratio stable, no layout shift). */
+  logoWidth: number;
+  logoHeight: number;
 }
 
 export const companies: InsuranceCompany[] = [
-  { id: "ateshgah", name: "Atəşgah Sığorta", monogram: "AS", logo: null },
-  { id: "pasha", name: "PAŞA Sığorta", monogram: "PS", logo: null },
-  { id: "mega", name: "MEGA Sığorta", monogram: "MS", logo: null },
-  { id: "qala", name: "Qala Sığorta", monogram: "QS", logo: null },
-  { id: "xalq", name: "Xalq Sığorta", monogram: "XS", logo: null },
-  { id: "azsenaye", name: "Azərbaycan Sənaye Sığorta", monogram: "ASS", logo: null },
+  {
+    id: "ateshgah",
+    name: "Atəşgah Sığorta",
+    logo: "/images/companies/ateshgah.png",
+    logoWidth: 479,
+    logoHeight: 109,
+  },
+  {
+    id: "pasha",
+    name: "PAŞA Sığorta",
+    logo: "/images/companies/pasha.svg",
+    logoWidth: 83,
+    logoHeight: 32,
+  },
+  {
+    id: "meqa",
+    name: "Meqa Sığorta",
+    logo: "/images/companies/mega.svg",
+    logoWidth: 405,
+    logoHeight: 131,
+  },
+  {
+    id: "qala",
+    name: "Qala Sığorta",
+    logo: "/images/companies/qala.svg",
+    logoWidth: 102,
+    logoHeight: 44,
+  },
+  {
+    id: "xalq",
+    name: "Xalq Sığorta",
+    logo: "/images/companies/xalq.svg",
+    logoWidth: 212,
+    logoHeight: 40,
+  },
+  {
+    id: "azsenaye",
+    name: "Azərbaycan Sənaye Sığorta",
+    logo: "/images/companies/azsenaye.svg",
+    logoWidth: 252,
+    logoHeight: 46,
+  },
 ];

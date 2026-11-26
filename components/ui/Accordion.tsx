@@ -41,14 +41,14 @@ export function Accordion({
                 aria-expanded={isOpen}
                 aria-controls={panelId}
                 onClick={() => setOpenIndex(isOpen ? null : index)}
-                className="group flex w-full items-center justify-between gap-6 py-5 text-left text-ink transition-colors hover:text-brand-700"
+                className="group flex w-full items-center justify-between gap-6 py-5 text-left text-ink transition-colors hover:text-ink-soft"
               >
                 <span>{item.question}</span>
                 <span
                   aria-hidden
                   className={cn(
                     "grid size-8 shrink-0 place-items-center rounded-full ring-1 ring-line-strong transition-[transform,background-color] duration-300 ease-out-soft group-hover:bg-surface motion-reduce:transition-none",
-                    isOpen && "rotate-45 bg-brand-50 ring-brand-200",
+                    isOpen && "rotate-45 bg-surface",
                   )}
                 >
                   <Plus className="size-4" />

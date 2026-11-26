@@ -50,9 +50,9 @@ export const photos = {
   homeHero: {
     src: homeHero,
     alt: l(
-      "Parkda gəzən xoşbəxt ailə",
-      "A happy family walking in a park",
-      "Счастливая семья на прогулке в парке",
+      "Gün batımında sahildə əl-ələ tutan ailə",
+      "A family holding hands on the beach at sunset",
+      "Семья держится за руки на пляже на закате",
     ),
   },
   carHero: {

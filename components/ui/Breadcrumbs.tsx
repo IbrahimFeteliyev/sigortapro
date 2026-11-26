@@ -19,7 +19,7 @@ export function Breadcrumbs({
   currentPath: string;
 }) {
   const t = useTranslations("Breadcrumbs");
-  const trail: BreadcrumbEntry[] = [{ name: t("home"), path: "" }, ...items];
+  const trail: BreadcrumbEntry[] = [{ name: t("home"), path: "/" }, ...items];
 
   return (
     <>
@@ -35,7 +35,7 @@ export function Breadcrumbs({
                   </span>
                 ) : (
                   <>
-                    <Link href={item.path || "/"} className="rounded-sm transition-colors hover:text-ink">
+                    <Link href={item.path ?? "/"} className="rounded-sm transition-colors hover:text-ink">
                       {item.name}
                     </Link>
                     <ChevronRight aria-hidden className="size-3.5 text-subtle" />

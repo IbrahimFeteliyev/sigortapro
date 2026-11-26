@@ -10,7 +10,7 @@ import {
   travelDestinations,
   vehicleTypes,
 } from "@/data/form-options";
-import { lifeAgeGroups, lifeCategories, lifeCoverageAmounts, lifeTermYears } from "@/data/life-tariffs";
+import { lifeCategories, lifeCoverageAmounts, lifeTermYears } from "@/data/life-tariffs";
 import { propertyRegionTariffs, propertyTypes } from "@/data/property-tariffs";
 import { daysBetweenInclusive, todayISO } from "@/lib/date";
 import {
@@ -193,7 +193,6 @@ export type PropertyCascoValues = z.input<typeof propertyCascoSchema>;
 
 export const lifeSchema = z.object({
   category: choice(ids(lifeCategories)),
-  ageGroup: choice(ids(lifeAgeGroups)),
   amount: choice(lifeCoverageAmounts.map(String) as [string, ...string[]]),
   term: choice(lifeTermYears.map(String) as [string, ...string[]]),
   firstName: nameField,

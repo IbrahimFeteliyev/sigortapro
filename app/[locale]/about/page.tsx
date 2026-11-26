@@ -1,12 +1,9 @@
-import { Eye, HeartHandshake, Scale, Sparkles, type LucideIcon } from "lucide-react";
 import type { Metadata } from "next";
 import Image from "next/image";
 import { getTranslations } from "next-intl/server";
 import { CtaSection } from "@/components/sections/CtaSection";
-import { HowItWorks } from "@/components/sections/HowItWorks";
 import { PageHero } from "@/components/sections/PageHero";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
-import { LogoMark } from "@/components/ui/Logo";
 import { Reveal, RevealGroup, RevealItem } from "@/components/ui/Reveal";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { photos } from "@/data/images";
@@ -15,12 +12,7 @@ import { buildPageMetadata } from "@/lib/seo";
 
 const PATH = "/about";
 
-const values: { key: "transparency" | "simplicity" | "trust" | "care"; icon: LucideIcon }[] = [
-  { key: "transparency", icon: Eye },
-  { key: "simplicity", icon: Sparkles },
-  { key: "trust", icon: Scale },
-  { key: "care", icon: HeartHandshake },
-];
+const values = ["transparency", "simplicity", "trust", "care"] as const;
 
 export async function generateMetadata({ params }: PageProps<"/[locale]/about">): Promise<Metadata> {
   const locale = await resolveLocale(params);
@@ -39,71 +31,52 @@ export default async function AboutPage({ params }: PageProps<"/[locale]/about">
     <>
       <PageHero
         breadcrumbs={<Breadcrumbs locale={locale} items={[{ name: nav("about") }]} currentPath={PATH} />}
-        eyebrow={t("eyebrow")}
         title={t("title")}
         description={t("description")}
       />
 
-      <section aria-labelledby="who-heading" className="container-page pb-20 sm:pb-28">
-        <div className="grid items-center gap-12 lg:grid-cols-12 lg:gap-16">
+      <section aria-labelledby="who-heading" className="container-page pb-12 sm:pb-16">
+        <div className="grid items-center gap-10 lg:grid-cols-12 lg:gap-16">
           {/* Not wrapped in <Reveal>: this text is often the LCP element on mobile. */}
           <div className="lg:col-span-6">
             <SectionHeading id="who-heading" title={t("whoTitle")} />
-            <div className="mt-6 space-y-5 text-lg leading-relaxed text-ink-soft">
+            <div className="mt-5 space-y-4 text-lg leading-relaxed text-ink-soft">
               {(t.raw("whoText") as string[]).map((paragraph) => (
                 <p key={paragraph}>{paragraph}</p>
               ))}
             </div>
+            <p className="mt-8 border-l-2 border-brand-900 pl-5 text-xl leading-snug font-medium text-ink">
+              {t("missionText")}
+            </p>
           </div>
           <Reveal className="lg:col-span-6" delay={0.08}>
-            <figure className="relative isolate overflow-hidden rounded-[2rem] p-8 pt-56 text-white sm:p-12 sm:pt-72">
+            <div className="relative aspect-[4/3] overflow-hidden rounded-3xl bg-surface">
               <Image
                 src={photos.aboutTeam.src}
                 alt={photos.aboutTeam.alt[locale]}
                 fill
                 sizes="(min-width: 1024px) 560px, 100vw"
                 placeholder="blur"
-                className="-z-10 object-cover"
+                className="object-cover"
               />
-              <div
-                aria-hidden
-                className="absolute inset-0 -z-10 bg-linear-to-t from-brand-950 via-brand-950/75 to-brand-950/5"
-              />
-              <LogoMark className="size-11" />
-              <figcaption className="mt-6 text-sm font-semibold tracking-wide text-brand-200">
-                {t("missionTitle")}
-              </figcaption>
-              <blockquote className="mt-3 text-2xl leading-snug font-medium tracking-tight sm:text-[1.75rem]">
-                {t("missionText")}
-              </blockquote>
-            </figure>
+            </div>
           </Reveal>
         </div>
       </section>
 
-      <section aria-labelledby="values-heading" className="container-page pb-20 sm:pb-28">
-        <SectionHeading id="values-heading" title={t("valuesTitle")} description={t("valuesDescription")} />
-        <RevealGroup as="ul" className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {values.map(({ key, icon: Icon }) => (
-            <RevealItem
-              as="li"
-              key={key}
-              className="rounded-[1.75rem] bg-white p-6 shadow-card ring-1 ring-line sm:p-7"
-            >
-              <span className="grid size-12 place-items-center rounded-2xl bg-brand-50 text-brand-700">
-                <Icon aria-hidden className="size-[1.375rem]" strokeWidth={1.75} />
-              </span>
-              <h3 className="mt-5 text-lg font-semibold text-ink">{t(`${key}.title`)}</h3>
-              <p className="mt-2 leading-relaxed text-muted">{t(`${key}.text`)}</p>
+      <section aria-labelledby="values-heading" className="container-page py-12 sm:py-16">
+        <SectionHeading id="values-heading" title={t("valuesTitle")} />
+        <RevealGroup as="ul" className="mt-8 grid gap-x-8 gap-y-8 sm:grid-cols-2 lg:grid-cols-4">
+          {values.map((key) => (
+            <RevealItem as="li" key={key} className="border-t border-line pt-5">
+              <h3 className="text-lg font-semibold text-ink">{t(`${key}.title`)}</h3>
+              <p className="mt-1.5 leading-relaxed text-muted">{t(`${key}.text`)}</p>
             </RevealItem>
           ))}
         </RevealGroup>
       </section>
 
-      <HowItWorks />
-      <div className="pt-20 sm:pt-28">
-        <CtaSection />
-      </div>
+      <CtaSection />
     </>
   );
 }

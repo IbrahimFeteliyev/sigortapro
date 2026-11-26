@@ -2,7 +2,7 @@ import { readFile } from "node:fs/promises";
 import { join } from "node:path";
 import { cacheLife } from "next/cache";
 import { ImageResponse } from "next/og";
-import { logoMarkDataUri } from "@/lib/brand";
+import { BRAND_NAVY, logoMarkInvertedDataUri } from "@/lib/brand";
 import { siteConfig } from "@/lib/site";
 
 export const ogSize = { width: 1200, height: 630 };
@@ -50,32 +50,30 @@ export async function renderOgImage({
         padding: "64px 72px",
         fontFamily: "Onest",
         color: "#ffffff",
-        backgroundColor: "#0d1a42",
-        backgroundImage:
-          "radial-gradient(900px 500px at 100% 0%, rgba(93,138,242,0.55), transparent), linear-gradient(160deg, #172b66 0%, #0d1a42 100%)",
+        backgroundColor: BRAND_NAVY,
       }}
     >
       <div style={{ display: "flex", alignItems: "center", gap: 18 }}>
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={logoMarkDataUri} width={64} height={64} alt="" />
+        <img src={logoMarkInvertedDataUri} width={64} height={64} alt="" />
         <div style={{ display: "flex", fontSize: 38, fontWeight: 600, letterSpacing: -1 }}>
           <span>Sığorta</span>
-          <span style={{ color: "#90b2f9" }}>Pro</span>
+          <span style={{ color: "#a2b6da" }}>Pro</span>
         </div>
       </div>
 
       <div style={{ display: "flex", flexDirection: "column", maxWidth: 960 }}>
-        <div style={{ display: "flex", fontSize: 26, color: "#bdd2fd", marginBottom: 18 }}>{eyebrow}</div>
+        <div style={{ display: "flex", fontSize: 26, color: "#cbd7ec", marginBottom: 18 }}>{eyebrow}</div>
         <div style={{ display: "flex", fontSize: 66, fontWeight: 600, lineHeight: 1.08, letterSpacing: -2 }}>
           {title}
         </div>
-        <div style={{ display: "flex", fontSize: 28, color: "#dce7fe", marginTop: 24, lineHeight: 1.35 }}>
+        <div style={{ display: "flex", fontSize: 28, color: "#e6ecf6", marginTop: 24, lineHeight: 1.35 }}>
           {subtitle}
         </div>
       </div>
 
       <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", fontSize: 24 }}>
-        <div style={{ display: "flex", color: "#bdd2fd" }}>{siteConfig.url.replace(/^https?:\/\//, "")}</div>
+        <div style={{ display: "flex", color: "#cbd7ec" }}>{siteConfig.url.replace(/^https?:\/\//, "")}</div>
         <div
           style={{
             display: "flex",

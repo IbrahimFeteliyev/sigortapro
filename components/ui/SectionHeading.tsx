@@ -13,17 +13,7 @@ interface SectionHeadingProps {
 }
 
 export function Eyebrow({ children, className }: { children: ReactNode; className?: string }) {
-  return (
-    <p
-      className={cn(
-        "inline-flex items-center gap-2 text-sm font-semibold tracking-wide text-brand-700",
-        className,
-      )}
-    >
-      <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-brand-500" />
-      {children}
-    </p>
-  );
+  return <p className={cn("text-sm font-semibold text-brand-600", className)}>{children}</p>;
 }
 
 export function SectionHeading({
@@ -39,20 +29,22 @@ export function SectionHeading({
   const centered = align === "center";
   return (
     <div className={cn("max-w-2xl", centered && "mx-auto text-center", className)}>
-      {eyebrow ? <Eyebrow className={cn(centered && "justify-center")}>{eyebrow}</Eyebrow> : null}
+      {eyebrow ? <Eyebrow>{eyebrow}</Eyebrow> : null}
       <Heading
         id={id}
         className={cn(
           "font-semibold text-ink",
-          eyebrow && "mt-3",
+          eyebrow && "mt-2",
           Heading === "h1"
             ? "text-4xl leading-[1.08] sm:text-5xl"
-            : "text-3xl leading-[1.12] sm:text-[2.5rem]",
+            : "text-[1.75rem] leading-[1.15] sm:text-[2.125rem]",
         )}
       >
         {title}
       </Heading>
-      {description ? <p className="mt-4 text-lg leading-relaxed text-muted">{description}</p> : null}
+      {description ? (
+        <p className="mt-3 text-base leading-relaxed text-muted sm:text-lg">{description}</p>
+      ) : null}
       {children}
     </div>
   );

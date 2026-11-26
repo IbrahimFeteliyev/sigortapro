@@ -12,7 +12,7 @@
     },
     "prices": {
       "title": "Insurance Prices and Plans",
-      "description": "Standard property insurance prices by region, the life insurance tariff table and individual quotes for other types of insurance."
+      "description": "Official tariffs for Secure Life and standard property insurance: prices by age group, coverage amount and region."
     },
     "about": {
       "title": "About Us",
@@ -39,7 +39,7 @@
     },
     "companies": {
       "title": "Insurance Companies",
-      "description": "Well-known insurance companies in Azerbaijan: Ateshgah, PASHA, MEGA, Qala, Xalq and Azerbaijan Industry Insurance. Contact SığortaPro with any questions."
+      "description": "Well-known insurance companies in Azerbaijan: Ateshgah, PASHA, Meqa, Qala, Xalq and Azerbaijan Industry Insurance. Contact SığortaPro with any questions."
     }
   },
   "Common": {
@@ -54,7 +54,10 @@
     "whatsapp": "WhatsApp",
     "writeWhatsapp": "Message on WhatsApp",
     "phone": "Phone",
-    "newTab": "(opens in a new tab)"
+    "newTab": "(opens in a new tab)",
+    "fromPrice": "From {price}",
+    "statutoryPrice": "Statutory tariff",
+    "individualPrice": "Individual quote"
   },
   "Nav": {
     "home": "Home",
@@ -82,28 +85,20 @@
     "ru": "Русский"
   },
   "Hero": {
-    "badge": "Online insurance in Azerbaijan",
-    "title": "Protect your future with <brand>SığortaPro</brand>!",
-    "description": "Protect your car, home, travels and life with convenient, reliable insurance solutions.",
-    "ctaPrimary": "Choose insurance",
+    "title": "Protect your future with <brand>SığortaPro</brand>",
+    "description": "Car, travel, property and life insurance — apply online in a few minutes.",
     "quickLabel": "What would you like to insure?",
     "quickPlaceholder": "Select insurance type",
     "quickSubmit": "Get an offer",
-    "visualProtected": "Reliable protection",
-    "visualApplication": "Online application",
-    "visualApplicationText": "In a few simple steps",
-    "visualWhatsapp": "Chat on WhatsApp"
+    "help": "Questions?"
   },
   "Products": {
-    "eyebrow": "Insurance products",
     "title": "Choose the insurance you need",
-    "description": "Tap an insurance type — the application form opens right away.",
+    "description": "Pick a type — the application form opens right away.",
     "viewAll": "View all insurance products"
   },
   "HowItWorks": {
-    "eyebrow": "How it works",
-    "title": "Three simple steps to cover",
-    "description": "No complicated paperwork, no long queues — everything is clear and convenient.",
+    "title": "How it works",
     "choose": {
       "title": "Choose your insurance",
       "text": "Pick the type of cover you need and review the details."
@@ -117,59 +112,24 @@
       "text": "Our specialist contacts you with a personalised offer."
     }
   },
-  "Benefits": {
-    "eyebrow": "Why SığortaPro?",
-    "title": "We make insurance simple and clear",
-    "description": "Every step is designed around your convenience — from choosing cover to applying for it.",
-    "easyOnline": {
-      "title": "Easy online application",
-      "text": "Prepare your application on any device with a clear, friendly form."
-    },
-    "timeSaving": {
-      "title": "Time-saving process",
-      "text": "Get started without visiting an office or waiting in line."
-    },
-    "personal": {
-      "title": "Personalised approach",
-      "text": "We listen to your needs and suggest a solution that fits."
-    },
-    "options": {
-      "title": "A range of insurance options",
-      "text": "Motor, travel, property and life insurance in one place."
-    },
-    "communication": {
-      "title": "Convenient communication",
-      "text": "Phone or WhatsApp — reach us whichever way suits you."
-    },
-    "simple": {
-      "title": "Simple, clear service",
-      "text": "We explain terms in plain language so you know exactly what you’re choosing."
-    }
-  },
   "Faq": {
-    "eyebrow": "Questions",
     "title": "Frequently asked questions",
-    "description": "Can’t find your answer? Give us a call or message us on WhatsApp.",
     "items": [
       {
         "question": "How does SığortaPro work?",
-        "answer": "You choose the type of insurance you need and fill in the online application form. Our specialist then contacts you, answers your questions and prepares a personalised offer based on your details."
+        "answer": "Choose a type of insurance and fill in a short online form. Our specialist contacts you and helps you complete your policy."
       },
       {
-        "question": "Why aren’t exact prices shown on the website?",
-        "answer": "Insurance premiums depend on the individual characteristics of the vehicle, property, trip or insured person. That’s why we provide the exact price in an offer prepared from your details."
+        "question": "Where can I see prices?",
+        "answer": "Tariffs for life and standard property insurance are on the Prices page. Compulsory motor, CASCO and travel insurance are priced from your details."
       },
       {
         "question": "How can I contact you?",
-        "answer": "Call us on {phone} or message us on WhatsApp. You can also use the online application forms on the website."
-      },
-      {
-        "question": "Which types of insurance can I apply for?",
-        "answer": "You can apply for compulsory motor insurance, CASCO, travel, property and life insurance."
+        "answer": "Call {phone} or message us on WhatsApp."
       },
       {
         "question": "How is my personal information used?",
-        "answer": "We use your details only to review your application and get in touch with you. You can find more information in our Privacy Policy."
+        "answer": "We use your details only to review your application and contact you. More in our Privacy Policy."
       }
     ]
   },
@@ -195,13 +155,8 @@
     "home": "Home"
   },
   "ProductPage": {
-    "overview": "Overview",
-    "howTitle": "How to apply",
     "faqTitle": "Frequently asked questions",
     "relatedTitle": "Other insurance products",
-    "relatedDescription": "Other solutions you might find useful.",
-    "ctaTitle": "Apply now: {name}",
-    "ctaDescription": "Fill in the form or give us a call — our specialist will help you get a personalised offer.",
     "applyTitle": {
       "car-insurance": "Apply for compulsory insurance",
       "casco": "Apply for CASCO",
@@ -209,7 +164,7 @@
       "property": "Choose your property insurance",
       "life": "Apply for life insurance"
     },
-    "applyDescription": "Fill in a few fields — our specialist will contact you with a personalised offer.",
+    "applyDescription": "Fill in the form — our specialist will contact you.",
     "coverageTitle": {
       "car-insurance": "What compulsory insurance covers",
       "casco": "What CASCO may cover",
@@ -225,19 +180,15 @@
       "life": "Critical illness insurance may provide a payment upon diagnosis of the following serious illnesses."
     },
     "coverageNote": "These categories are for guidance only and are not a contractual guarantee. The exact risks, limits and exclusions are set out in the insurance contract.",
-    "voluntaryEyebrow": "Voluntary insurance",
     "voluntaryNote": "These covers relate to voluntary Property CASCO and are not automatically included in the standard property insurance package. Exact terms are set out in the policy.",
-    "standardEyebrow": "Standard property insurance",
     "standardTableTitle": "Cover and price by region",
-    "standardTableDescription": "In the standard package, the sum insured and the premium depend on where the property is located.",
-    "standardTableNote": "Please review the policy terms when you take out the policy. Questions? Talk to our specialist.",
+    "standardTableDescription": "The sum insured and price depend on where the property is located.",
     "lifeTableTitle": "Tariff table",
-    "lifeTableDescription": "Choose a category: the premium depends on the age group and coverage amount."
+    "lifeTableDescription": "Choose a category. The premium depends on the age group and coverage amount."
   },
   "InsurancePage": {
-    "eyebrow": "Insurance products",
-    "title": "Online insurance products in Azerbaijan",
-    "description": "Insurance solutions for your car, travels, property and life — each with clear information and a convenient online application.",
+    "title": "Insurance products",
+    "description": "Choose the insurance you need and apply online.",
     "compareTitle": "Which motor insurance do I need?",
     "compareDescription": "Compulsory insurance and CASCO serve different purposes. Here are the key differences:",
     "compulsoryPoints": [
@@ -249,44 +200,18 @@
     "compareNote": "For broader protection, many drivers choose both."
   },
   "PricesPage": {
-    "eyebrow": "Prices",
-    "title": "Insurance prices",
-    "description": "Tariffs for standard property and life insurance, and an individual quote based on your details for other types of insurance.",
+    "title": "Prices",
+    "description": "Official tariffs for life and standard property insurance. Other types get an individual quote.",
     "propertyTitle": "Standard property insurance",
-    "propertyDescription": "The sum insured and premium depend on where the property is located.",
+    "propertyDescription": "The sum insured and price depend on where the property is located.",
     "applyProperty": "Apply for property insurance",
     "lifeTitle": "Secure life insurance",
-    "lifeDescription": "The price depends on the insurance category, age group and coverage amount.",
+    "lifeDescription": "The premium depends on the category, age group and coverage amount.",
     "quoteTitle": "Individual quote",
-    "quoteDescription": "For these types of insurance, the price is calculated from your details.",
-    "quoteNote": {
-      "car-insurance": "The premium is calculated according to rules set by legislation, based on the vehicle type and technical characteristics.",
-      "casco": "The price depends on the car’s market value, make, model and year of manufacture.",
-      "travel": "The price depends on the trip length, destination and number of travellers."
-    },
-    "getQuote": "Get a quote",
-    "faqTitle": "Questions about pricing",
-    "faq": [
-      {
-        "question": "How can I get a quote?",
-        "answer": "Fill in the form on the relevant insurance page, call {phone} or message us on WhatsApp — our specialist will prepare a personalised offer."
-      },
-      {
-        "question": "How is the price of standard property insurance set?",
-        "answer": "In the standard package, the sum insured and premium are fixed by region — for example, AZN 25,000 of cover in Baku costs AZN 50."
-      },
-      {
-        "question": "What does the price of life insurance depend on?",
-        "answer": "It depends on the insurance category, age group and chosen coverage amount. For options without a confirmed tariff, we prepare an individual offer."
-      },
-      {
-        "question": "How is the price of compulsory motor insurance calculated?",
-        "answer": "The premium for compulsory motor insurance is calculated according to rules set by legislation, taking into account the vehicle type and its technical characteristics."
-      }
-    ]
+    "quoteDescription": "For these types of insurance the price is calculated from your details.",
+    "applyLife": "Apply for life insurance"
   },
   "AboutPage": {
-    "eyebrow": "About us",
     "title": "Making insurance simple for everyone",
     "description": "SığortaPro aims to turn choosing insurance into a modern, transparent and convenient digital experience.",
     "whoTitle": "Who we are",
@@ -294,10 +219,8 @@
       "For many people, insurance means complicated jargon, long documents and lost time. SığortaPro was created to change that experience.",
       "On our platform you can find clear information about motor, travel, property and life insurance, choose the option that suits you and prepare an online application. Our specialist is ready to answer your questions at every step."
     ],
-    "missionTitle": "Our mission",
     "missionText": "To create a simple, trustworthy insurance experience that helps people and families plan their future with confidence.",
     "valuesTitle": "Our values",
-    "valuesDescription": "The principles behind every decision we make.",
     "transparency": {
       "title": "Transparency",
       "text": "We explain terms openly and in plain language."
@@ -316,9 +239,8 @@
     }
   },
   "ContactPage": {
-    "eyebrow": "Contact",
     "title": "Get in touch",
-    "description": "Have a question or need help choosing insurance? Contact us in whichever way suits you.",
+    "description": "Call us, message us on WhatsApp or send an online application.",
     "phoneTitle": "Phone",
     "phoneText": "Speak directly with our specialist.",
     "whatsappTitle": "WhatsApp",
@@ -326,14 +248,7 @@
     "whatsappAction": "Start a chat",
     "applyTitle": "Online application",
     "applyText": "Fill in the form and take the first step towards a personalised offer.",
-    "applyAction": "Fill in the form",
-    "helpTitle": "How can we help?",
-    "helpItems": [
-      "Choosing the right type of insurance",
-      "Explaining terms and coverage in plain language",
-      "Preparing your online application",
-      "Getting a personalised quote"
-    ]
+    "applyAction": "Fill in the form"
   },
   "ApplyPage": {
     "eyebrow": "Online application",
@@ -364,7 +279,7 @@
     "endBeforeStart": "The end date can’t be before the start date",
     "tripLength": "The trip can’t be longer than 365 days",
     "travelers": "Choose between 1 and 10 travellers",
-    "age": "Age must be between 18 and 80",
+    "age": "Age must be between 0 and 65",
     "consent": "Please confirm your consent to continue",
     "tooLong": "The text is too long",
     "tooShort": "Please provide more detail"
@@ -482,20 +397,14 @@
     "browse": "Browse insurance products"
   },
   "Companies": {
-    "eyebrow": "Insurance companies",
-    "title": "Well-known insurance companies in Azerbaijan",
-    "description": "Established insurers operating in the market. Contact SığortaPro to find out which option suits you.",
-    "viewAll": "Learn more",
-    "disclaimer": "Company names are shown for information only and do not imply an official partnership or endorsement. For any questions, contact SığortaPro: {phone}.",
+    "title": "Insurance companies",
+    "description": "Well-known insurers operating in Azerbaijan.",
+    "viewAll": "View all",
+    "disclaimer": "Logos and names belong to their respective companies and are shown for information only.",
     "pageTitle": "Insurance companies",
-    "pageDescription": "Well-known insurance companies operating in Azerbaijan. Have a question? Reach SığortaPro on a single number.",
+    "pageDescription": "Well-known insurance companies operating in Azerbaijan. One number for every question.",
     "contactTitle": "One number for every question",
-    "contactText": "Whatever type of insurance you’re interested in, a SığortaPro specialist answers your questions and helps with your application.",
-    "contactPoints": [
-      "Plain-language explanations of insurance types",
-      "Help choosing the right insurance",
-      "Support preparing your application"
-    ]
+    "contactText": "Whatever insurance you’re interested in, our specialist answers your questions and helps with your application."
   },
   "Forms": {
     "optional": "optional",
@@ -617,16 +526,17 @@
       "amount": "Coverage amount",
       "amountHint": "Choose a category first",
       "price": "Premium",
-      "priceSelect": "Choose a category, age group and amount",
+      "priceSelect": "Choose a category, age and amount",
       "priceUnavailable": "Tariff not confirmed yet",
       "priceUnavailableNote": "There is no confirmed price for this option yet. Apply and our specialist will prepare an individual offer.",
-      "tableUnavailableNote": "Prices will appear here once the official tariff table is confirmed. For now, please apply for an individual offer.",
-      "age": "Age",
+      "age": "Insured person’s age",
       "agePlaceholder": "e.g. 35",
       "term": "Insurance term",
       "termValue": "{years, plural, one {# year} other {# years}}",
       "documents": "ID card",
-      "documentsValue": "{count, plural, one {# file selected} other {# files selected}} (not sent)"
+      "documentsValue": "{count, plural, one {# file selected} other {# files selected}} (not sent)",
+      "ageGroupHint": "Age group: {group}",
+      "tableNote": "Amounts in AZN. Exact terms are set out in the insurance contract."
     },
     "upload": {
       "title": "ID card",

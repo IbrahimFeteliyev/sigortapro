@@ -7,28 +7,28 @@
 @theme {
   --font-sans: var(--font-onest), ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
 
-  /* Brand — deep blue */
-  --color-brand-50: #eef4ff;
-  --color-brand-100: #dce7fe;
-  --color-brand-200: #bdd2fd;
-  --color-brand-300: #90b2f9;
-  --color-brand-400: #5d8af2;
-  --color-brand-500: #3a67e8;
-  --color-brand-600: #2149cf;
-  --color-brand-700: #1b3aa8;
-  --color-brand-800: #1b3386;
-  --color-brand-900: #172b66;
-  --color-brand-950: #0d1a42;
+  /* Brand — midnight navy. One accent colour, used sparingly. */
+  --color-brand-50: #f3f6fb;
+  --color-brand-100: #e6ecf6;
+  --color-brand-200: #cbd7ec;
+  --color-brand-300: #a2b6da;
+  --color-brand-400: #6f8cc0;
+  --color-brand-500: #4a6aa6;
+  --color-brand-600: #2f4f8a;
+  --color-brand-700: #233e70;
+  --color-brand-800: #1a2f57;
+  --color-brand-900: #132342;
+  --color-brand-950: #0b162b;
 
-  /* Neutrals — soft, slightly cool grays */
-  --color-ink: #0e1730;
-  --color-ink-soft: #2b3550;
-  --color-muted: #5a6478;
-  --color-subtle: #6b7489; /* 4.7:1 on white — AA for small text */
-  --color-line: #e7e9ef;
-  --color-line-strong: #d6dae3;
-  --color-surface: #f6f8fb;
-  --color-surface-strong: #eef1f6;
+  /* Neutrals — warm, quiet grays (Airbnb-like) */
+  --color-ink: #1d1d1f;
+  --color-ink-soft: #3a3a3c;
+  --color-muted: #6a6a6f; /* 5.3:1 on white */
+  --color-subtle: #717175; /* 4.8:1 on white — AA for small text */
+  --color-line: #ebebeb;
+  --color-line-strong: #dddddd;
+  --color-surface: #f7f7f7;
+  --color-surface-strong: #efefef;
 
   --color-success-50: #ecfdf3;
   --color-success-600: #067647;
@@ -40,12 +40,12 @@
   --radius-4xl: 2rem;
   --radius-5xl: 2.5rem;
 
-  --shadow-xs: 0 1px 2px rgb(14 23 48 / 0.05);
-  --shadow-card: 0 1px 2px rgb(14 23 48 / 0.04), 0 6px 20px -8px rgb(14 23 48 / 0.1);
-  --shadow-card-hover: 0 2px 6px rgb(14 23 48 / 0.05), 0 22px 44px -16px rgb(14 23 48 / 0.22);
-  --shadow-float: 0 6px 16px rgb(14 23 48 / 0.12);
-  --shadow-pop: 0 2px 4px rgb(14 23 48 / 0.04), 0 16px 48px -12px rgb(14 23 48 / 0.24);
-  --shadow-brand: 0 10px 30px -10px rgb(33 73 207 / 0.55);
+  --shadow-xs: 0 1px 2px rgb(0 0 0 / 0.06);
+  --shadow-card: 0 1px 2px rgb(0 0 0 / 0.04), 0 4px 12px rgb(0 0 0 / 0.04);
+  --shadow-card-hover: 0 2px 4px rgb(0 0 0 / 0.04), 0 12px 28px rgb(0 0 0 / 0.1);
+  --shadow-float: 0 6px 16px rgb(0 0 0 / 0.12);
+  --shadow-pop: 0 6px 20px rgb(0 0 0 / 0.12);
+  --shadow-brand: 0 1px 2px rgb(0 0 0 / 0.08);
 
   --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
 
@@ -91,7 +91,7 @@
   }
 
   :focus-visible {
-    outline: 2px solid var(--color-brand-600);
+    outline: 2px solid var(--color-ink);
     outline-offset: 3px;
     border-radius: 6px;
   }
@@ -101,7 +101,7 @@
   h3,
   h4 {
     text-wrap: balance;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.022em;
   }
 
   p {
@@ -145,32 +145,13 @@
   }
 }
 
-@utility text-gradient-brand {
-  background-image: linear-gradient(
-    110deg,
-    var(--color-brand-700) 0%,
-    var(--color-brand-500) 55%,
-    #4f8df7 100%
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-
+/* Solid fills — the premium look comes from restraint, not gradients. */
 @utility bg-brand-gradient {
-  background-image: linear-gradient(135deg, var(--color-brand-600) 0%, var(--color-brand-700) 100%);
+  background-color: var(--color-brand-900);
 }
 
 @utility bg-hero-panel {
-  background-image:
-    radial-gradient(120% 80% at 100% 0%, rgb(93 138 242 / 0.55) 0%, transparent 55%),
-    radial-gradient(80% 60% at 0% 100%, rgb(58 103 232 / 0.35) 0%, transparent 60%),
-    linear-gradient(160deg, var(--color-brand-900) 0%, var(--color-brand-950) 100%);
-}
-
-@utility bg-dot-grid {
-  background-image: radial-gradient(rgb(14 23 48 / 0.08) 1px, transparent 1px);
-  background-size: 22px 22px;
+  background-color: var(--color-brand-950);
 }
 
 @utility no-scrollbar {

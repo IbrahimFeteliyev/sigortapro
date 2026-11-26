@@ -12,7 +12,7 @@
     },
     "prices": {
       "title": "Sığorta qiymətləri və tariflər",
-      "description": "Standart əmlak sığortasının region üzrə qiymətləri, həyat sığortası tarif cədvəli və digər sığorta növləri üçün fərdi qiymət təklifi."
+      "description": "Güvənli həyat və standart əmlak sığortasının rəsmi tarifləri: yaş qrupu, təminat məbləği və region üzrə qiymətlər."
     },
     "about": {
       "title": "Haqqımızda",
@@ -39,7 +39,7 @@
     },
     "companies": {
       "title": "Sığorta şirkətləri",
-      "description": "Azərbaycanın tanınmış sığorta şirkətləri: Atəşgah, PAŞA, MEGA, Qala, Xalq və Azərbaycan Sənaye Sığorta. Suallarınız üçün SığortaPro ilə əlaqə saxlayın."
+      "description": "Azərbaycanın tanınmış sığorta şirkətləri: Atəşgah, PAŞA, Meqa, Qala, Xalq və Azərbaycan Sənaye Sığorta. Suallarınız üçün SığortaPro ilə əlaqə saxlayın."
     }
   },
   "Common": {
@@ -54,7 +54,10 @@
     "whatsapp": "WhatsApp",
     "writeWhatsapp": "WhatsApp-a yaz",
     "phone": "Telefon",
-    "newTab": "(yeni pəncərədə açılır)"
+    "newTab": "(yeni pəncərədə açılır)",
+    "fromPrice": "{price}-dən",
+    "statutoryPrice": "Qanunla müəyyən edilmiş tarif",
+    "individualPrice": "Fərdi qiymət"
   },
   "Nav": {
     "home": "Ana səhifə",
@@ -82,28 +85,20 @@
     "ru": "Русский"
   },
   "Hero": {
-    "badge": "Azərbaycanda onlayn sığorta",
-    "title": "Gələcəyinizi <brand>SığortaPro</brand> ilə qoruyun!",
-    "description": "Avtomobilinizi, evinizi, səyahətinizi və həyatınızı rahat və etibarlı sığorta həlləri ilə qoruyun.",
-    "ctaPrimary": "Sığorta seç",
+    "title": "Gələcəyinizi <brand>SığortaPro</brand> ilə qoruyun",
+    "description": "Avtomobil, səyahət, əmlak və həyat sığortası — bir neçə dəqiqəyə onlayn müraciət.",
     "quickLabel": "Hansı sığorta lazımdır?",
     "quickPlaceholder": "Sığorta növünü seçin",
     "quickSubmit": "Təklif al",
-    "visualProtected": "Etibarlı qoruma",
-    "visualApplication": "Onlayn müraciət",
-    "visualApplicationText": "Sadə addımlarla",
-    "visualWhatsapp": "WhatsApp ilə əlaqə"
+    "help": "Sualınız var?"
   },
   "Products": {
-    "eyebrow": "Sığorta məhsulları",
     "title": "Sizə lazım olan sığortanı seçin",
-    "description": "Sığorta növünə toxunun — müraciət formasını dərhal görəcəksiniz.",
+    "description": "Sığorta növünü seçin — müraciət forması dərhal açılacaq.",
     "viewAll": "Bütün sığorta növlərinə bax"
   },
   "HowItWorks": {
-    "eyebrow": "Necə işləyir",
-    "title": "Sığortaya üç sadə addım",
-    "description": "Mürəkkəb sənədlər və uzun növbələr olmadan — hər şey aydın və rahatdır.",
+    "title": "Necə işləyir",
     "choose": {
       "title": "Sığortanı seçin",
       "text": "Ehtiyacınıza uyğun sığorta növünü seçin və şərtlərlə tanış olun."
@@ -117,59 +112,24 @@
       "text": "Mütəxəssisimiz sizinlə əlaqə saxlayıb fərdi təklif təqdim edir."
     }
   },
-  "Benefits": {
-    "eyebrow": "Niyə SığortaPro?",
-    "title": "Sığortanı sadə və anlaşıqlı edirik",
-    "description": "Hər addımı sizin rahatlığınız üçün düşünmüşük — seçimdən müraciətə qədər.",
-    "easyOnline": {
-      "title": "Asan onlayn müraciət",
-      "text": "Aydın və rahat forma ilə müraciətinizi istənilən cihazdan hazırlayın."
-    },
-    "timeSaving": {
-      "title": "Vaxta qənaət",
-      "text": "Ofisə getmədən və növbə gözləmədən prosesə başlayın."
-    },
-    "personal": {
-      "title": "Fərdi yanaşma",
-      "text": "Ehtiyaclarınızı dinləyir, sizə uyğun həll təklif edirik."
-    },
-    "options": {
-      "title": "Müxtəlif sığorta seçimləri",
-      "text": "Avtomobil, səyahət, əmlak və həyat sığortası bir platformada."
-    },
-    "communication": {
-      "title": "Rahat ünsiyyət",
-      "text": "Telefon və ya WhatsApp — sizə uyğun əlaqə vasitəsini seçin."
-    },
-    "simple": {
-      "title": "Sadə və anlaşıqlı xidmət",
-      "text": "Şərtləri sadə dildə izah edirik ki, nə seçdiyinizi dəqiq biləsiniz."
-    }
-  },
   "Faq": {
-    "eyebrow": "Suallar",
     "title": "Tez-tez verilən suallar",
-    "description": "Cavabını tapmadığınız sual varsa, bizə zəng edin və ya WhatsApp-a yazın.",
     "items": [
       {
         "question": "SığortaPro necə işləyir?",
-        "answer": "Sizə lazım olan sığorta növünü seçir və onlayn müraciət formasını doldurursunuz. Mütəxəssisimiz sizinlə əlaqə saxlayır, suallarınızı cavablandırır və məlumatlarınıza əsasən fərdi təklif hazırlayır."
+        "answer": "Sığorta növünü seçir və qısa onlayn formanı doldurursunuz. Mütəxəssisimiz sizinlə əlaqə saxlayır və müraciətinizi rəsmiləşdirməyə kömək edir."
       },
       {
-        "question": "Niyə saytda dəqiq qiymətlər göstərilmir?",
-        "answer": "Sığorta haqqı avtomobilin, əmlakın, səfərin və ya sığortalanan şəxsin fərdi göstəricilərindən asılıdır. Buna görə dəqiq qiyməti sizin məlumatlarınız əsasında hazırlanan təkliflə təqdim edirik."
+        "question": "Qiymətləri harada görə bilərəm?",
+        "answer": "Həyat və standart əmlak sığortasının tarifləri «Qiymətlər» səhifəsində göstərilib. İcbari sığorta, KASKO və səyahət sığortasının qiyməti sizin məlumatlarınıza əsasən hesablanır."
       },
       {
         "question": "Sizinlə necə əlaqə saxlaya bilərəm?",
-        "answer": "{phone} nömrəsinə zəng edə və ya WhatsApp vasitəsilə yaza bilərsiniz. Həmçinin saytdakı onlayn müraciət formasından istifadə edə bilərsiniz."
-      },
-      {
-        "question": "Hansı sığorta növləri üçün müraciət etmək olar?",
-        "answer": "İcbari avtomobil sığortası, KASKO, səyahət, əmlak və həyat sığortası üçün müraciət edə bilərsiniz."
+        "answer": "{phone} nömrəsinə zəng edin və ya WhatsApp-a yazın."
       },
       {
         "question": "Şəxsi məlumatlarım necə istifadə olunur?",
-        "answer": "Məlumatlarınızdan yalnız müraciətinizə baxılması və sizinlə əlaqə saxlanılması məqsədilə istifadə edirik. Ətraflı məlumatı Məxfilik siyasətində tapa bilərsiniz."
+        "answer": "Məlumatlarınızdan yalnız müraciətinizə baxmaq və sizinlə əlaqə saxlamaq üçün istifadə edirik. Ətraflı — Məxfilik siyasətində."
       }
     ]
   },
@@ -195,13 +155,8 @@
     "home": "Ana səhifə"
   },
   "ProductPage": {
-    "overview": "Ümumi məlumat",
-    "howTitle": "Necə müraciət etmək olar",
     "faqTitle": "Tez-tez verilən suallar",
     "relatedTitle": "Digər sığorta növləri",
-    "relatedDescription": "Sizi maraqlandıra biləcək digər həllər.",
-    "ctaTitle": "{name} üçün müraciət edin",
-    "ctaDescription": "Formu doldurun və ya zəng edin — mütəxəssisimiz sizə fərdi təklif hazırlamağa kömək edəcək.",
     "applyTitle": {
       "car-insurance": "İcbari sığorta üçün müraciət",
       "casco": "KASKO üçün müraciət",
@@ -209,7 +164,7 @@
       "property": "Əmlak sığortasının növünü seçin",
       "life": "Həyat sığortası üçün müraciət"
     },
-    "applyDescription": "Bir neçə sahəni doldurun — mütəxəssisimiz fərdi təkliflə sizinlə əlaqə saxlayacaq.",
+    "applyDescription": "Formu doldurun — mütəxəssisimiz sizinlə əlaqə saxlayacaq.",
     "coverageTitle": {
       "car-insurance": "İcbari sığorta nəyi əhatə edir",
       "casco": "KASKO nələri əhatə edə bilər",
@@ -225,19 +180,15 @@
       "life": "Sağalmaz xəstəliklərdən sığorta aşağıdakı ağır xəstəliklərin diaqnozu zamanı ödəniş nəzərdə tuta bilər."
     },
     "coverageNote": "Bu kateqoriyalar tanışlıq məqsədi daşıyır və müqavilə təminatı deyil. Dəqiq risklər, limitlər və istisnalar sığorta müqaviləsində müəyyən edilir.",
-    "voluntaryEyebrow": "Könüllü sığorta",
     "voluntaryNote": "Bu təminatlar könüllü Əmlakın KASKO sığortasına aiddir və standart əmlak sığortası paketinə avtomatik daxil deyil. Dəqiq şərtlər polis müqaviləsində müəyyən edilir.",
-    "standardEyebrow": "Standart əmlak sığortası",
     "standardTableTitle": "Region üzrə təminat və qiymət",
-    "standardTableDescription": "Standart paketdə təminat məbləği və sığorta haqqı əmlakın yerləşdiyi regiondan asılıdır.",
-    "standardTableNote": "Rəsmiləşdirmə zamanı polisin şərtləri ilə tanış olun. Sualınız varsa, mütəxəssisimizlə əlaqə saxlayın.",
+    "standardTableDescription": "Təminat məbləği və qiymət əmlakın yerləşdiyi regiondan asılıdır.",
     "lifeTableTitle": "Tarif cədvəli",
-    "lifeTableDescription": "Kateqoriyanı seçin: sığorta haqqı yaş qrupu və təminat məbləğinə görə müəyyən edilir."
+    "lifeTableDescription": "Kateqoriyanı seçin. Sığorta haqqı yaş qrupuna və təminat məbləğinə görə müəyyən olunur."
   },
   "InsurancePage": {
-    "eyebrow": "Sığorta məhsulları",
-    "title": "Azərbaycanda onlayn sığorta məhsulları",
-    "description": "Avtomobil, səyahət, əmlak və həyat üçün sığorta həlləri — hər biri haqqında aydın məlumat və rahat onlayn müraciət imkanı ilə.",
+    "title": "Sığorta məhsulları",
+    "description": "Ehtiyacınıza uyğun sığortanı seçin və onlayn müraciət edin.",
     "compareTitle": "Avtomobil üçün hansı sığorta lazımdır?",
     "compareDescription": "İcbari sığorta və KASKO fərqli məqsədlərə xidmət edir. Əsas fərqlər belədir:",
     "compulsoryPoints": [
@@ -253,44 +204,18 @@
     "compareNote": "Daha geniş qoruma üçün bir çox sürücü hər iki sığortanı birlikdə seçir."
   },
   "PricesPage": {
-    "eyebrow": "Qiymətlər",
-    "title": "Sığorta qiymətləri",
-    "description": "Standart əmlak və həyat sığortası üzrə tariflər, digər sığorta növləri üçün isə məlumatlarınıza əsaslanan fərdi qiymət təklifi.",
+    "title": "Qiymətlər",
+    "description": "Həyat və standart əmlak sığortasının rəsmi tarifləri. Digər növlər üçün fərdi qiymət hazırlanır.",
     "propertyTitle": "Standart əmlak sığortası",
-    "propertyDescription": "Təminat məbləği və sığorta haqqı əmlakın yerləşdiyi regiondan asılıdır.",
+    "propertyDescription": "Təminat məbləği və qiymət əmlakın yerləşdiyi regiondan asılıdır.",
     "applyProperty": "Əmlak sığortası üçün müraciət et",
     "lifeTitle": "Güvənli həyat sığortası",
-    "lifeDescription": "Qiymət sığorta kateqoriyası, yaş qrupu və təminat məbləğinə görə müəyyən edilir.",
-    "quoteTitle": "Fərdi qiymət təklifi",
-    "quoteDescription": "Bu sığorta növlərində qiymət sizin məlumatlarınıza əsasən hesablanır.",
-    "quoteNote": {
-      "car-insurance": "Sığorta haqqı qanunvericiliklə müəyyən edilmiş qaydada, nəqliyyat vasitəsinin növü və texniki göstəricilərinə görə hesablanır.",
-      "casco": "Qiymət avtomobilin bazar dəyəri, markası, modeli və buraxılış ilindən asılıdır.",
-      "travel": "Qiymət səfərin müddətindən, istiqamətindən və səyahətçilərin sayından asılıdır."
-    },
-    "getQuote": "Qiymət təklifi al",
-    "faqTitle": "Qiymətlərlə bağlı suallar",
-    "faq": [
-      {
-        "question": "Qiymət təklifini necə ala bilərəm?",
-        "answer": "Müvafiq sığorta səhifəsindəki formanı doldurun, {phone} nömrəsinə zəng edin və ya WhatsApp-a yazın — mütəxəssisimiz fərdi təklif hazırlayacaq."
-      },
-      {
-        "question": "Standart əmlak sığortasının qiyməti necə müəyyən edilir?",
-        "answer": "Standart paketdə təminat məbləği və sığorta haqqı əmlakın yerləşdiyi regiona görə sabitdir — məsələn, Bakı üçün 25 000 AZN təminat 50 AZN-dir."
-      },
-      {
-        "question": "Həyat sığortasının qiyməti nədən asılıdır?",
-        "answer": "Qiymət sığorta kateqoriyasından, yaş qrupundan və seçilmiş təminat məbləğindən asılıdır. Tarif təsdiqlənməyən seçimlər üçün fərdi təklif hazırlanır."
-      },
-      {
-        "question": "İcbari sığortanın qiyməti necə hesablanır?",
-        "answer": "İcbari avtomobil sığortasının haqqı qanunvericiliklə müəyyən edilmiş qaydada, nəqliyyat vasitəsinin növü və texniki göstəriciləri nəzərə alınmaqla hesablanır."
-      }
-    ]
+    "lifeDescription": "Sığorta haqqı kateqoriya, yaş qrupu və təminat məbləğindən asılıdır.",
+    "quoteTitle": "Fərdi qiymət",
+    "quoteDescription": "Bu sığorta növlərində qiymət sizin məlumatlarınıza görə hesablanır.",
+    "applyLife": "Həyat sığortası üçün müraciət et"
   },
   "AboutPage": {
-    "eyebrow": "Haqqımızda",
     "title": "Sığortanı hər kəs üçün sadə edirik",
     "description": "SığortaPro sığorta seçimini müasir, şəffaf və rahat rəqəmsal təcrübəyə çevirmək məqsədi daşıyır.",
     "whoTitle": "Biz kimik",
@@ -298,10 +223,8 @@
       "Çoxları üçün sığorta mürəkkəb terminlər, uzun sənədlər və itirilmiş vaxtla assosiasiya olunur. SığortaPro bu təcrübəni dəyişmək ideyası ilə yaradılıb.",
       "Platformamızda avtomobil, səyahət, əmlak və həyat sığortası haqqında aydın məlumat tapa, sizə uyğun variantı seçə və onlayn müraciət hazırlaya bilərsiniz. Mütəxəssisimiz isə hər addımda suallarınızı cavablandırmağa hazırdır."
     ],
-    "missionTitle": "Missiyamız",
     "missionText": "İnsanlara və ailələrə gələcəklərini arxayınlıqla planlamağa kömək edən sadə və etibarlı sığorta təcrübəsi yaratmaq.",
     "valuesTitle": "Dəyərlərimiz",
-    "valuesDescription": "Hər qərarımızda bu prinsiplərə əsaslanırıq.",
     "transparency": {
       "title": "Şəffaflıq",
       "text": "Şərtləri açıq və anlaşıqlı dildə izah edirik."
@@ -320,9 +243,8 @@
     }
   },
   "ContactPage": {
-    "eyebrow": "Əlaqə",
     "title": "Bizimlə əlaqə saxlayın",
-    "description": "Sualınız var və ya sığorta seçimində köməyə ehtiyacınız var? Sizə uyğun üsulla bizimlə əlaqə saxlayın.",
+    "description": "Zəng edin, WhatsApp-a yazın və ya onlayn müraciət göndərin.",
     "phoneTitle": "Telefon",
     "phoneText": "Mütəxəssisimizlə birbaşa danışın.",
     "whatsappTitle": "WhatsApp",
@@ -330,14 +252,7 @@
     "whatsappAction": "Yazmağa başla",
     "applyTitle": "Onlayn müraciət",
     "applyText": "Formu doldurun və fərdi təklif üçün ilk addımı atın.",
-    "applyAction": "Formu doldur",
-    "helpTitle": "Necə kömək edə bilərik?",
-    "helpItems": [
-      "Sizə uyğun sığorta növünün seçilməsi",
-      "Şərtlərin və təminatların sadə dildə izahı",
-      "Onlayn müraciətin hazırlanması",
-      "Fərdi qiymət təklifinin alınması"
-    ]
+    "applyAction": "Formu doldur"
   },
   "ApplyPage": {
     "eyebrow": "Onlayn müraciət",
@@ -368,7 +283,7 @@
     "endBeforeStart": "Bitmə tarixi başlanğıc tarixindən əvvəl ola bilməz",
     "tripLength": "Səyahət müddəti 365 gündən çox ola bilməz",
     "travelers": "1 ilə 10 arasında say seçin",
-    "age": "Yaş 18 ilə 80 arasında olmalıdır",
+    "age": "Yaş 0 ilə 65 arasında olmalıdır",
     "consent": "Davam etmək üçün razılığınızı təsdiqləyin",
     "tooLong": "Mətn çox uzundur",
     "tooShort": "Daha ətraflı qeyd edin"
@@ -486,20 +401,14 @@
     "browse": "Sığorta məhsullarına bax"
   },
   "Companies": {
-    "eyebrow": "Sığorta şirkətləri",
-    "title": "Azərbaycanın tanınmış sığorta şirkətləri",
-    "description": "Bazarda fəaliyyət göstərən tanınmış sığorta şirkətləri. Sizə hansı seçimin uyğun olduğunu öyrənmək üçün SığortaPro ilə əlaqə saxlayın.",
-    "viewAll": "Ətraflı",
-    "disclaimer": "Şirkət adları yalnız məlumat məqsədilə göstərilir və rəsmi tərəfdaşlıq və ya təsdiq anlamına gəlmir. Bütün suallar üçün SığortaPro ilə əlaqə saxlayın: {phone}.",
+    "title": "Sığorta şirkətləri",
+    "description": "Azərbaycanda fəaliyyət göstərən tanınmış sığorta şirkətləri.",
+    "viewAll": "Hamısına bax",
+    "disclaimer": "Loqolar və adlar müvafiq şirkətlərə məxsusdur və yalnız məlumat məqsədilə göstərilir.",
     "pageTitle": "Sığorta şirkətləri",
-    "pageDescription": "Azərbaycanda fəaliyyət göstərən tanınmış sığorta şirkətləri. Sualınız varsa, bir nömrə ilə SığortaPro-ya müraciət edin.",
+    "pageDescription": "Azərbaycanda fəaliyyət göstərən tanınmış sığorta şirkətləri. Bütün suallar üçün — bir nömrə.",
     "contactTitle": "Bütün suallar üçün bir əlaqə nömrəsi",
-    "contactText": "Hansı sığorta növü ilə maraqlanmağınızdan asılı olmayaraq, SığortaPro mütəxəssisi suallarınızı cavablandırır və müraciətinizdə kömək edir.",
-    "contactPoints": [
-      "Sığorta növlərinin sadə dildə izahı",
-      "Sizə uyğun sığortanın seçilməsində kömək",
-      "Müraciətin hazırlanmasında dəstək"
-    ]
+    "contactText": "Hansı sığorta ilə maraqlanmağınızdan asılı olmayaraq, mütəxəssisimiz suallarınızı cavablandırır və müraciətdə kömək edir."
   },
   "Forms": {
     "optional": "istəyə bağlı",
@@ -621,16 +530,17 @@
       "amount": "Təminat məbləği",
       "amountHint": "Əvvəlcə kateqoriyanı seçin",
       "price": "Sığorta haqqı",
-      "priceSelect": "Kateqoriya, yaş qrupu və məbləği seçin",
+      "priceSelect": "Kateqoriya, yaş və məbləği seçin",
       "priceUnavailable": "Tarif hələ təsdiqlənməyib",
       "priceUnavailableNote": "Bu seçim üçün təsdiqlənmiş qiymət yoxdur. Müraciət edin — mütəxəssisimiz fərdi təklif hazırlayacaq.",
-      "tableUnavailableNote": "Rəsmi tarif cədvəli təsdiqləndikdən sonra qiymətlər burada göstəriləcək. Hazırda fərdi təklif üçün müraciət edin.",
-      "age": "Yaş",
+      "age": "Sığortalının yaşı",
       "agePlaceholder": "Məs.: 35",
       "term": "Sığorta müddəti",
       "termValue": "{years} il",
       "documents": "Şəxsiyyət vəsiqəsi",
-      "documentsValue": "{count} fayl seçildi (göndərilmədi)"
+      "documentsValue": "{count} fayl seçildi (göndərilmədi)",
+      "ageGroupHint": "Yaş qrupu: {group}",
+      "tableNote": "Məbləğlər AZN ilə göstərilir. Dəqiq şərtlər sığorta müqaviləsində müəyyən edilir."
     },
     "upload": {
       "title": "Şəxsiyyət vəsiqəsi",

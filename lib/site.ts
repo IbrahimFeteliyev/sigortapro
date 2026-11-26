@@ -1,4 +1,4 @@
-import type { Locale } from "@/i18n/routing";
+import { localizePathname, type Locale } from "@/i18n/routing";
 
 const rawSiteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
 
@@ -26,9 +26,13 @@ export function whatsappLink(text?: string) {
   return text ? `${base}?text=${encodeURIComponent(text)}` : base;
 }
 
-/** Absolute URL for a locale-prefixed path, e.g. ("az", "/about"). */
+/**
+ * Absolute public URL for an internal route, e.g. ("az", "/about") →
+ * "https://…/az/haqqimizda". The path is translated via `routing.pathnames`.
+ */
 export function absoluteUrl(locale: Locale, path = "") {
-  const normalized = path === "/" ? "" : path;
+  const localized = localizePathname(locale, path || "/");
+  const normalized = localized === "/" ? "" : localized;
   return `${siteConfig.url}/${locale}${normalized}`;
 }
 
